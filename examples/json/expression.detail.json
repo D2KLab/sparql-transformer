@@ -1,0 +1,391 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "expression",
+      "name",
+      "description",
+      "genre_uri",
+      "genre_label",
+      "key_uri",
+      "key_label",
+      "expCreation",
+      "activity",
+      "composer_uri",
+      "dateCreated"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [{
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonates"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Sonata quasi una fantasia"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Quasi una fantasia"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Moonlight sonata"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonate au clair de lune"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Clair de lune"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonate Clair de lune"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea"
+        },
+        "name": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Mondschein-Sonate"
+        },
+        "genre_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "genre_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "sonata"
+        },
+        "key_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/key/cxm"
+        },
+        "key_label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "C sharp Minor"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892"
+        },
+        "activity": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892/activity/1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1801"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,335 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "expression",
+      "title",
+      "expCreation",
+      "composer_uri",
+      "composer_label",
+      "genre",
+      "dateCreated"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [{
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/01176f28-f15b-34ad-8c22-efe668fbfbcb"
+        },
+        "title": {
+          "type": "literal",
+          "value": "Concertos"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/d72dccea-abd2-384b-b6e4-c41619091cac"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/co"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1763"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/e90501cc-25bd-3a21-887b-ad4e938e0c8f"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Concertos"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/1e9155c0-6568-3be5-877f-6dc1a6e5a624"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/co"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1760"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/dc27e45b-1f12-3161-b097-d84137e48ee5"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonates"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/8486085a-447f-3994-96b6-f81c5b7f1ab1"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1760"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/e806ec19-6594-3d7f-a1dc-df8b0aa6b1ae"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Concertos"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/7730bd0b-d6ae-3d5a-9e7d-45e5de33be8b"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/co"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1740"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/4e0be963-0365-3bd6-bc36-863fefc64355"
+        },
+        "title": {
+          "type": "literal",
+          "value": "Sonates"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/9951d426-fbc1-3489-b081-31176b7877a7"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1756"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/19e06a31-b29e-3d1b-8466-4de36f04a55e"
+        },
+        "title": {
+          "type": "literal",
+          "value": "Caprices"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/7f5fee62-ef78-3973-b7b0-bf4d1c5ffc69"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/st"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1700"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/925ee18f-762a-324e-8196-65636d286dc6"
+        },
+        "title": {
+          "type": "literal",
+          "value": "Concertos"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/e8642d2e-0c63-3365-a762-4fe577face6e"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/co"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1762"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/a0553a55-ffdd-31da-be0d-532d909dca1b"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonates"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/654fd072-fcb2-35d7-a69e-0b5bbf58b233"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1700"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/a0553a55-ffdd-31da-be0d-532d909dca1b"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Solos"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/654fd072-fcb2-35d7-a69e-0b5bbf58b233"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1700"
+        }
+      },
+      {
+        "expression": {
+          "type": "uri",
+          "value": "http://data.doremus.org/expression/69c2465d-351a-39f6-8070-4338c2917f04"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sonates"
+        },
+        "expCreation": {
+          "type": "uri",
+          "value": "http://data.doremus.org/event/9ef4dd42-fa05-336a-9d68-0c7eb392e097"
+        },
+        "composer_uri": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "composer_label": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://data.doremus.org/vocabulary/iaml/genre/sn"
+        },
+        "dateCreated": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1700"
+        }
+      }
+    ]
+  }
+}

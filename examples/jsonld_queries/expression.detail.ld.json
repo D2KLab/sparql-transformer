@@ -1,0 +1,55 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [{
+    "@type": "MusicComposition",
+    "@id": "http://data.doremus.org/expression/d72301f0-0aba-3ba6-93e5-c4efbee9c6ea",
+    "name": [{
+        "@value": "Sonates",
+        "@language": "fr"
+      },
+      {
+        "@value": "Sonata quasi una fantasia",
+        "@language": "it"
+      },
+      {
+        "@value": "Quasi una fantasia",
+        "@language": "it"
+      },
+      {
+        "@value": "Moonlight sonata",
+        "@language": "en"
+      },
+      {
+        "@value": "Sonate au clair de lune",
+        "@language": "fr"
+      },
+      {
+        "@value": "Clair de lune",
+        "@language": "fr"
+      },
+      {
+        "@value": "Sonate Clair de lune",
+        "@language": "fr"
+      },
+      {
+        "@value": "Mondschein-Sonate",
+        "@language": "de"
+      },
+    ],
+    "genre": {
+      "@id": "http://data.doremus.org/vocabulary/iaml/genre/sn",
+      "@language": "en",
+      "name": "sonata"
+    },
+    "musicalKey": {
+      "@id": "http://data.doremus.org/vocabulary/key/cxm",
+      "@language": "en",
+      "name": "C sharp Minor"
+    },
+    "expCreation": "http://data.doremus.org/event/3f9d2fae-da75-3c66-902d-fa3a0755d892",
+    "composer": {
+      "@id": "http://data.doremus.org/artist/6963af5e-b126-3d40-a84b-97e0b78f5452"
+    },
+    "dateCreated": "1801"
+  }]
+}

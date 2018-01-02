@@ -1,0 +1,11 @@
+SELECT DISTINCT *
+WHERE {
+  ?expression mus:U70_has_title ?title .
+  OPTIONAL{
+    ?expCreation efrbroo:R17_created ?expression ;
+                ecrm:P9_consists_of / ecrm:P14_carried_out_by ?composer_uri.
+    ?composer_uri rdfs:label ?composer_label .
+  }
+  OPTIONAL { ?expression mus:U12_has_genre ?genre }
+  OPTIONAL { ?expCreation ecrm:P4_has_time-span / time:hasBeginning / time:inXSDDate ?dateCreated }
+} LIMIT 10

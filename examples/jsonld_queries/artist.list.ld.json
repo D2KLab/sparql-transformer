@@ -1,0 +1,16 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [{
+    "@type": "Person",
+    "@id": "?id",
+    "name": "$foaf:name$required",
+    "image": "$foaf:depiction",
+    "birthDate": "$schema:birthDate",
+    "deathDate": "$schema:deathDate"
+  }],
+  "$where": [
+    "?id a ecrm:E21_Person",
+    "[] ecrm:P14_carried_out_by ?id"
+  ],
+  "$limit": 10
+}

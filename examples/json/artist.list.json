@@ -1,0 +1,251 @@
+{
+  "head": {
+    "link": [],
+    "vars": ["id", "v0", "v1", "v2", "v3"]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [{
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Franti\u0161ek Benda"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Frantisek_Benda_2.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1709"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1786"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Franz Benda"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Frantisek_Benda_2.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1709"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1786"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/0f653f42-5e46-34a1-9481-35c4efd460e8"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Neal Hefti"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Neal_Hefti.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1922"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "2008"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/158d31f4-6c24-3ba2-a021-365a86a449bc"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Bob Marley"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bob-Marley.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1945"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1981"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/158d31f4-6c24-3ba2-a021-365a86a449bc"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Robert Nesta Marley"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bob-Marley.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1945"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1981"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/158d31f4-6c24-3ba2-a021-365a86a449bc"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Nesta Robert Marley"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bob-Marley.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1945"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1981"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/18e80b8e-e2cd-3694-aa00-ceca0856c5f7"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Elias Parish-Alvars"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Elias_Parish_Alvars.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1808"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1849"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/18e80b8e-e2cd-3694-aa00-ceca0856c5f7"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Eli Parish"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Elias_Parish_Alvars.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1808"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1849"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/64e79835-9faf-392b-9640-bb3804677515"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Johann Mattheson"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Johann_mattheson.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1681"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1764"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://data.doremus.org/artist/44de5752-5d03-39fd-b5c7-8e939863ff78"
+        },
+        "v0": {
+          "type": "literal",
+          "value": "Kurt Atterberg"
+        },
+        "v1": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Kurt_Atterberg.jpg"
+        },
+        "v2": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1887"
+        },
+        "v3": {
+          "type": "typed-literal",
+          "datatype": "http://www.w3.org/2001/XMLSchema#gYear",
+          "value": "1974"
+        }
+      }
+    ]
+  }
+}
