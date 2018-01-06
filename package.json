@@ -39,6 +39,7 @@
   "dependencies": {
     "debug": "^3.1.0",
     "debug-levels": "^0.2.0",
+    "detect-node": "^2.0.3",
     "fast-deep-equal": "^1.0.0",
     "is-valid-path": "^0.1.1",
     "virtuoso-sparql-client": "^0.1.5"

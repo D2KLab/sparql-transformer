@@ -1,7 +1,7 @@
 import test from 'ava';
 import fs from 'fs';
 
-import schemaConv from './index';
+import jsonldTransformer from './index';
 
 const INPUT = "./examples/json/";
 const OUTPUT = "./examples/jsonld/";
@@ -20,7 +20,7 @@ var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'artist.list.ld.json', 'utf8
 
 test(async t => {
   var expected = JSON.parse(fs.readFileSync(OUTPUT + 'artist.list.ld.json', 'utf8'));
-  var out = await schemaConv(q, {endpoint: 'http://data.doremus.org/sparql'});
+  var out = await jsonldTransformer(q, {endpoint: 'http://data.doremus.org/sparql'});
   t.deepEqual(out, expected);
 });
 

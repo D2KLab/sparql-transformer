@@ -1,0 +1,14 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [{
+    "@type": "City",
+    "@id" : "?id",
+    "name": "$rdfs:label$required",
+    "image": "$foaf:depiction$required"
+  }],
+  "$where": [
+    "?id a dbo:City",
+    "?id dbo:country dbr:Italy"
+  ],
+  "$limit": 100
+}

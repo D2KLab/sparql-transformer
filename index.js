@@ -1,8 +1,8 @@
-import fs from 'fs';
 import isValidPath from 'is-valid-path';
 import debugModule from 'debug-levels';
 import sparqlClient from 'virtuoso-sparql-client';
 import equal from 'fast-deep-equal';
+import isNode from 'detect-node';
 
 const debug = debugModule('jsonld-converter');
 const DEFAULT_OPTIONS = {
@@ -70,18 +70,27 @@ function mergeObj(base, addition) {
   return base;
 }
 
+function readAndParse(path) {
+  const fs = require('fs');
+
+  debug.verbose('loading input from %s', path);
+  if (!fs.existsSync(path))
+    throw new Error(`Unable to find file ${path}`);
+  return JSON.parse(fs.readFileSync(path, 'utf8'));
+
+}
 
 export default function schemaConv(input, options = {}) {
-  if (isValidPath(input)) {
-    debug.verbose('loading input from %s', input);
-    if (!fs.existsSync(input))
-      throw new Error(`Unable to find file ${input}`);
-    input = JSON.parse(fs.readFileSync(input, 'utf8'));
-  }
+  if (isNode && isValidPath(input))
+    input = readAndParse(input);
+
   if (typeof input != 'object')
     throw new Error(`Input format not valid`);
 
-  let opt = Object.assign({}, DEFAULT_OPTIONS, options);
+  let opt = Object.assign({},
+    DEFAULT_OPTIONS, {
+      context: input['@context'],
+    }, options);
   debug.debug('options:', JSON.stringify(opt, null, 2));
 
   let {
