@@ -10,13 +10,26 @@ const DEFAULT_OPTIONS = {
   endpoint: 'http://dbpedia.org/sparql'
 };
 
+const KEY_VOCABULARIES = {
+  JSONLD: {
+    id: '@id',
+    lang: '@language',
+    value: '@value'
+  },
+  PROTO: {
+    id: 'id',
+    lang: 'language',
+    value: 'value'
+  }
+};
+
 function defaultSparql(endpoint) {
   let client = new sparqlClient.Client(endpoint);
   client.setOptions("application/json");
   return q => client.query(q);
 }
 
-function sparql2proto(line, proto) {
+function sparql2proto(line, proto, options) {
   let instance = Object.assign({}, proto);
   let lineKeys = Object.keys(line);
 
@@ -30,21 +43,22 @@ function sparql2proto(line, proto) {
     if (!lineKeys.includes(variable))
       delete instance[k];
     else
-      instance[k] = toJsonldValue(line[variable]);
+      instance[k] = toJsonldValue(line[variable], options);
   });
   return instance;
 }
 
-function toJsonldValue(input) {
+function toJsonldValue(input, options) {
   let value = input.value;
   let lang = input['xml:lang'];
 
-  if (lang)
-    return {
-      '@value': value,
-      '@language': lang
-    };
-
+  let voc = options.voc;
+  if (lang){
+    let obj = {};
+    obj[voc.lang] = lang;
+    obj[voc.value] = value;
+    return obj;
+  }
   return value;
 }
 
@@ -97,6 +111,9 @@ export default function schemaConv(input, options = {}) {
     proto,
     query
   } = jsonld2query(input);
+  var isJsonLD = input['@graph'];
+  var voc = KEY_VOCABULARIES[isJsonLD?'JSONLD':'PROTO'];
+  opt.voc = voc;
 
   let sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
 
@@ -104,12 +121,12 @@ export default function schemaConv(input, options = {}) {
     debug.verbose(sparqlRes);
     let bindings = sparqlRes.results.bindings;
     // apply the proto
-    let instances = bindings.map(b => sparql2proto(b, proto));
+    let instances = bindings.map(b => sparql2proto(b, proto, opt));
     // merge lines with the same id
     let content = [];
     instances.reduce((old, inst) => {
-      let id = inst['@id'];
-      if (old['@id'] != id) {
+      let id = inst[voc.id];
+      if (old[voc.id] != id) {
         // it is a new one
         content.push(inst);
         return inst;
@@ -119,17 +136,19 @@ export default function schemaConv(input, options = {}) {
       return old;
     }, {});
 
-    console.log(content);
-    var data = {
-      '@context': opt.context,
-      '@graph': content
-    };
-    return data;
+    if (isJsonLD)
+      return {
+        '@context': opt.context,
+        '@graph': content
+      };
+    return content;
   });
 }
 
 export function jsonld2query(input) {
-  var proto = input['@graph'][0];
+  var proto = input['@graph'] || input.proto;
+  if (Array.isArray(proto)) proto = proto[0];
+
 
   // get all props starting with '$'
   var modifiers = {};

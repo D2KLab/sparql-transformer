@@ -40,8 +40,7 @@ Extract of the [json results](http://dbpedia.org/sparql?default-graph-uri=http%3
           "xml:lang": "fr",
           "value": "Bologne"
         }
-      },
-      {
+      }, {
         "city": {
           "type": "uri",
           "value": "http://dbpedia.org/resource/Bologna"
@@ -55,8 +54,7 @@ Extract of the [json results](http://dbpedia.org/sparql?default-graph-uri=http%3
           "xml:lang": "it",
           "value": "Bologna"
         }
-      },
-      {
+      }, {
         "city": {
           "type": "uri",
           "value": "http://dbpedia.org/resource/Siena"
@@ -70,8 +68,7 @@ Extract of the [json results](http://dbpedia.org/sparql?default-graph-uri=http%3
           "xml:lang": "en",
           "value": "Siena"
         }
-      }
-    ]
+      }]
   }
 }
 ```
@@ -101,9 +98,31 @@ More practical would be an output of this shape, following the specification of 
 
 Here is clear that there are 2 results, each one with an image and 2 (the first) or 1 (the second) value for the name.
 
-## Query in JSON-LD
+## Query in JSON
 
-The core idea of this module is writing in a single file the query and the expected output in JSON-LD. Here an example of syntax for the query of cities.
+The core idea of this module is writing in a single file the query and the expected output in JSON.
+
+Two syntaxes are supported: plain JSON and JSON-LD.
+Here the examples in the 2 formats for the query of cities.
+
+- plain JSON
+
+```json
+{
+  "proto": [{
+    "id" : "?id",
+    "name": "$rdfs:label$required",
+    "image": "$foaf:depiction$required"
+  }],
+  "$where": [
+    "?id a dbo:City",
+    "?id dbo:country dbr:Italy"
+  ],
+  "$limit": 100
+}
+```
+
+- JSON-LD
 
 ```json
 {
@@ -122,11 +141,11 @@ The core idea of this module is writing in a single file the query and the expec
 }
 ```
 
-The `@graph` property contains the prototype of the result as I expect it. When the value should be taken from the query result, I declare it using the following syntax:
+The `@graph`/`proto` property contains the prototype of the result as I expect it. When the value should be taken from the query result, I declare it using the following syntax:
 
     $<SPARQL PREDICATE>[$required]
 
-The subject of the predicate is always `?id`. If `$requred` is omitted, the clause is wrapped by `OPTIONAL { ... }`.
+The subject of the predicate is always `?id`. If `$required` is omitted, the clause is wrapped by `OPTIONAL { ... }`.
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 
 The `$`-something root properties allow to make the query more specific. They will be not present in the output, being used only at query level.
@@ -137,7 +156,11 @@ The supported properties are:
 - `$orderby` to be done;
 - `$filter` to be done;
 
-The `@context` and any other root property is transferred as is to the output.
+The `@context` property (for the JSON-LD version) will be transferred to the output.
+
+The output of this query is intended to be:
+- for the plain JSON, an array of object with the shape of the prototype;
+- for the JSON-LD, an array of object with the shape of the prototype in the `@graph` property and with a sibling `@context`.
 
 ## Usage
 

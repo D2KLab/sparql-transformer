@@ -1,349 +1,337 @@
-{
-  "@context": "http://schema.org/",
-  "@graph": [{
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Bologna",
-    "name": [{
-      "@value": "Bologna",
-      "@language": "en"
-    }, {
-      "@value": "بولونيا (إيطاليا)",
-      "@language": "ar"
-    }, {
-      "@value": "Bologna",
-      "@language": "de"
-    }, {
-      "@value": "Bolonia",
-      "@language": "es"
-    }, {
-      "@value": "Bologne",
-      "@language": "fr"
-    }, {
-      "@value": "Bologna",
-      "@language": "it"
-    }, {
-      "@value": "ボローニャ",
-      "@language": "ja"
-    }, {
-      "@value": "Bologna (stad)",
-      "@language": "nl"
-    }, {
-      "@value": "Bolonia",
-      "@language": "pl"
-    }, {
-      "@value": "Bolonha",
-      "@language": "pt"
-    }, {
-      "@value": "Болонья",
-      "@language": "ru"
-    }, {
-      "@value": "博洛尼亚",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+[{
+  "id": "http://dbpedia.org/resource/Bologna",
+  "name": [{
+    "value": "Bologna",
+    "language": "en"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Siena",
-    "name": [{
-      "@value": "Siena",
-      "@language": "en"
-    }, {
-      "@value": "سيينا",
-      "@language": "ar"
-    }, {
-      "@value": "Siena",
-      "@language": "de"
-    }, {
-      "@value": "Siena",
-      "@language": "es"
-    }, {
-      "@value": "Sienne",
-      "@language": "fr"
-    }, {
-      "@value": "Siena",
-      "@language": "it"
-    }, {
-      "@value": "シエーナ",
-      "@language": "ja"
-    }, {
-      "@value": "Siena (stad)",
-      "@language": "nl"
-    }, {
-      "@value": "Siena",
-      "@language": "pl"
-    }, {
-      "@value": "Siena",
-      "@language": "pt"
-    }, {
-      "@value": "Сиена",
-      "@language": "ru"
-    }, {
-      "@value": "锡耶纳",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+    "value": "بولونيا (إيطاليا)",
+    "language": "ar"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Avola",
-    "name": [{
-      "@value": "أفولا",
-      "@language": "ar"
-    }, {
-      "@value": "Avola",
-      "@language": "de"
-    }, {
-      "@value": "Avola",
-      "@language": "en"
-    }, {
-      "@value": "Avola",
-      "@language": "es"
-    }, {
-      "@value": "Avola",
-      "@language": "fr"
-    }, {
-      "@value": "Avola",
-      "@language": "it"
-    }, {
-      "@value": "アーヴォラ",
-      "@language": "ja"
-    }, {
-      "@value": "Avola (gemeente)",
-      "@language": "nl"
-    }, {
-      "@value": "Avola",
-      "@language": "pl"
-    }, {
-      "@value": "Avola",
-      "@language": "pt"
-    }, {
-      "@value": "Авола (город)",
-      "@language": "ru"
-    }, {
-      "@value": "阿沃拉",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+    "value": "Bologna",
+    "language": "de"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Caivano",
-    "name": [{
-      "@value": "كايفانو",
-      "@language": "ar"
-    }, {
-      "@value": "Caivano",
-      "@language": "de"
-    }, {
-      "@value": "Caivano",
-      "@language": "es"
-    }, {
-      "@value": "Caivano",
-      "@language": "en"
-    }, {
-      "@value": "Caivano",
-      "@language": "fr"
-    }, {
-      "@value": "Caivano",
-      "@language": "it"
-    }, {
-      "@value": "カイヴァーノ",
-      "@language": "ja"
-    }, {
-      "@value": "Caivano",
-      "@language": "nl"
-    }, {
-      "@value": "Caivano",
-      "@language": "pl"
-    }, {
-      "@value": "Caivano",
-      "@language": "pt"
-    }, {
-      "@value": "Кайвано",
-      "@language": "ru"
-    }, {
-      "@value": "卡伊瓦诺",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+    "value": "Bolonia",
+    "language": "es"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Colico",
-    "name": [{
-      "@value": "Colico",
-      "@language": "en"
-    }, {
-      "@value": "Colico",
-      "@language": "de"
-    }, {
-      "@value": "Cólico (Italia)",
-      "@language": "es"
-    }, {
-      "@value": "Colico",
-      "@language": "fr"
-    }, {
-      "@value": "Colico",
-      "@language": "it"
-    }, {
-      "@value": "コーリコ",
-      "@language": "ja"
-    }, {
-      "@value": "Colico",
-      "@language": "nl"
-    }, {
-      "@value": "Colico",
-      "@language": "pl"
-    }, {
-      "@value": "Colico",
-      "@language": "pt"
-    }, {
-      "@value": "Колико",
-      "@language": "ru"
-    }, {
-      "@value": "科利科",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+    "value": "Bologne",
+    "language": "fr"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Muggiò",
-    "name": [{
-      "@value": "Muggiò",
-      "@language": "de"
-    }, {
-      "@value": "Muggiò",
-      "@language": "es"
-    }, {
-      "@value": "Muggiò",
-      "@language": "en"
-    }, {
-      "@value": "Muggiò",
-      "@language": "fr"
-    }, {
-      "@value": "Muggiò",
-      "@language": "it"
-    }, {
-      "@value": "ムッジョ",
-      "@language": "ja"
-    }, {
-      "@value": "Muggiò",
-      "@language": "nl"
-    }, {
-      "@value": "Muggiò",
-      "@language": "pl"
-    }, {
-      "@value": "Muggiò",
-      "@language": "pt"
-    }, {
-      "@value": "Муджо",
-      "@language": "ru"
-    }, {
-      "@value": "穆吉奥",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+    "value": "Bologna",
+    "language": "it"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Orsara_di_Puglia",
-    "name": [{
-      "@value": "أورسارا دي بوليا",
-      "@language": "ar"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "de"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "es"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "en"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "fr"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "it"
-    }, {
-      "@value": "オルサーラ・ディ・プーリア",
-      "@language": "ja"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "nl"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "pl"
-    }, {
-      "@value": "Orsara di Puglia",
-      "@language": "pt"
-    }, {
-      "@value": "Орсара-ди-Пулья",
-      "@language": "ru"
-    }, {
-      "@value": "奥尔萨拉迪普利亚",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+    "value": "ボローニャ",
+    "language": "ja"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Robbio",
-    "name": [{
-      "@value": "روبيو (بافيا)",
-      "@language": "ar"
-    }, {
-      "@value": "Robbio",
-      "@language": "de"
-    }, {
-      "@value": "Robbio",
-      "@language": "es"
-    }, {
-      "@value": "Robbio",
-      "@language": "en"
-    }, {
-      "@value": "Robbio",
-      "@language": "fr"
-    }, {
-      "@value": "Robbio",
-      "@language": "it"
-    }, {
-      "@value": "ロッビオ",
-      "@language": "ja"
-    }, {
-      "@value": "Robbio",
-      "@language": "nl"
-    }, {
-      "@value": "Robbio",
-      "@language": "pl"
-    }, {
-      "@value": "Robbio",
-      "@language": "pt"
-    }, {
-      "@value": "Роббьо",
-      "@language": "ru"
-    }, {
-      "@value": "罗比奥",
-      "@language": "zh"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+    "value": "Bologna (stad)",
+    "language": "nl"
   }, {
-    "@type": "City",
-    "@id": "http://dbpedia.org/resource/Potenza",
-    "name": [{
-      "@value": "Potenza",
-      "@language": "en"
-    }, {
-      "@value": "بوتنسا",
-      "@language": "ar"
-    }, {
-      "@value": "Potenza",
-      "@language": "de"
-    }, {
-      "@value": "Potenza",
-      "@language": "es"
-    }, {
-      "@value": "Potenza",
-      "@language": "fr"
-    }, {
-      "@value": "Potenza (Italia)",
-      "@language": "it"
-    }],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
-  }]
-}
+    "value": "Bolonia",
+    "language": "pl"
+  }, {
+    "value": "Bolonha",
+    "language": "pt"
+  }, {
+    "value": "Болонья",
+    "language": "ru"
+  }, {
+    "value": "博洛尼亚",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+}, {
+  "id": "http://dbpedia.org/resource/Siena",
+  "name": [{
+    "value": "Siena",
+    "language": "en"
+  }, {
+    "value": "سيينا",
+    "language": "ar"
+  }, {
+    "value": "Siena",
+    "language": "de"
+  }, {
+    "value": "Siena",
+    "language": "es"
+  }, {
+    "value": "Sienne",
+    "language": "fr"
+  }, {
+    "value": "Siena",
+    "language": "it"
+  }, {
+    "value": "シエーナ",
+    "language": "ja"
+  }, {
+    "value": "Siena (stad)",
+    "language": "nl"
+  }, {
+    "value": "Siena",
+    "language": "pl"
+  }, {
+    "value": "Siena",
+    "language": "pt"
+  }, {
+    "value": "Сиена",
+    "language": "ru"
+  }, {
+    "value": "锡耶纳",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+}, {
+  "id": "http://dbpedia.org/resource/Avola",
+  "name": [{
+    "value": "أفولا",
+    "language": "ar"
+  }, {
+    "value": "Avola",
+    "language": "de"
+  }, {
+    "value": "Avola",
+    "language": "en"
+  }, {
+    "value": "Avola",
+    "language": "es"
+  }, {
+    "value": "Avola",
+    "language": "fr"
+  }, {
+    "value": "Avola",
+    "language": "it"
+  }, {
+    "value": "アーヴォラ",
+    "language": "ja"
+  }, {
+    "value": "Avola (gemeente)",
+    "language": "nl"
+  }, {
+    "value": "Avola",
+    "language": "pl"
+  }, {
+    "value": "Avola",
+    "language": "pt"
+  }, {
+    "value": "Авола (город)",
+    "language": "ru"
+  }, {
+    "value": "阿沃拉",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+}, {
+  "id": "http://dbpedia.org/resource/Caivano",
+  "name": [{
+    "value": "كايفانو",
+    "language": "ar"
+  }, {
+    "value": "Caivano",
+    "language": "de"
+  }, {
+    "value": "Caivano",
+    "language": "es"
+  }, {
+    "value": "Caivano",
+    "language": "en"
+  }, {
+    "value": "Caivano",
+    "language": "fr"
+  }, {
+    "value": "Caivano",
+    "language": "it"
+  }, {
+    "value": "カイヴァーノ",
+    "language": "ja"
+  }, {
+    "value": "Caivano",
+    "language": "nl"
+  }, {
+    "value": "Caivano",
+    "language": "pl"
+  }, {
+    "value": "Caivano",
+    "language": "pt"
+  }, {
+    "value": "Кайвано",
+    "language": "ru"
+  }, {
+    "value": "卡伊瓦诺",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+}, {
+  "id": "http://dbpedia.org/resource/Colico",
+  "name": [{
+    "value": "Colico",
+    "language": "en"
+  }, {
+    "value": "Colico",
+    "language": "de"
+  }, {
+    "value": "Cólico (Italia)",
+    "language": "es"
+  }, {
+    "value": "Colico",
+    "language": "fr"
+  }, {
+    "value": "Colico",
+    "language": "it"
+  }, {
+    "value": "コーリコ",
+    "language": "ja"
+  }, {
+    "value": "Colico",
+    "language": "nl"
+  }, {
+    "value": "Colico",
+    "language": "pl"
+  }, {
+    "value": "Colico",
+    "language": "pt"
+  }, {
+    "value": "Колико",
+    "language": "ru"
+  }, {
+    "value": "科利科",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+}, {
+  "id": "http://dbpedia.org/resource/Muggiò",
+  "name": [{
+    "value": "Muggiò",
+    "language": "de"
+  }, {
+    "value": "Muggiò",
+    "language": "es"
+  }, {
+    "value": "Muggiò",
+    "language": "en"
+  }, {
+    "value": "Muggiò",
+    "language": "fr"
+  }, {
+    "value": "Muggiò",
+    "language": "it"
+  }, {
+    "value": "ムッジョ",
+    "language": "ja"
+  }, {
+    "value": "Muggiò",
+    "language": "nl"
+  }, {
+    "value": "Muggiò",
+    "language": "pl"
+  }, {
+    "value": "Muggiò",
+    "language": "pt"
+  }, {
+    "value": "Муджо",
+    "language": "ru"
+  }, {
+    "value": "穆吉奥",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+}, {
+  "id": "http://dbpedia.org/resource/Orsara_di_Puglia",
+  "name": [{
+    "value": "أورسارا دي بوليا",
+    "language": "ar"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "de"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "es"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "en"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "fr"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "it"
+  }, {
+    "value": "オルサーラ・ディ・プーリア",
+    "language": "ja"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "nl"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "pl"
+  }, {
+    "value": "Orsara di Puglia",
+    "language": "pt"
+  }, {
+    "value": "Орсара-ди-Пулья",
+    "language": "ru"
+  }, {
+    "value": "奥尔萨拉迪普利亚",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+}, {
+  "id": "http://dbpedia.org/resource/Robbio",
+  "name": [{
+    "value": "روبيو (بافيا)",
+    "language": "ar"
+  }, {
+    "value": "Robbio",
+    "language": "de"
+  }, {
+    "value": "Robbio",
+    "language": "es"
+  }, {
+    "value": "Robbio",
+    "language": "en"
+  }, {
+    "value": "Robbio",
+    "language": "fr"
+  }, {
+    "value": "Robbio",
+    "language": "it"
+  }, {
+    "value": "ロッビオ",
+    "language": "ja"
+  }, {
+    "value": "Robbio",
+    "language": "nl"
+  }, {
+    "value": "Robbio",
+    "language": "pl"
+  }, {
+    "value": "Robbio",
+    "language": "pt"
+  }, {
+    "value": "Роббьо",
+    "language": "ru"
+  }, {
+    "value": "罗比奥",
+    "language": "zh"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+}, {
+  "id": "http://dbpedia.org/resource/Potenza",
+  "name": [{
+    "value": "Potenza",
+    "language": "en"
+  }, {
+    "value": "بوتنسا",
+    "language": "ar"
+  }, {
+    "value": "Potenza",
+    "language": "de"
+  }, {
+    "value": "Potenza",
+    "language": "es"
+  }, {
+    "value": "Potenza",
+    "language": "fr"
+  }, {
+    "value": "Potenza (Italia)",
+    "language": "it"
+  }],
+  "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+}]
