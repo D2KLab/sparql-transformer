@@ -145,7 +145,7 @@ The `@graph`/`proto` property contains the prototype of the result as I expect i
 
     $<SPARQL PREDICATE>[$required][$sample]
 
-The subject of the predicate is always `?id`. Some modifiers can be present after, separated by the `$` sign:
+The subject of the predicate is always `?id`, while the object is automatically assigned. Some modifiers can be present after, separated by the `$` sign:
 - `$required`:  when omitted, the clause is wrapped by `OPTIONAL { ... }`.
 - `$sample`: extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT
 
@@ -159,7 +159,7 @@ The supported properties are:
 - `$groupby` to be done;
 - `$orderby` to be done;
 - `$filter` to be done;
-- `$prefixes` to be done;
+- `$prefixes` [object] set the prefixes in the format `"prefix": "http:/related/uri"`;
 
 The `@context` property (for the JSON-LD version) will be transferred to the output.
 

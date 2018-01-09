@@ -29,6 +29,11 @@ function defaultSparql(endpoint) {
   return q => client.query(q);
 }
 
+function parsePrefixes(prefixes) {
+  return Object.keys(prefixes)
+  .map(p=> `PREFIX ${p}: <${prefixes[p]}>`);
+}
+
 function sparql2proto(line, proto, options) {
   let instance = Object.assign({}, proto);
   let lineKeys = Object.keys(line);
@@ -182,9 +187,11 @@ export function jsonld2query(input) {
     .concat(asArray(modifiers.$where));
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
-  var distinct = modifiers.$distinct === false ? '': 'DISTINCT';
+  var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
+  var prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
 
-  var query = `SELECT ${distinct} ${vars.join(',')}
+  var query = `${prefixes.join('\n')}
+  SELECT ${distinct} ${vars.join(',')}
   WHERE {
     ${wheres.join('.\n')}
   }
