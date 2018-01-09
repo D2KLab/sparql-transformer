@@ -3,6 +3,7 @@ import debugModule from 'debug-levels';
 import sparqlClient from 'virtuoso-sparql-client';
 import equal from 'fast-deep-equal';
 import isNode from 'detect-node';
+import jsonfile from 'jsonfile';
 
 const debug = debugModule('jsonld-converter');
 const DEFAULT_OPTIONS = {
@@ -89,6 +90,7 @@ function toJsonldValue(input, options) {
       value = value.replace('INF', 'Infinity');
       return parseFloat(value);
   }
+  // if here, it is a string or a date, that are not parsed
 
   let lang = input['xml:lang'];
 
@@ -102,6 +104,11 @@ function toJsonldValue(input, options) {
   return value;
 }
 
+/**
+ * Merge base and addition, by defining/adding in an
+ * array the values in addition to the base object.
+ * @return the base object merged.
+ */
 function mergeObj(base, addition) {
   Object.keys(addition).forEach(k => {
     let b = base[k],
@@ -124,19 +131,11 @@ function mergeObj(base, addition) {
   return base;
 }
 
-function readAndParse(path) {
-  const fs = require('fs');
-
-  debug.verbose('loading input from %s', path);
-  if (!fs.existsSync(path))
-    throw new Error(`Unable to find file ${path}`);
-  return JSON.parse(fs.readFileSync(path, 'utf8'));
-
-}
-
 export default function schemaConv(input, options = {}) {
-  if (isNode && isValidPath(input))
-    input = readAndParse(input);
+  if (isNode && isValidPath(input)) {
+    debug.verbose('loading input from %s', path);
+    input = jsonfile.readFileSync(input);
+  }
 
   if (typeof input != 'object')
     throw new Error(`Input format not valid`);
