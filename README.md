@@ -162,7 +162,6 @@ The supported properties are:
 - `$where` [array] add where clause in the triple format;
 - `$limit` [number] map to `LIMIT` in SPARQL;
 - `$distinct` [boolean, default `true`] set the `DISTINCT` in the select;
-- `$groupby` to be done;
 - `$filter` to be done;
 - `$prefixes` [object] set the prefixes in the format `"prefix": "http:/related/uri"`;
 
