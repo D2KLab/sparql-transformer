@@ -151,7 +151,10 @@ The subject of the predicate is always `?id`, while the object is automatically 
 |---|---|---|
 |`$required`|n/a| When omitted, the clause is wrapped by `OPTIONAL { ... }`.|
 |`$sample`|n/a|extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
-|`$order`|`:priority`[int] `:desc`| Order the results by that property. The presence of `:desc` set descendent orderby. In case of order by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$order`, `$order:3`, `$order:1:desc`|
+|`$order`|`:priority`[int] `:desc`| Apply an ORDER BY for the property. The presence of `:desc` set descendent order. In case of order by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$order`, `$order:3`, `$order:1:desc`|
+|`$groupby`|`:priority`[int] | Apply a GROUP BY for the property. In case of group by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$groupby`, `$groupby:3`|
+
+
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 
 The `$`-something root properties allow to make the query more specific. They will be not present in the output, being used only at query level.
@@ -160,7 +163,6 @@ The supported properties are:
 - `$limit` [number] map to `LIMIT` in SPARQL;
 - `$distinct` [boolean, default `true`] set the `DISTINCT` in the select;
 - `$groupby` to be done;
-- `$orderby` to be done;
 - `$filter` to be done;
 - `$prefixes` [object] set the prefixes in the format `"prefix": "http:/related/uri"`;
 

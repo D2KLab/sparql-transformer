@@ -207,6 +207,7 @@ function jsonld2query(input) {
 
   var vars = [];
   var orderby = [];
+  var groupby = [];
   var wheres = asArray(modifiers.$where);
 
   // $-something values
@@ -229,8 +230,12 @@ function jsonld2query(input) {
       let _var = options.includes('sample') ?
         `SAMPLE(${id}) AS ${id}` : id;
       vars.push(_var);
-      let _order = options.find(o => o.match('order.+'));
+
+      let _order = options.find(o => o.match('order.*'));
       if (_order) orderby.push(parseOrder(_order, id));
+
+      let _groupby = options.find(o => o.match('groupby.*'));
+      if (_groupby) groupby.push(parseOrder(_groupby, id));
 
       if (is$) {
         let q = `?id ${v} ${id}`;
@@ -247,6 +252,7 @@ function jsonld2query(input) {
   WHERE {
     ${wheres.join('.\n')}
   }
+  ${prepareGroupby(groupby)}
   ${prepareOrderby(orderby)}
   ${limit}
   `;
@@ -258,13 +264,17 @@ function jsonld2query(input) {
   };
 }
 
+function prepareGroupby(array = []) {
+  array.forEach(s => delete s.desc);
+  return prepareOrderby(array, 'GROUP BY');
+}
 
-function prepareOrderby(array = []) {
+function prepareOrderby(array = [], keyword = 'ORDER BY') {
   if (!array.length) return '';
-  return 'ORDER BY ' +
+  return keyword + ' ' +
     array.sort((a, b) => b.priority - a.priority)
     .map(s => s.desc ? `DESC(${s.variable})` : s.variable)
-    .join(',');
+    .join(' ');
 }
 
 function parseOrder(str, variable) {
@@ -281,7 +291,7 @@ function parseOrder(str, variable) {
   }
 
   let priority = s[0] && parseInt(s[0]);
-  if (priority) ord.priority = priority;
+  ord.priority = priority || 0;
 
   return ord;
 }
