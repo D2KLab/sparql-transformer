@@ -1,7 +1,7 @@
 import test from 'ava';
 import fs from 'fs';
 
-import jsonldTransformer from './index';
+import sparqlTransformer from './index';
 
 const INPUT = "./examples/json/";
 const OUTPUT = "./examples/jsonld/";
@@ -20,7 +20,7 @@ function normaliseStr(str = '') {
 test('DBpedia list of cities (proto)', async t => {
   var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'city.list.json', 'utf8'));
   var expected = JSON.parse(fs.readFileSync(OUTPUT + 'city.list.ld.json', 'utf8'));
-  var out = await jsonldTransformer(q);
+  var out = await sparqlTransformer(q);
   t.deepEqual(out, expected);
 });
 
@@ -28,7 +28,7 @@ test('DOREMUS list of artists (jsonld)', async t => {
   var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'artist.list.ld.json', 'utf8'));
 
   var expected = JSON.parse(fs.readFileSync(OUTPUT + 'artist.list.ld.json', 'utf8'));
-  var out = await jsonldTransformer(q, {
+  var out = await sparqlTransformer(q, {
     endpoint: 'http://data.doremus.org/sparql'
   });
   t.deepEqual(out, expected);

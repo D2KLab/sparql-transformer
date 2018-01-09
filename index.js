@@ -53,7 +53,7 @@ function toJsonldValue(input, options) {
   let lang = input['xml:lang'];
 
   let voc = options.voc;
-  if (lang){
+  if (lang) {
     let obj = {};
     obj[voc.lang] = lang;
     obj[voc.value] = value;
@@ -112,7 +112,7 @@ export default function schemaConv(input, options = {}) {
     query
   } = jsonld2query(input);
   var isJsonLD = input['@graph'];
-  var voc = KEY_VOCABULARIES[isJsonLD?'JSONLD':'PROTO'];
+  var voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
   opt.voc = voc;
 
   let sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
@@ -159,31 +159,39 @@ export function jsonld2query(input) {
       delete input[k];
     });
 
+  var vars = ['?id'];
   var wheres = Object.keys(proto)
     .filter(k => proto[k].startsWith('$'))
     .map((k, i) => {
       let v = proto[k].substring(1);
       let options = [];
+
       if (v.includes('$'))
         [v, ...options] = v.split('$');
+
       let required = options.includes('required');
       let id = '?v' + i;
       proto[k] = id;
 
       let q = `?id ${v} ${id}`;
+      let _var = options.includes('sample') ?
+        `SAMPLE(${id}) AS ${id}` : id;
+      vars.push(_var);
       return required ? q : `OPTIONAL { ${q} }`;
     })
     .concat(asArray(modifiers.$where));
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
+  var distinct = modifiers.$distinct === false ? '': 'DISTINCT';
 
-  var query = `SELECT DISTINCT *
+  var query = `SELECT ${distinct} ${vars.join(',')}
   WHERE {
     ${wheres.join('.\n')}
   }
   ${limit}
   `;
 
+  debug.debug(query);
   return {
     query,
     proto

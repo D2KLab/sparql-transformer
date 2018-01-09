@@ -1,4 +1,4 @@
-JSON-LD Transformer
+SPARQL Transformer
 ===================
 
 Write your SPARQL query directly in the JSON-LD you would like to have in output.
@@ -143,18 +143,23 @@ Here the examples in the 2 formats for the query of cities.
 
 The `@graph`/`proto` property contains the prototype of the result as I expect it. When the value should be taken from the query result, I declare it using the following syntax:
 
-    $<SPARQL PREDICATE>[$required]
+    $<SPARQL PREDICATE>[$required][$sample]
 
-The subject of the predicate is always `?id`. If `$required` is omitted, the clause is wrapped by `OPTIONAL { ... }`.
+The subject of the predicate is always `?id`. Some modifiers can be present after, separated by the `$` sign:
+- `$required`:  when omitted, the clause is wrapped by `OPTIONAL { ... }`.
+- `$sample`: extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT
+
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 
 The `$`-something root properties allow to make the query more specific. They will be not present in the output, being used only at query level.
 The supported properties are:
 - `$where` [array] add where clause in the triple format;
 - `$limit` [number] map to `LIMIT` in SPARQL;
+- `$distinct` [boolean, default `true`] set the `DISTINCT` in the select;
 - `$groupby` to be done;
 - `$orderby` to be done;
 - `$filter` to be done;
+- `$prefixes` to be done;
 
 The `@context` property (for the JSON-LD version) will be transferred to the output.
 
@@ -167,14 +172,14 @@ The output of this query is intended to be:
 Install by npm.
 
 ```bash
-npm install git+ssh://git@github.com/D2KLab/jsonld-transformer
+npm install git+ssh://git@github.com/D2KLab/sparql-transformer
 ```
 Use in your JS application (node or browser).
 
 ```js
-import jsonldTransformer from 'jsonld-transformer';
+import sparqlTransformer from 'sparql-transformer';
 
-jsonldTransformer(query, options)
+sparqlTransformer(query, options)
   .then(res => console.log(res))
   .catch(err => console.error(err););
 

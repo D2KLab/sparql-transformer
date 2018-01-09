@@ -5,8 +5,8 @@
     "@id": "?id",
     "name": "$foaf:name$required",
     "image": "$foaf:depiction",
-    "birthDate": "$schema:birthDate",
-    "deathDate": "$schema:deathDate"
+    "birthDate": "$schema:birthDate$sample",
+    "deathDate": "$schema:deathDate$sample"
   }],
   "$where": [
     "?id a ecrm:E21_Person",
