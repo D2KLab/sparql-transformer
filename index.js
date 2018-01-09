@@ -66,27 +66,30 @@ function xsd(resource) {
  * Prepare the output managing languages and datatypes
  */
 function toJsonldValue(input, options) {
-  let [value, datatype] = input;
+  let {
+    value,
+    datatype
+  } = input;
   switch (datatype) {
-    case XSD('boolean'):
+    case xsd('boolean'):
       return value != 'false' && value != 0; // jshint ignore:line
-    case XSD('integer'):
-    case XSD('nonPositiveInteger'):
-    case XSD('negativeInteger'):
-    case XSD('nonNegativeInteger'):
-    case XSD('xs:positiveInteger'):
-    case XSD('long'):
-    case XSD('int'):
-    case XSD('short'):
-    case XSD('byte'):
-    case XSD('unsignedLong'):
-    case XSD('unsignedInt'):
-    case XSD('unsignedShort'):
-    case XSD('unsignedByte'):
+    case xsd('integer'):
+    case xsd('nonPositiveInteger'):
+    case xsd('negativeInteger'):
+    case xsd('nonNegativeInteger'):
+    case xsd('xs:positiveInteger'):
+    case xsd('long'):
+    case xsd('int'):
+    case xsd('short'):
+    case xsd('byte'):
+    case xsd('unsignedLong'):
+    case xsd('unsignedInt'):
+    case xsd('unsignedShort'):
+    case xsd('unsignedByte'):
       return parseInt(value);
-    case XSD('decimal'):
-    case XSD('float'):
-    case XSD('double'):
+    case xsd('decimal'):
+    case xsd('float'):
+    case xsd('double'):
       value = value.replace('INF', 'Infinity');
       return parseFloat(value);
   }
@@ -184,7 +187,11 @@ export default function schemaConv(input, options = {}) {
   });
 }
 
-export function jsonld2query(input) {
+/**
+ * Read the input and extract the query and the
+ * prototype
+ */
+function jsonld2query(input) {
   var proto = input['@graph'] || input.proto;
   if (Array.isArray(proto)) proto = proto[0];
 
@@ -198,27 +205,38 @@ export function jsonld2query(input) {
       delete input[k];
     });
 
-  var vars = ['?id'];
-  var wheres = Object.keys(proto)
-    .filter(k => proto[k].startsWith('$'))
-    .map((k, i) => {
-      let v = proto[k].substring(1);
-      let options = [];
+  var vars = [];
+  var orderby = [];
+  var wheres = asArray(modifiers.$where);
 
+  // $-something values
+  Object.keys(proto)
+    .filter(k => proto[k].match('[?$].+'))
+    .forEach((k, i) => {
+      let v = proto[k];
+      let is$ = v.startsWith('$');
+      if (is$) v = v.substring(1);
+
+      let options = [];
       if (v.includes('$'))
         [v, ...options] = v.split('$');
 
       let required = options.includes('required');
-      let id = '?v' + i;
+
+      let id = is$ ? '?v' + i : v;
       proto[k] = id;
 
-      let q = `?id ${v} ${id}`;
       let _var = options.includes('sample') ?
         `SAMPLE(${id}) AS ${id}` : id;
       vars.push(_var);
-      return required ? q : `OPTIONAL { ${q} }`;
-    })
-    .concat(asArray(modifiers.$where));
+      let _order = options.find(o => o.match('order.+'));
+      if (_order) orderby.push(parseOrder(_order, id));
+
+      if (is$) {
+        let q = `?id ${v} ${id}`;
+        wheres.push(required ? q : `OPTIONAL { ${q} }`);
+      }
+    });
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
   var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
@@ -229,6 +247,7 @@ export function jsonld2query(input) {
   WHERE {
     ${wheres.join('.\n')}
   }
+  ${prepareOrderby(orderby)}
   ${limit}
   `;
 
@@ -239,6 +258,33 @@ export function jsonld2query(input) {
   };
 }
 
+
+function prepareOrderby(array = []) {
+  if (!array.length) return '';
+  return 'ORDER BY ' +
+    array.sort((a, b) => b.priority - a.priority)
+    .map(s => s.desc ? `DESC(${s.variable})` : s.variable)
+    .join(',');
+}
+
+function parseOrder(str, variable) {
+  let ord = {
+    variable
+  };
+  let s = str.split(':');
+
+  s.shift(); // first one is always 'order'
+
+  if (s.includes('desc')) {
+    ord.desc = true;
+    s.splice(s.indexOf('desc'), 1);
+  }
+
+  let priority = s[0] && parseInt(s[0]);
+  if (priority) ord.priority = priority;
+
+  return ord;
+}
 
 function asArray(v) {
   if (!v) return [];

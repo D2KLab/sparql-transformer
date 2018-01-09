@@ -143,12 +143,15 @@ Here the examples in the 2 formats for the query of cities.
 
 The `@graph`/`proto` property contains the prototype of the result as I expect it. When the value should be taken from the query result, I declare it using the following syntax:
 
-    $<SPARQL PREDICATE>[$required][$sample]
+    $<SPARQL PREDICATE>[$modifier[:option...]...]
 
-The subject of the predicate is always `?id`, while the object is automatically assigned. Some modifiers can be present after, separated by the `$` sign:
-- `$required`:  when omitted, the clause is wrapped by `OPTIONAL { ... }`.
-- `$sample`: extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT
+The subject of the predicate is always `?id`, while the object is automatically assigned. Some modifiers can be present after, separated by the `$` sign. The `:` prepend the options for a given modifier.
 
+|MODIFIER|OPTIONS|NOTE|
+|---|---|---|
+|`$required`|n/a| When omitted, the clause is wrapped by `OPTIONAL { ... }`.|
+|`$sample`|n/a|extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
+|`$order`|`:priority`[int] `:desc`| Order the results by that property. The presence of `:desc` set descendent orderby. In case of order by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$order`, `$order:3`, `$order:1:desc`|
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 
 The `$`-something root properties allow to make the query more specific. They will be not present in the output, being used only at query level.
