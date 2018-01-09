@@ -31,9 +31,12 @@ function defaultSparql(endpoint) {
 
 function parsePrefixes(prefixes) {
   return Object.keys(prefixes)
-  .map(p=> `PREFIX ${p}: <${prefixes[p]}>`);
+    .map(p => `PREFIX ${p}: <${prefixes[p]}>`);
 }
 
+/**
+ * Apply the prototype to a single line of query results
+ */
 function sparql2proto(line, proto, options) {
   let instance = Object.assign({}, proto);
   let lineKeys = Object.keys(line);
@@ -53,8 +56,40 @@ function sparql2proto(line, proto, options) {
   return instance;
 }
 
+const XSD = 'http://www.w3.org/2001/XMLSchema#';
+
+function xsd(resource) {
+  return XSD + resource;
+}
+/**
+ * Prepare the output managing languages and datatypes
+ */
 function toJsonldValue(input, options) {
-  let value = input.value;
+  let [value, datatype] = input;
+  switch (datatype) {
+    case XSD('boolean'):
+      return value != 'false' && value != 0; // jshint ignore:line
+    case XSD('integer'):
+    case XSD('nonPositiveInteger'):
+    case XSD('negativeInteger'):
+    case XSD('nonNegativeInteger'):
+    case XSD('xs:positiveInteger'):
+    case XSD('long'):
+    case XSD('int'):
+    case XSD('short'):
+    case XSD('byte'):
+    case XSD('unsignedLong'):
+    case XSD('unsignedInt'):
+    case XSD('unsignedShort'):
+    case XSD('unsignedByte'):
+      return parseInt(value);
+    case XSD('decimal'):
+    case XSD('float'):
+    case XSD('double'):
+      value = value.replace('INF', 'Infinity');
+      return parseFloat(value);
+  }
+
   let lang = input['xml:lang'];
 
   let voc = options.voc;
