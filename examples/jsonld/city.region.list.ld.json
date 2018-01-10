@@ -1,0 +1,1705 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Vibo_Valentia",
+      "name": {
+        "@language": "it",
+        "@value": "Vibo Valentia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vibo_panorama.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Calabria",
+        "name": {
+          "@language": "it",
+          "@value": "Calabria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Crotone",
+      "name": {
+        "@language": "it",
+        "@value": "Crotone"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Crotone_Lungomare.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Calabria",
+        "name": {
+          "@language": "it",
+          "@value": "Calabria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Caivano",
+      "name": {
+        "@language": "it",
+        "@value": "Caivano"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Caiazzo",
+      "name": {
+        "@language": "it",
+        "@value": "Caiazzo"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Caiazzo_panorama.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Benevento",
+      "name": {
+        "@language": "it",
+        "@value": "Benevento"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Benevento.svg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Capua",
+      "name": {
+        "@language": "it",
+        "@value": "Capua"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Capua_(ponte).jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Pompei",
+      "name": {
+        "@language": "it",
+        "@value": "Pompei"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Campanile_Pompei_08_-_Vs_Vesuvio.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Salerno",
+      "name": {
+        "@language": "it",
+        "@value": "Salerno"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SalernoCanalone.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Terni",
+      "name": {
+        "@language": "it",
+        "@value": "Terni"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Terni_panorama_visto_da_sant_erasmo_di_cesi.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Umbria",
+        "name": {
+          "@language": "it",
+          "@value": "Umbria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Padua",
+      "name": {
+        "@language": "it",
+        "@value": "Padova"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Padua5.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Venice",
+      "name": {
+        "@language": "it",
+        "@value": "Venezia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Venezia.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Vicenza",
+      "name": {
+        "@language": "it",
+        "@value": "Vicenza"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Vicenza.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Bassano_del_Grappa",
+      "name": {
+        "@language": "it",
+        "@value": "Bassano del Grappa"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bassano_z01.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Acquapendente",
+      "name": {
+        "@language": "it",
+        "@value": "Acquapendente"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Acquapendente.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lazio",
+        "name": {
+          "@language": "it",
+          "@value": "Lazio"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Rieti",
+      "name": {
+        "@language": "it",
+        "@value": "Rieti"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/600px_Amaranto_e_Celeste.svg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lazio",
+        "name": {
+          "@language": "it",
+          "@value": "Lazio"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Anzio",
+      "name": {
+        "@language": "it",
+        "@value": "Anzio"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Anzio.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lazio",
+        "name": {
+          "@language": "it",
+          "@value": "Lazio"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Gaeta",
+      "name": {
+        "@language": "it",
+        "@value": "Gaeta"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GaetaSErasmoDaSFrancesco_Wiki.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lazio",
+        "name": {
+          "@language": "it",
+          "@value": "Lazio"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Novi_Ligure",
+      "name": {
+        "@language": "it",
+        "@value": "Novi Ligure"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Montaggio.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Piedmont",
+        "name": {
+          "@language": "it",
+          "@value": "Piemonte"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Acqui_Terme",
+      "name": {
+        "@language": "it",
+        "@value": "Acqui Terme"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Acqui_Terme_–_La_Bollente.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Piedmont",
+        "name": {
+          "@language": "it",
+          "@value": "Piemonte"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Asti",
+      "name": {
+        "@language": "it",
+        "@value": "Asti"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Asti_Panoramica_3_1.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Piedmont",
+        "name": {
+          "@language": "it",
+          "@value": "Piemonte"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Alessandria",
+      "name": {
+        "@language": "it",
+        "@value": "Alessandria"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Alessandria_piazzaduomo.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Piedmont",
+        "name": {
+          "@language": "it",
+          "@value": "Piemonte"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Avola",
+      "name": {
+        "@language": "it",
+        "@value": "Avola"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Syracuse,_Sicily",
+      "name": {
+        "@language": "it",
+        "@value": "Siracusa"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SIRACUSA_VISTA_DALLAEREO_CON_LETNA_SULLO_SFONDO.FOTO_Di_Angelo.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Ciminna",
+      "name": {
+        "@language": "it",
+        "@value": "Ciminna"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ciminna-Stemma.gif",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Modica",
+      "name": {
+        "@language": "it",
+        "@value": "Modica"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Modica_view.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Scicli",
+      "name": {
+        "@language": "it",
+        "@value": "Scicli"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Scicli-StBartelemy.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cefalù",
+      "name": {
+        "@language": "it",
+        "@value": "Cefalù"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cefalu-bjs2007-01.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Agrigento",
+      "name": {
+        "@language": "it",
+        "@value": "Agrigento"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Historic_centre_of_Agrigento_seen_from_the_Valle_dei_Templi_-_Italy_2015_(2).JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Gibellina",
+      "name": {
+        "@language": "it",
+        "@value": "Gibellina"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama_di_Gibellina_Nuova.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Palermo",
+      "name": {
+        "@language": "it",
+        "@value": "Palermo"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Montage_of_Palermo.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Trapani",
+      "name": {
+        "@language": "it",
+        "@value": "Trapani"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trapani_from_erice.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sicily",
+        "name": {
+          "@language": "it",
+          "@value": "Sicilia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Orsara_di_Puglia",
+      "name": {
+        "@language": "it",
+        "@value": "Orsara di Puglia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Andria",
+      "name": {
+        "@language": "it",
+        "@value": "Andria"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Castel_del_Monte_Mai08.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Foggia",
+      "name": {
+        "@language": "it",
+        "@value": "Foggia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Villacomunalefoggia.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Lucera",
+      "name": {
+        "@language": "it",
+        "@value": "Lucera"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Map_of_comune_of_Lucera_(province_of_Foggia,_region_Apulia,_Italy).svg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Noci",
+      "name": {
+        "@language": "it",
+        "@value": "Noci (Italia)"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torre_orologio_Noci.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/San_Severo",
+      "name": {
+        "@language": "it",
+        "@value": "San Severo"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/San_Severo_Palazzo_di_città.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Bari",
+      "name": {
+        "@language": "it",
+        "@value": "Bari"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Bari.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Molfetta",
+      "name": {
+        "@language": "it",
+        "@value": "Molfetta"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Porto_di_Molfetta.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Taranto",
+      "name": {
+        "@language": "it",
+        "@value": "Taranto"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Castello_Aragonese(Taranto).JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Brindisi",
+      "name": {
+        "@language": "it",
+        "@value": "Brindisi"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Le_colonne_della_Via_Appia_a_Brindisi.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Lecce",
+      "name": {
+        "@language": "it",
+        "@value": "Lecce"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Lecce.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Potenza",
+      "name": {
+        "@language": "it",
+        "@value": "Potenza (Italia)"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Basilicata",
+        "name": {
+          "@language": "it",
+          "@value": "Basilicata"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Matera",
+      "name": {
+        "@language": "it",
+        "@value": "Matera"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cittadimatera1.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Basilicata",
+        "name": {
+          "@language": "it",
+          "@value": "Basilicata"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Campobasso",
+      "name": {
+        "@language": "it",
+        "@value": "Campobasso"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Campobasso_Campanile_S._Bartolomeo.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Molise",
+        "name": {
+          "@language": "it",
+          "@value": "Molise"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Nuoro",
+      "name": {
+        "@language": "it",
+        "@value": "Nuoro"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Statua_del_Redentore_monte_Ortobene-Nuoro-2.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sardinia",
+        "name": {
+          "@language": "it",
+          "@value": "Sardegna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Quartu_Sant'Elena",
+      "name": {
+        "@language": "it",
+        "@value": "Quartu Sant'Elena"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Basilica_Sant_Elena_Quartu.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sardinia",
+        "name": {
+          "@language": "it",
+          "@value": "Sardegna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Olbia",
+      "name": {
+        "@language": "it",
+        "@value": "Olbia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Olbia.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sardinia",
+        "name": {
+          "@language": "it",
+          "@value": "Sardegna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Sassari",
+      "name": {
+        "@language": "it",
+        "@value": "Sassari"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sassari,_historic_Old_Town.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Sardinia",
+        "name": {
+          "@language": "it",
+          "@value": "Sardegna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Lavagna",
+      "name": {
+        "@language": "it",
+        "@value": "Lavagna (Italia)"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lavagna_panorama.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Liguria",
+        "name": {
+          "@language": "it",
+          "@value": "Liguria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/La_Spezia",
+      "name": {
+        "@language": "it",
+        "@value": "La Spezia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La_Spezia_-_L'arsenale.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Liguria",
+        "name": {
+          "@language": "it",
+          "@value": "Liguria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Colico",
+      "name": {
+        "@language": "it",
+        "@value": "Colico"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Muggiò",
+      "name": {
+        "@language": "it",
+        "@value": "Muggiò"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cantù",
+      "name": {
+        "@language": "it",
+        "@value": "Cantù"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Piazza_garibaldi_cantù.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Gallarate",
+      "name": {
+        "@language": "it",
+        "@value": "Gallarate"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Santa_Maria_Assunta_Gallarate_1.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Tradate",
+      "name": {
+        "@language": "it",
+        "@value": "Tradate"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tradate-Stemma.png",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Como",
+      "name": {
+        "@language": "it",
+        "@value": "Como"
+      },
+      "image": "http://en.wikipedia.org/wiki/Special:FilePath/ComoNight.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Mantua",
+      "name": {
+        "@language": "it",
+        "@value": "Mantova"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mantova_Skyline.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Milan",
+      "name": {
+        "@language": "it",
+        "@value": "Milano"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Milan.svg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Monza",
+      "name": {
+        "@language": "it",
+        "@value": "Monza"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Monza.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Varese",
+      "name": {
+        "@language": "it",
+        "@value": "Varese"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Varese_Palazzo_Estense.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Bergamo",
+      "name": {
+        "@language": "it",
+        "@value": "Bergamo"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bergamo_collage.png",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cremona",
+      "name": {
+        "@language": "it",
+        "@value": "Cremona"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cremona_centro.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Parma",
+      "name": {
+        "@language": "it",
+        "@value": "Parma"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Parma_01.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Ferrara",
+      "name": {
+        "@language": "it",
+        "@value": "Ferrara"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Castello_esterno.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Modena",
+      "name": {
+        "@language": "it",
+        "@value": "Modena"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Modena.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Ravenna",
+      "name": {
+        "@language": "it",
+        "@value": "Ravenna"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ravenna_collage.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Rimini",
+      "name": {
+        "@language": "it",
+        "@value": "Rimini"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rimini_Montage.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cesena",
+      "name": {
+        "@language": "it",
+        "@value": "Cesena"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama_di_Cesena_e_le_sue_colline.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Aosta",
+      "name": {
+        "@language": "it",
+        "@value": "Aosta"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aosta.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Aosta_Valley",
+        "name": {
+          "@language": "it",
+          "@value": "Valle d'Aosta"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Aquileia",
+      "name": {
+        "@language": "it",
+        "@value": "Aquileia"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Basilica_Aquileia_110.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Friuli-Venezia_Giulia",
+        "name": {
+          "@language": "it",
+          "@value": "Friuli-Venezia Giulia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Trieste",
+      "name": {
+        "@language": "it",
+        "@value": "Trieste"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trieste_collage.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Friuli-Venezia_Giulia",
+        "name": {
+          "@language": "it",
+          "@value": "Friuli-Venezia Giulia"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Trento",
+      "name": {
+        "@language": "it",
+        "@value": "Trento"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panorama_di_trento.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Trentino-Alto_Adige/Südtirol",
+        "name": {
+          "@language": "it",
+          "@value": "Trentino-Alto Adige"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Bolzano",
+      "name": {
+        "@language": "it",
+        "@value": "Bolzano"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Panoramic_view_of_Bolzano.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Trentino-Alto_Adige/Südtirol",
+        "name": {
+          "@language": "it",
+          "@value": "Trentino-Alto Adige"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Siena",
+      "name": {
+        "@language": "it",
+        "@value": "Siena"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Florence",
+      "name": {
+        "@language": "it",
+        "@value": "Firenze"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Firenze.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Pisa",
+      "name": {
+        "@language": "it",
+        "@value": "Pisa"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pisa_-_veduta_dall'aereo_4.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Pontremoli",
+      "name": {
+        "@language": "it",
+        "@value": "Pontremoli"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PontremoliView.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Lucca",
+      "name": {
+        "@language": "it",
+        "@value": "Lucca"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/02_Lucca_seen_from_Torre_Guinigi.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Carrara",
+      "name": {
+        "@language": "it",
+        "@value": "Carrara"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Carrara.marble.quarries.in.italy.arp.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Catanzaro",
+      "name": {
+        "@language": "it",
+        "@value": "Catanzaro"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_-_Catanzaro.png",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Calabria",
+        "name": {
+          "@language": "it",
+          "@value": "Calabria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cosenza",
+      "name": {
+        "@language": "it",
+        "@value": "Cosenza"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cosenza2.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Calabria",
+        "name": {
+          "@language": "it",
+          "@value": "Calabria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Lamezia_Terme",
+      "name": {
+        "@language": "it",
+        "@value": "Lamezia Terme"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PanoramaLamezia.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Calabria",
+        "name": {
+          "@language": "it",
+          "@value": "Calabria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Torre_del_Greco",
+      "name": {
+        "@language": "it",
+        "@value": "Torre del Greco"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torre_del_greco_porto.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Afragola",
+      "name": {
+        "@language": "it",
+        "@value": "Afragola"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Municipio_Afragola.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Aversa",
+      "name": {
+        "@language": "it",
+        "@value": "Aversa"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Porta_Napoli_Aversa.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cava_de'_Tirreni",
+      "name": {
+        "@language": "it",
+        "@value": "Cava de' Tirreni"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cava.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Pozzuoli",
+      "name": {
+        "@language": "it",
+        "@value": "Pozzuoli"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pozzuoli.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Torre_Annunziata",
+      "name": {
+        "@language": "it",
+        "@value": "Torre Annunziata"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torre_Annunziata_-_view_from_the_port.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Giugliano_in_Campania",
+      "name": {
+        "@language": "it",
+        "@value": "Giugliano in Campania"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annunziata_Giugliano.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Orvieto",
+      "name": {
+        "@language": "it",
+        "@value": "Orvieto"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Orvieto_3.JPG",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Umbria",
+        "name": {
+          "@language": "it",
+          "@value": "Umbria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Spoleto",
+      "name": {
+        "@language": "it",
+        "@value": "Spoleto"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Rocca_Albornoz_and_Ponte_delle_Torri,_Spoleto.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Umbria",
+        "name": {
+          "@language": "it",
+          "@value": "Umbria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Città_di_Castello",
+      "name": {
+        "@language": "it",
+        "@value": "Città di Castello"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Città_di_Castello_Panorama.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Umbria",
+        "name": {
+          "@language": "it",
+          "@value": "Umbria"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Thiene",
+      "name": {
+        "@language": "it",
+        "@value": "Thiene"
+      },
+      "image": "http://en.wikipedia.org/wiki/Special:FilePath/Thiene_Castle.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Verona",
+      "name": {
+        "@language": "it",
+        "@value": "Verona"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Verona.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Vittorio_Veneto",
+      "name": {
+        "@language": "it",
+        "@value": "Vittorio Veneto"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vittorio_Veneto_da_Col_Visentin.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Treviso",
+      "name": {
+        "@language": "it",
+        "@value": "Treviso"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Piazza_dei_Signori_e_Palazzo_dei_Trecento.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Cittadella",
+      "name": {
+        "@language": "it",
+        "@value": "Cittadella (Italia)"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cittadella_Borgo_Vicenza.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/San_Donà_di_Piave",
+      "name": {
+        "@language": "it",
+        "@value": "San Donà di Piave"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Trentin.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    },
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Eraclea",
+      "name": {
+        "@language": "it",
+        "@value": "Eraclea"
+      },
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Laguna-22-giugno-2008_253.jpg",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "@id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
+    }
+  ]
+}

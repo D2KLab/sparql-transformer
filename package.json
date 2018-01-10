@@ -1,12 +1,13 @@
 {
-  "name": "jsonld-converter",
+  "name": "sparql-transformer",
   "version": "0.0.1",
-  "description": "Convert the SPARQL Endpoint output in JSON-LD",
+  "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
   "files": [
     "index.es5.js"
   ],
+  "repository": "https://github.com/D2KLab/sparql-transformer",
   "scripts": {
     "test": "DEBUG=jsonld-converter DEBUG_LEVEL=debug ava",
     "prepublishOnly": "babel index.js --out-file index.es5.js",
@@ -43,6 +44,7 @@
     "fast-deep-equal": "^1.0.0",
     "is-valid-path": "^0.1.1",
     "jsonfile": "^4.0.0",
+    "object-assign-deep": "^0.3.1",
     "virtuoso-sparql-client": "^0.1.5"
   }
 }

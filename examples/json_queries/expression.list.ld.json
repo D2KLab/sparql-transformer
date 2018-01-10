@@ -2,93 +2,18 @@
   "@context": "http://schema.org/",
   "@graph": [{
     "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/01176f28-f15b-34ad-8c22-efe668fbfbcb",
-    "name": "Concertos",
+    "genre": "$mus:U12_has_genre/skos:prefLabel$lang:en",
+    "@id": "?id",
+    "name": "$mus:U70_has_title|ecrm:P102_has_title$required",
     "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+      "@id": "?composer",
+      "name": "$foaf:name$required"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
     "dateCreated": "1763"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/e90501cc-25bd-3a21-887b-ad4e938e0c8f",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1760"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/dc27e45b-1f12-3161-b097-d84137e48ee5",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1760"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/e806ec19-6594-3d7f-a1dc-df8b0aa6b1ae",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1740"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/4e0be963-0365-3bd6-bc36-863fefc64355",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1756"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/19e06a31-b29e-3d1b-8466-4de36f04a55e",
-    "name": "Caprices",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/st",
-    "dateCreated": "1700"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/925ee18f-762a-324e-8196-65636d286dc6",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1762"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/a0553a55-ffdd-31da-be0d-532d909dca1b",
-    "name": ["Solos", "Sonates"],
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1700"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/69c2465d-351a-39f6-8070-4338c2917f04",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
-    },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1700"
-  }]
+  }],
+  "$where": [
+    "?expCreation efrbroo:R17_created ?id; ecrm:P9_consists_of / ecrm:P14_carried_out_by ?composer"
+  ],
+  "$filter": "?id = <http://data.doremus.org/expression/6787dd14-2e7f-392a-9076-c4b74d135711>",
+  "$limit": 10
 }

@@ -1,0 +1,19 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [{
+    "@type": "City",
+    "@id": "?id",
+    "name": "$rdfs:label$required$lang:it",
+    "image": "$foaf:depiction$required",
+    "containedInPlace":{
+      "@type": "AdministrativeArea",
+      "@id" : "$dbo:region$required",
+      "name": "$rdfs:label$lang:it"
+    }
+  }],
+  "$where": [
+    "?id a dbo:City",
+    "?id dbo:country dbr:Italy"
+  ],
+  "$limit": 100
+}

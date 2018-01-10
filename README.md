@@ -141,7 +141,7 @@ Here the examples in the 2 formats for the query of cities.
 }
 ```
 
-The syntax mostly composed by two parts.
+The syntax is composed by two main parts.
 
 ### The prototype
 
@@ -149,7 +149,10 @@ The `@graph`/`proto` property contains the prototype of the result as I expect i
 
     $<SPARQL PREDICATE>[$modifier[:option...]...]
 
-The subject of the predicate is always `?id`, while the object is automatically assigned. Some modifiers can be present after, separated by the `$` sign. The `:` prepend the options for a given modifier.
+The subject of the predicate is the variable (declared of automatically assigned) of the closer `@id`/`id` in the structure (if it exists, otherwise is the default `?id`).
+The object is manually (with the `$var` modifier) or automatically assigned.
+
+Some modifiers can be present after, separated by the `$` sign. The `:` prepend the options for a given modifier.
 
 |MODIFIER|OPTIONS|NOTE|
 |---|---|---|

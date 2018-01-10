@@ -1,94 +1,169 @@
 {
   "@context": "http://schema.org/",
-  "@graph": [{
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/01176f28-f15b-34ad-8c22-efe668fbfbcb",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+  "@graph": [
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "unknown form"
+      },
+      "@id": "http://data.doremus.org/expression/7cfaff16-6370-3f21-a144-95e9c0930810",
+      "name": {
+        "@language": "fr",
+        "@value": "La tempesta d'après Giorgione"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/f9be0f12-f30c-354b-9495-37062c53a992",
+        "name": "Hugues Dufourt"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1763"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/e90501cc-25bd-3a21-887b-ad4e938e0c8f",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "moving picture music"
+      },
+      "@id": "http://data.doremus.org/expression/71019baa-f3af-35f1-8fe5-3fc6f7d122db",
+      "name": {
+        "@language": "fr",
+        "@value": "Plein ciel malgache"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/206a6cfe-2d82-341d-9dbf-01fb63dda672",
+        "name": "Henri Sauguet"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1760"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/dc27e45b-1f12-3161-b097-d84137e48ee5",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "hymn"
+      },
+      "@id": "http://data.doremus.org/expression/12b2940b-6f53-3c8c-bc20-38b53a6e6dec",
+      "name": "Te Deum laudamus",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/13304b97-dd98-3e18-9ff3-c2563ac46481",
+        "name": "Francisco Guerrero"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1760"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/e806ec19-6594-3d7f-a1dc-df8b0aa6b1ae",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "unknown form"
+      },
+      "@id": "http://data.doremus.org/expression/09ccec2d-dea9-3a29-a429-0315f98b5bf6",
+      "name": {
+        "@language": "la",
+        "@value": "Signum magnum"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/815e3357-bec3-38b0-83c9-aa0510282902",
+        "name": "Kristjan Kõrver"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1740"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/4e0be963-0365-3bd6-bc36-863fefc64355",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "jazz"
+      },
+      "@id": "http://data.doremus.org/expression/3140f386-8ef3-3778-94cb-47319e26ba12",
+      "name": "I Surrender Dear",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/5e3e34ab-02e7-3e27-aa10-f5f489cd6762",
+        "name": "Gordon Clifford"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1756"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/19e06a31-b29e-3d1b-8466-4de36f04a55e",
-    "name": "Caprices",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "other form"
+      },
+      "@id": "http://data.doremus.org/expression/257f1c0e-cc98-317e-a336-7b5a576a004a",
+      "name": {
+        "@language": "de",
+        "@value": "Lieder ohne Worte"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/c02d29d9-0ab1-376e-a104-ae6184064092",
+        "name": "Felix Mendelssohn Bartholdy"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/st",
-    "dateCreated": "1700"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/925ee18f-762a-324e-8196-65636d286dc6",
-    "name": "Concertos",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "waltz"
+      },
+      "@id": "http://data.doremus.org/expression/c938d572-1439-3f7c-b403-87073529ffca",
+      "name": {
+        "@language": "pt",
+        "@value": "Amor perdido"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/975a91df-ef2b-3ac9-9dd1-4f5f95eec5a3",
+        "name": "Pattàpio Silva"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/co",
-    "dateCreated": "1762"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/a0553a55-ffdd-31da-be0d-532d909dca1b",
-    "name": ["Solos", "Sonates"],
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "ballet"
+      },
+      "@id": "http://data.doremus.org/expression/07add006-dea0-3c80-be58-2e3e175147a1",
+      "name": {
+        "@language": "fr",
+        "@value": "Le carnaval"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/4e21ae31-5390-3843-9236-078f8d4b8c30",
+        "name": "Jean-Baptiste Lully"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1700"
-  }, {
-    "@type": "MusicComposition",
-    "@id": "http://data.doremus.org/expression/69c2465d-351a-39f6-8070-4338c2917f04",
-    "name": "Sonates",
-    "composer": {
-      "@id": "http://data.doremus.org/artist/06373273-f08a-306b-b5ba-1b6e4d66d035",
-      "name": "Franz Benda"
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "suite"
+      },
+      "@id": "http://data.doremus.org/expression/d335d14d-db3f-3fe0-8769-3b4189066058",
+      "name": {
+        "@language": "hu",
+        "@value": "A fából faragott királyfi"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/23df9200-a2a7-3ba8-ab11-ec16bf781c41",
+        "name": "Béla Bartók"
+      },
+      "dateCreated": "1763"
     },
-    "genre": "http://data.doremus.org/vocabulary/iaml/genre/sn",
-    "dateCreated": "1700"
-  }]
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "quintet"
+      },
+      "@id": "http://data.doremus.org/expression/2bea1fe6-9c2c-3ad5-9ec3-2a79297754d9",
+      "name": {
+        "@language": "fr",
+        "@value": "Aquarium"
+      },
+      "composer": {
+        "@id": "http://data.doremus.org/artist/499c5737-529f-32a1-9284-7d99b73b1be3",
+        "name": "Camille Saint-Saëns"
+      },
+      "dateCreated": "1763"
+    }
+  ]
 }

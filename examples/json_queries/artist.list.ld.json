@@ -5,12 +5,16 @@
     "@id": "?id",
     "name": "$foaf:name$required",
     "image": "$foaf:depiction",
-    "birthDate": "$schema:birthDate$sample",
-    "deathDate": "$schema:deathDate$sample"
+    "birthDate": "$schema:birthDate",
+    "deathDate": "$schema:deathDate"
   }],
   "$where": [
     "?id a ecrm:E21_Person",
     "[] ecrm:P14_carried_out_by ?id"
   ],
+  "$prefix":{
+    "schema": "http://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/"
+  },
   "$limit": 10
 }

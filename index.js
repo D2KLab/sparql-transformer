@@ -4,6 +4,7 @@ import sparqlClient from 'virtuoso-sparql-client';
 import equal from 'fast-deep-equal';
 import isNode from 'detect-node';
 import jsonfile from 'jsonfile';
+import objectAssignDeep from 'object-assign-deep';
 
 const debug = debugModule('jsonld-converter');
 const DEFAULT_OPTIONS = {
@@ -39,22 +40,43 @@ function parsePrefixes(prefixes) {
  * Apply the prototype to a single line of query results
  */
 function sparql2proto(line, proto, options) {
-  let instance = Object.assign({}, proto);
-  let lineKeys = Object.keys(line);
+  let instance = objectAssignDeep({}, proto);
 
-  Object.keys(instance).forEach(k => {
+  let fiiFun = fitIn(instance, line, options);
+  Object.keys(instance).forEach(fiiFun);
+  return instance;
+}
+
+/**
+ * Apply the result of SPARQL to a single
+ * property of the proto instance
+ */
+function fitIn(instance, line, options) {
+  return function(k) {
     let variable = instance[k];
     // TODO if value is an obj
-    // not a variable, continue
+    if (typeof variable == 'object') {
+      let fiiFun = fitIn(variable, line, options);
+      Object.keys(variable).forEach(fiiFun);
+      if (isEmptyObject(variable)) delete instance[k];
+      return;
+    }
+
     if (!variable.startsWith('?')) return;
     variable = variable.substring(1);
+
     // variable not in result, delete from
-    if (!lineKeys.includes(variable))
+    if (!line[variable])
       delete instance[k];
     else
       instance[k] = toJsonldValue(line[variable], options);
-  });
-  return instance;
+
+    return instance;
+  };
+}
+
+function isEmptyObject(target) {
+  return !Object.getOwnPropertyNames(target).length;
 }
 
 const XSD = 'http://www.w3.org/2001/XMLSchema#';
@@ -112,7 +134,7 @@ function toJsonldValue(input, options) {
  * array the values in addition to the base object.
  * @return the base object merged.
  */
-function mergeObj(base, addition) {
+function mergeObj(base, addition, options) {
   Object.keys(addition).forEach(k => {
     let b = base[k],
       a = addition[k];
@@ -128,6 +150,10 @@ function mergeObj(base, addition) {
       return;
     }
     if (equal(a, b)) return;
+
+    let voc = options.voc;
+    if (a[voc.id] && a[voc.id] == b[voc.id]) //same ids
+      mergeObj(b, a, options);
     else base[k] = [b, a];
   });
 
@@ -136,7 +162,7 @@ function mergeObj(base, addition) {
 
 export default function schemaConv(input, options = {}) {
   if (isNode && isValidPath(input)) {
-    debug.verbose('loading input from %s', path);
+    debug.verbose('loading input from %s', input);
     input = jsonfile.readFileSync(input);
   }
 
@@ -174,7 +200,7 @@ export default function schemaConv(input, options = {}) {
         return inst;
       }
       // otherwise modify previous one
-      mergeObj(old, inst);
+      mergeObj(old, inst, opt);
       return old;
     }, {});
 
@@ -209,40 +235,8 @@ function jsonld2query(input) {
   var filters = asArray(modifiers.$filter);
   var wheres = asArray(modifiers.$where);
 
-  // $-something values
-  Object.keys(proto)
-    .filter(k => proto[k].match('[?$].+'))
-    .forEach((k, i) => {
-      let v = proto[k];
-      let is$ = v.startsWith('$');
-      if (is$) v = v.substring(1);
-
-      let options = [];
-      if (v.includes('$'))
-        [v, ...options] = v.split('$');
-
-      let required = options.includes('required');
-
-      let id = is$ ? '?v' + i : v;
-      let _id = options.find(o => o.match('var:.*'));
-      if (_id) {
-        id = _id.split(':')[1];
-        if (!id.startsWith('?')) id = '?' + id;
-      }
-      proto[k] = id;
-
-      let _var = options.includes('sample') ?
-        `SAMPLE(${id}) AS ${id}` : id;
-      vars.push(_var);
-
-      let _lang = options.find(o => o.match('lang:.*'));
-      if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
-
-      if (is$) {
-        let q = `?id ${v} ${id}`;
-        wheres.push(required ? q : `OPTIONAL { ${q} }`);
-      }
-    });
+  let mpkFun = manageProtoKey(proto, vars, filters, wheres);
+  Object.keys(proto).forEach(mpkFun);
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
   var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
@@ -267,6 +261,77 @@ function jsonld2query(input) {
   return {
     query,
     proto
+  };
+}
+
+function computeRootId(proto, prefix) {
+  let k = Object.keys(KEY_VOCABULARIES).find(k => !!proto[KEY_VOCABULARIES[k].id]);
+  if (!k) return;
+
+  k = KEY_VOCABULARIES[k].id;
+  let str = proto[k];
+  var [_rootId, ...modifiers] = str.split('$');
+
+  let _var = modifiers.find(m => m.match('var:.+'));
+  if (_var) {
+    _rootId = _var.split(':')[1];
+    if (!_rootId.startsWith['?']) _rootId = '?' + _rootId;
+  }
+
+  if (!_rootId) {
+    _rootId = "?" + prefix + "r";
+    proto[k] += '$var:' + _rootId;
+  }
+
+  proto[k] += '$prevRoot';
+  return _rootId;
+}
+
+/**
+ * Parse a single key in prototype
+ */
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], prefix = "v", prevRoot = null) {
+  var _rootId = computeRootId(proto, prefix) || prevRoot || '?id';
+
+  return function(k, i) {
+    let v = proto[k];
+
+    if (typeof v == 'object') {
+      let mpkFun = manageProtoKey(v, vars, filters, wheres, prefix + i, _rootId);
+      Object.keys(v).forEach(mpkFun);
+      return;
+    }
+
+    let is$ = v.startsWith('$');
+    if (!is$ && !v.startsWith('?')) return;
+    if (is$) v = v.substring(1);
+
+    let options = [];
+    if (v.includes('$'))
+      [v, ...options] = v.split('$');
+
+    let required = options.includes('required');
+
+    let id = is$ ? ('?' + prefix + i) : v;
+    let _id = options.find(o => o.match('var:.*'));
+    if (_id) {
+      id = _id.split(':')[1];
+      if (!id.startsWith('?')) id = '?' + id;
+    }
+    proto[k] = id;
+
+    let _var = options.includes('sample') ?
+      `SAMPLE(${id}) AS ${id}` : id;
+    vars.push(_var);
+
+    let _lang = options.find(o => o.match('lang:.*'));
+    if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
+
+    if (is$) {
+      let subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
+      let q = `${subject} ${v} ${id}`;
+      wheres.push(required ? q : `OPTIONAL { ${q} }`);
+    }
   };
 }
 
