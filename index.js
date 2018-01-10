@@ -208,7 +208,7 @@ function jsonld2query(input) {
   var vars = [];
   var orderby = [];
   var groupby = [];
-  var filters = [];
+  var filters = asArray(modifiers.$filter);
   var wheres = asArray(modifiers.$where);
 
   // $-something values
@@ -226,6 +226,11 @@ function jsonld2query(input) {
       let required = options.includes('required');
 
       let id = is$ ? '?v' + i : v;
+      let _id = options.find(o => o.match('var:.*'));
+      if (_id) {
+        id = _id.split(':')[1];
+        if(!id.startsWith('?')) id = '?' + id;
+      }
       proto[k] = id;
 
       let _var = options.includes('sample') ?
@@ -240,7 +245,6 @@ function jsonld2query(input) {
 
       let _lang = options.find(o => o.match('lang:.*'));
       if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
-
 
       if (is$) {
         let q = `?id ${v} ${id}`;
