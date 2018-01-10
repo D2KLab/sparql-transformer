@@ -206,8 +206,6 @@ function jsonld2query(input) {
     });
 
   var vars = [];
-  var orderby = [];
-  var groupby = [];
   var filters = asArray(modifiers.$filter);
   var wheres = asArray(modifiers.$where);
 
@@ -229,19 +227,13 @@ function jsonld2query(input) {
       let _id = options.find(o => o.match('var:.*'));
       if (_id) {
         id = _id.split(':')[1];
-        if(!id.startsWith('?')) id = '?' + id;
+        if (!id.startsWith('?')) id = '?' + id;
       }
       proto[k] = id;
 
       let _var = options.includes('sample') ?
         `SAMPLE(${id}) AS ${id}` : id;
       vars.push(_var);
-
-      let _order = options.find(o => o.match('order.*'));
-      if (_order) orderby.push(parseOrder(_order, id));
-
-      let _groupby = options.find(o => o.match('groupby.*'));
-      if (_groupby) groupby.push(parseOrder(_groupby, id));
 
       let _lang = options.find(o => o.match('lang:.*'));
       if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
@@ -255,6 +247,9 @@ function jsonld2query(input) {
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
   var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
   var prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
+  var orderby = modifiers.$orderby ? 'ORDER BY ' + asArray(modifiers.$orderby).join(' ') : '';
+  var groupby = modifiers.$groupby ? 'GROUP BY ' + asArray(modifiers.$groupby).join(' ') : '';
+  var having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
 
   var query = `${prefixes.join('\n')}
   SELECT ${distinct} ${vars.join(',')}
@@ -262,8 +257,9 @@ function jsonld2query(input) {
     ${wheres.join('.\n')}
     ${filters.map(f=>`FILTER(${f})`).join('\n')}
   }
-  ${prepareGroupby(groupby)}
-  ${prepareOrderby(orderby)}
+  ${groupby}
+  ${having}
+  ${orderby}
   ${limit}
   `;
 
