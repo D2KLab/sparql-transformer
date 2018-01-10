@@ -153,7 +153,7 @@ The subject of the predicate is always `?id`, while the object is automatically 
 |`$sample`|n/a|extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
 |`$order`|`:priority`[int] `:desc`| Apply an ORDER BY for the property. The presence of `:desc` set descendent order. In case of order by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$order`, `$order:3`, `$order:1:desc`|
 |`$groupby`|`:priority`[int] | Apply a GROUP BY for the property. In case of group by multiple variables, they are ordered by descendent priority (higher priorities first). <br> Ex. `$groupby`, `$groupby:3`|
-
+|`$lang`|`:lang`[string]| FILTER by language.<br>Ex. `$lang:it`, `$lang:en`|
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 

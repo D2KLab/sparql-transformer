@@ -208,6 +208,7 @@ function jsonld2query(input) {
   var vars = [];
   var orderby = [];
   var groupby = [];
+  var filters = [];
   var wheres = asArray(modifiers.$where);
 
   // $-something values
@@ -237,6 +238,10 @@ function jsonld2query(input) {
       let _groupby = options.find(o => o.match('groupby.*'));
       if (_groupby) groupby.push(parseOrder(_groupby, id));
 
+      let _lang = options.find(o => o.match('lang:.*'));
+      if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
+
+
       if (is$) {
         let q = `?id ${v} ${id}`;
         wheres.push(required ? q : `OPTIONAL { ${q} }`);
@@ -251,6 +256,7 @@ function jsonld2query(input) {
   SELECT ${distinct} ${vars.join(',')}
   WHERE {
     ${wheres.join('.\n')}
+    ${filters.map(f=>`FILTER(${f})`).join('\n')}
   }
   ${prepareGroupby(groupby)}
   ${prepareOrderby(orderby)}
