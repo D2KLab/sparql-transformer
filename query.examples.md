@@ -1,5 +1,5 @@
-Ex
-===================
+Examples of JSON queries
+========================
 
 ## Nested objects
 
