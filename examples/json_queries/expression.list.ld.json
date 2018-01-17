@@ -14,6 +14,5 @@
   "$where": [
     "?expCreation efrbroo:R17_created ?id; ecrm:P9_consists_of / ecrm:P14_carried_out_by ?composer"
   ],
-  "$filter": "?id = <http://data.doremus.org/expression/6787dd14-2e7f-392a-9076-c4b74d135711>",
   "$limit": 10
 }

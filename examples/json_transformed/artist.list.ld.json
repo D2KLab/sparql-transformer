@@ -1,0 +1,51 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+      "name": [
+        "Karl Friedrich Abel",
+        "Carl Friedrich Abel"
+      ],
+      "birthDate": "1723",
+      "deathDate": "1787"
+    },
+    {
+      "@type": "Person",
+      "@id": "http://data.doremus.org/artist/5500e650-4d41-31ab-b2ed-d93607613665",
+      "name": [
+        "Carl Philipp Emanuel Bach",
+        "Karl Philip Emanuel Bach",
+        "Carl Philipp Emmanuel Bach"
+      ],
+      "birthDate": "1714",
+      "deathDate": "1788"
+    },
+    {
+      "@type": "Person",
+      "@id": "http://data.doremus.org/artist/1fdf9de1-0697-3a3d-bb7c-0161488ce05b",
+      "name": "Pietro Antonio Locatelli",
+      "birthDate": "1695",
+      "deathDate": "1764"
+    },
+    {
+      "@type": "Person",
+      "@id": "http://data.doremus.org/artist/bcfefeca-ab42-3e86-9ffa-0b0176319b29",
+      "name": "Darius Milhaud",
+      "birthDate": "1892",
+      "deathDate": "1974"
+    },
+    {
+      "@type": "Person",
+      "@id": "http://data.doremus.org/artist/de78212d-a3af-3095-a8a8-fdaf1199b81a",
+      "name": [
+        "Sigismond Neukomm",
+        "Sigismund Ritter von Neukomm",
+        "Sigismund Neukomm"
+      ],
+      "birthDate": "1778",
+      "deathDate": "1858"
+    }
+  ]
+}

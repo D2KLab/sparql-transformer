@@ -1,0 +1,90 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "sonata"
+      },
+      "@id": "http://data.doremus.org/expression/5839281b-cb43-3cd1-a008-d6c372b997db",
+      "name": "Six easy sonattas",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+        "name": [
+          "Carl Friedrich Abel",
+          "Karl Friedrich Abel"
+        ]
+      },
+      "dateCreated": "1763"
+    },
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "sonata"
+      },
+      "@id": "http://data.doremus.org/expression/c52cec3a-0d77-33e6-bafc-6bb424e2f359",
+      "name": "6 sonates",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+        "name": [
+          "Carl Friedrich Abel",
+          "Karl Friedrich Abel"
+        ]
+      },
+      "dateCreated": "1763"
+    },
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "quartet"
+      },
+      "@id": "http://data.doremus.org/expression/8ab554c9-3ff9-3df1-91cc-92ec5c81aa5d",
+      "name": "6 quatuors",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+        "name": [
+          "Carl Friedrich Abel",
+          "Karl Friedrich Abel"
+        ]
+      },
+      "dateCreated": "1763"
+    },
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "concerto"
+      },
+      "@id": "http://data.doremus.org/expression/a0ccf335-0d94-37d6-ac1e-af592a784936",
+      "name": "6 concertos",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+        "name": [
+          "Carl Friedrich Abel",
+          "Karl Friedrich Abel"
+        ]
+      },
+      "dateCreated": "1763"
+    },
+    {
+      "@type": "MusicComposition",
+      "genre": {
+        "@language": "en",
+        "@value": "symphony"
+      },
+      "@id": "http://data.doremus.org/expression/0da99326-b3a8-346d-83ee-a9772fba26ed",
+      "name": "6 symphonies",
+      "composer": {
+        "@id": "http://data.doremus.org/artist/1cb4406b-a3e7-3d47-bc00-1e20c88bcfa2",
+        "name": [
+          "Carl Friedrich Abel",
+          "Karl Friedrich Abel"
+        ]
+      },
+      "dateCreated": "1763"
+    }
+  ]
+}
