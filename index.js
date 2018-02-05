@@ -36,6 +36,18 @@ function parsePrefixes(prefixes) {
     .map(p => `PREFIX ${p}: <${prefixes[p]}>`);
 }
 
+function parseValues(values) {
+  return Object.keys(values)
+    .map(p => {
+      let _v = asArray(values[p]).map(v => {
+        if (v.startsWith('http')) return `<${v}>`;
+        if (v.includes(':')) return v;
+        return `"${v}"`;
+      });
+      return `VALUES ${sparqlVar(p)} {${_v.join(' ')}}`;
+    });
+}
+
 /**
  * Apply the prototype to a single line of query results
  */
@@ -241,6 +253,7 @@ function jsonld2query(input) {
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
   var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
   var prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
+  var values = modifiers.$values ? parseValues(modifiers.$values) : [];
   var orderby = modifiers.$orderby ? 'ORDER BY ' + asArray(modifiers.$orderby).join(' ') : '';
   var groupby = modifiers.$groupby ? 'GROUP BY ' + asArray(modifiers.$groupby).join(' ') : '';
   var having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
@@ -248,6 +261,7 @@ function jsonld2query(input) {
   var query = `${prefixes.join('\n')}
   SELECT ${distinct} ${vars.join(',')}
   WHERE {
+    ${values.join('\n')}
     ${wheres.join('.\n')}
     ${filters.map(f=>`FILTER(${f})`).join('\n')}
   }
@@ -274,8 +288,7 @@ function computeRootId(proto, prefix) {
 
   let _var = modifiers.find(m => m.match('var:.+'));
   if (_var) {
-    _rootId = _var.split(':')[1];
-    if (!_rootId.startsWith['?']) _rootId = '?' + _rootId;
+    _rootId = sparqlVar(_var.split(':')[1]);
   }
 
   if (!_rootId) {
@@ -285,6 +298,15 @@ function computeRootId(proto, prefix) {
 
   proto[k] += '$prevRoot';
   return _rootId;
+}
+
+/**
+ * Add the "?" if absent
+ */
+function sparqlVar(input) {
+  'use strict';
+  if (input.startsWith['?']) return input;
+  return '?' + input;
 }
 
 /**
