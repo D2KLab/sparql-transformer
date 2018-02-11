@@ -45,6 +45,6 @@
     "is-valid-path": "^0.1.1",
     "jsonfile": "^4.0.0",
     "object-assign-deep": "^0.3.1",
-    "virtuoso-sparql-client": "^0.1.5"
+    "virtuoso-sparql-client": "0.1.5"
   }
 }
