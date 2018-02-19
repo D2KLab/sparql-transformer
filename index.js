@@ -1,12 +1,12 @@
 import isValidPath from 'is-valid-path';
-import debugModule from 'debug-levels';
 import sparqlClient from 'virtuoso-sparql-client';
 import equal from 'fast-deep-equal';
 import isNode from 'detect-node';
 import jsonfile from 'jsonfile';
 import objectAssignDeep from 'object-assign-deep';
+import Debugger from './debugger';
 
-const debug = debugModule('jsonld-converter');
+const debug = new Debugger();
 const DEFAULT_OPTIONS = {
   context: 'http://schema.org/',
   endpoint: 'http://dbpedia.org/sparql'
@@ -172,7 +172,16 @@ function mergeObj(base, addition, options) {
   return base;
 }
 
-export default function schemaConv(input, options = {}) {
+export default function(input, options = {}) {
+  let opt = Object.assign({},
+    DEFAULT_OPTIONS, {
+      context: input['@context'],
+    }, options);
+
+  if (opt.debug) debug.level = 'debug';
+
+  debug.verbose('options:', JSON.stringify(opt, null, 2));
+
   if (isNode && isValidPath(input)) {
     debug.verbose('loading input from %s', input);
     input = jsonfile.readFileSync(input);
@@ -180,12 +189,6 @@ export default function schemaConv(input, options = {}) {
 
   if (typeof input != 'object')
     throw new Error(`Input format not valid`);
-
-  let opt = Object.assign({},
-    DEFAULT_OPTIONS, {
-      context: input['@context'],
-    }, options);
-  debug.debug('options:', JSON.stringify(opt, null, 2));
 
   let {
     proto,

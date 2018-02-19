@@ -215,6 +215,7 @@ The `options` parameter is optional, and can define the following:
 |context | http://schema.org/ | The value in `@context`. It overwrites the one in the query.|
 | sparqlFunction | `null` | A function receiving in input the transformed query in SPARQL, returning a Promise. If not specified, the module performs the query on its own<sup id="a1">[1](#f1)</sup> against the specified endpoint.  |
 | endpoint | http://dbpedia.org/sparql | Used only if `sparqlFunction` is not specified. |
+| debug | `false` | Enter in debug mode. This allow to print in console the generated SPARQL query. |
 
 
 See [`test.js`](./test.js) for further examples.
