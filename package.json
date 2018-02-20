@@ -1,6 +1,6 @@
 {
   "name": "sparql-transformer",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
@@ -44,6 +44,6 @@
     "jsonfile": "^4.0.0",
     "node-noop": "^1.0.0",
     "object-assign-deep": "^0.3.1",
-    "virtuoso-sparql-client": "0.1.5"
+    "virtuoso-sparql-client": "^0.1.8"
   }
 }
