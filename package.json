@@ -10,7 +10,7 @@
   "repository": "https://github.com/D2KLab/sparql-transformer",
   "scripts": {
     "test": " DEBUG_LEVEL=verbose ava",
-    "prepublishOnly": "babel index.js --out-file index.es5.js",
+    "prepublishOnly": "babel index.js --out-file index.es5.js && babel debugger.js --out-file debugger.es5.js",
     "postpublish": "rimraf index.es5.js && git push --follow-tags"
   },
   "keywords": [
@@ -33,6 +33,7 @@
     "babel-cli": "6.26.0",
     "babel-eslint": "^8.2.1",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-rename-import": "^2.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "6.26.0",
     "rimraf": "^2.6.2"

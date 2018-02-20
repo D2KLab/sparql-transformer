@@ -3,6 +3,9 @@
     "es2015"
   ],
   "plugins": [
-    "add-module-exports"
+    "add-module-exports", ["transform-rename-import", {
+      "original": "^(.{1,2})/(.+[^5])$",
+      "replacement": "$1/$2.es5"
+    }]
   ]
 }
