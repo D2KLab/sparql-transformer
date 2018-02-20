@@ -1,17 +1,17 @@
 {
   "name": "sparql-transformer",
-  "version": "1.1.1",
+  "version": "1.1.3",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
   "files": [
-    "index.es5.js"
+    "*.es5.js"
   ],
   "repository": "https://github.com/D2KLab/sparql-transformer",
   "scripts": {
     "test": " DEBUG_LEVEL=verbose ava",
     "prepublishOnly": "babel index.js --out-file index.es5.js && babel debugger.js --out-file debugger.es5.js",
-    "postpublish": "rimraf index.es5.js && git push --follow-tags"
+    "postpublish": "rimraf *.es5.js && git push --follow-tags"
   },
   "keywords": [
     "json-ld",
