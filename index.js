@@ -262,7 +262,7 @@ function jsonld2query(input) {
   var having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
 
   var query = `${prefixes.join('\n')}
-  SELECT ${distinct} ${vars.join(',')}
+  SELECT ${distinct} ${vars.join(' ')}
   WHERE {
     ${values.join('\n')}
     ${wheres.join('.\n')}

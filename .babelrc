@@ -3,9 +3,16 @@
     "es2015"
   ],
   "plugins": [
-    "add-module-exports", ["transform-rename-import", {
-      "original": "^(.{1,2})/(.+[^5])$",
-      "replacement": "$1/$2.es5"
-    }]
-  ]
+    "add-module-exports"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-rename-import", {
+          "original": "^(.{1,2})/(.+[^5])$",
+          "replacement": "$1/$2.es5"
+        }]
+      ]
+    }
+  }
 }
