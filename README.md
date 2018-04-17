@@ -3,7 +3,20 @@ SPARQL Transformer
 
 Write your SPARQL query directly in the JSON-LD you would like to have in output.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Motivation](#motivation)
+- [Query in JSON](#query-in-json)
+- [How to use](#how-to-use)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Motivation
+
+[Slides at the WebConf 2018.](https://goo.gl/s5FoDv)
 
 The output of SPARQL endpoints (i.e. [Virtuoso](https://virtuoso.openlinksw.com/)) is not so practical. It simply presents the results as an array of all possible sets of variables that satisfy the query.
 
@@ -186,12 +199,12 @@ The output of this query is intended to be:
 - for the plain JSON, an array of object with the shape of the prototype;
 - for the JSON-LD, an array of object with the shape of the prototype in the `@graph` property and with a sibling `@context`.
 
-## Usage
+## How to use
 
 Install by npm.
 
 ```bash
-npm install git+ssh://git@github.com/D2KLab/sparql-transformer
+npm install sparql-transformer
 ```
 Use in your JS application (node or browser).
 
@@ -219,5 +232,17 @@ The `options` parameter is optional, and can define the following:
 
 
 See [`test.js`](./test.js) for further examples.
+
+
+## Credits
+
+If you use this module for your research work, please cite:
+
+> Pasquale Lisena and Raphaël Troncy. Transforming the JSON Output of SPARQL Queries for Linked Data Clients. In WWW'18 Companion: The 2018 Web Conference Companion, April 23–27, 2018, Lyon, France.
+https://doi.org/10.1145/3184558.3188739
+
+[BIB file](./lisena2018sparqltransformer.bib)
+
+---
 
 <b id="f1">1</b>: Using [virtuoso-sparql-client](https://github.com/crs4/virtuoso-sparql-client).
