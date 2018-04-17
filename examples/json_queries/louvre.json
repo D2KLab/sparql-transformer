@@ -1,0 +1,17 @@
+{
+  "proto": {
+    "id" : "?work",
+    "name": "$rdfs:label$required",
+    "image": "$foaf:depiction$required",
+    "author" : {
+      "id" : "?author",
+      "name" : "$rdfs:label$sample"
+    }
+  },
+  "$where": [
+    "?work a dbo:Work",
+    "?work dbo:museum dbr:Louvre",
+    "?work dbo:author ?author"
+  ],
+  "$limit": 100
+}

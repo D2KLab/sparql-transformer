@@ -1,0 +1,524 @@
+[
+  {
+    "id": "http://dbpedia.org/resource/St._John_the_Baptist_(Leonardo)",
+    "name": [
+      {
+        "language": "ar",
+        "value": "يوحنا المعمدان (لوحة)"
+      },
+      {
+        "language": "en",
+        "value": "St. John the Baptist (Leonardo)"
+      },
+      {
+        "language": "de",
+        "value": "Johannes der Täufer (Leonardo da Vinci)"
+      },
+      {
+        "language": "es",
+        "value": "San Juan Bautista (Leonardo)"
+      },
+      {
+        "language": "fr",
+        "value": "Saint Jean-Baptiste (Léonard de Vinci)"
+      },
+      {
+        "language": "it",
+        "value": "San Giovanni Battista (Leonardo)"
+      },
+      {
+        "language": "nl",
+        "value": "Johannes de Doper (Leonardo da Vinci)"
+      },
+      {
+        "language": "pl",
+        "value": "Jan Chrzciciel (obraz Leonarda da Vinci)"
+      },
+      {
+        "language": "pt",
+        "value": "São João Batista (Leonardo da Vinci)"
+      },
+      {
+        "language": "ru",
+        "value": "Иоанн Креститель (Леонардо да Винчи)"
+      },
+      {
+        "language": "zh",
+        "value": "施洗者圣约翰 (达芬奇)"
+      }
+    ],
+    "image": "http://en.wikipedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Fishing_(Carracci)",
+    "name": {
+      "language": "en",
+      "value": "Fishing (Carracci)"
+    },
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale_Carracci_-_Fishing_-_WGA4414.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Combat_of_Love_and_Chastity",
+    "name": [
+      {
+        "language": "it",
+        "value": "Lotta tra Amore e Castità"
+      },
+      {
+        "language": "fr",
+        "value": "Le Combat de l'Amour et de la Chasteté"
+      },
+      {
+        "language": "nl",
+        "value": "Strijd tussen Liefde en Kuisheid"
+      },
+      {
+        "language": "en",
+        "value": "Combat of Love and Chastity"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Perugino,_lotta_tra_amore_e_castità_1.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Bonaparte_Visiting_the_Plague_Victims_of_Jaffa",
+    "name": [
+      {
+        "language": "fr",
+        "value": "Bonaparte visitant les pestiférés de Jaffa"
+      },
+      {
+        "language": "pl",
+        "value": "Napoleon odwiedza zadżumionych w Jaffie"
+      },
+      {
+        "language": "en",
+        "value": "Bonaparte Visiting the Plague Victims of Jaffa"
+      },
+      {
+        "language": "pt",
+        "value": "Bonaparte visitando as vítimas da peste de Jaffa"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Antoine-Jean_Gros_-_Bonaparte_visitant_les_pestiférés_de_Jaffa.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Le_Bénédicité",
+    "name": [
+      {
+        "language": "es",
+        "value": "El benedícite"
+      },
+      {
+        "language": "en",
+        "value": "Le Bénédicité"
+      }
+    ],
+    "image": "http://en.wikipedia.org/wiki/Special:FilePath/Jean-Baptiste_Siméon_Chardin_003.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Beggars",
+    "name": [
+      {
+        "language": "de",
+        "value": "Die Krüppel"
+      },
+      {
+        "language": "it",
+        "value": "Gli storpi"
+      },
+      {
+        "language": "fr",
+        "value": "Les Mendiants (Brueghel)"
+      },
+      {
+        "language": "nl",
+        "value": "De kreupelen"
+      },
+      {
+        "language": "pl",
+        "value": "Kalecy"
+      },
+      {
+        "language": "en",
+        "value": "The Beggars"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_the_Elder_-_The_Cripples.JPG"
+  },
+  {
+    "id": "http://dbpedia.org/resource/St._Michael_(Raphael)",
+    "name": [
+      {
+        "language": "es",
+        "value": "San Miguel (Rafael, 1501)"
+      },
+      {
+        "language": "it",
+        "value": "San Michele e il drago"
+      },
+      {
+        "language": "fr",
+        "value": "Saint Michel et le Dragon"
+      },
+      {
+        "language": "en",
+        "value": "St. Michael (Raphael)"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/St_Michael_Raphael.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Antinous_Mondragone",
+    "name": [
+      {
+        "language": "en",
+        "value": "Antinous Mondragone"
+      },
+      {
+        "language": "it",
+        "value": "Antinoo Mondragone"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Antinous_Mondragone_Louvre_Ma1205_n3.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Hunting_(Carracci)",
+    "name": {
+      "language": "en",
+      "value": "Hunting (Carracci)"
+    },
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Annibale_Carracci_-_Hunting_-_WGA04417.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Baronci_Altarpiece",
+    "name": [
+      {
+        "language": "de",
+        "value": "Pala vom seligen Nikolaus von Tolentino (Raffael)"
+      },
+      {
+        "language": "en",
+        "value": "Baronci Altarpiece"
+      },
+      {
+        "language": "fr",
+        "value": "Retable Baronci"
+      },
+      {
+        "language": "it",
+        "value": "Pala del beato Nicola da Tolentino"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Raffaello_Angelo_1_(frammento_pala_Baronci).jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/La_belle_jardinière",
+    "name": [
+      {
+        "language": "de",
+        "value": "Die schöne Gärtnerin"
+      },
+      {
+        "language": "es",
+        "value": "La bella Jardinera"
+      },
+      {
+        "language": "en",
+        "value": "La belle jardinière"
+      },
+      {
+        "language": "it",
+        "value": "Belle Jardinière"
+      },
+      {
+        "language": "fr",
+        "value": "La Belle Jardinière (Raphaël)"
+      },
+      {
+        "language": "pl",
+        "value": "Piękna Ogrodniczka"
+      },
+      {
+        "language": "ru",
+        "value": "Прекрасная садовница"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La-belle-jardiniere.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/St._Michael_Vanquishing_Satan",
+    "name": [
+      {
+        "language": "es",
+        "value": "San Miguel (Rafael, 1518)"
+      },
+      {
+        "language": "en",
+        "value": "St. Michael Vanquishing Satan"
+      },
+      {
+        "language": "it",
+        "value": "San Michele sconfigge Satana"
+      },
+      {
+        "language": "fr",
+        "value": "Saint Michel terrassant le démon"
+      },
+      {
+        "language": "pl",
+        "value": "Święty Michał pokonuje szatana"
+      }
+    ],
+    "image": "http://en.wikipedia.org/wiki/Special:FilePath/Le_Grand_Saint_Michel,_by_Raffaello_Sanzio,_from_C2RMF_retouched.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/St._George_(Raphael,_Louvre)",
+    "name": [
+      {
+        "language": "es",
+        "value": "San Jorge (Rafael)"
+      },
+      {
+        "language": "en",
+        "value": "St. George (Raphael, Louvre)"
+      },
+      {
+        "language": "it",
+        "value": "San Giorgio e il drago (Raffaello Parigi)"
+      },
+      {
+        "language": "fr",
+        "value": "Saint Georges et le Dragon (Raphaël, musée du Louvre)"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Raphael_-_Saint_George_Fighting_the_Dragon.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Ship_of_Fools_(painting)",
+    "name": [
+      {
+        "language": "en",
+        "value": "Ship of Fools (painting)"
+      },
+      {
+        "language": "es",
+        "value": "La nave de los locos"
+      },
+      {
+        "language": "fr",
+        "value": "La Nef des fous (Bosch)"
+      },
+      {
+        "language": "it",
+        "value": "Nave dei folli (Bosch)"
+      },
+      {
+        "language": "nl",
+        "value": "Het narrenschip (schilderij)"
+      },
+      {
+        "language": "pt",
+        "value": "Navio dos Loucos"
+      },
+      {
+        "language": "ru",
+        "value": "Корабль дураков (картина Босха)"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jheronimus_Bosch_011.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Ray_of_Light",
+    "name": {
+      "language": "en",
+      "value": "The Ray of Light"
+    },
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaaksz._van_Ruisdael_003.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/La_belle_ferronnière",
+    "name": [
+      {
+        "language": "ar",
+        "value": "حداد جميل (لوحة)"
+      },
+      {
+        "language": "en",
+        "value": "La belle ferronnière"
+      },
+      {
+        "language": "de",
+        "value": "La Belle Ferronnière"
+      },
+      {
+        "language": "es",
+        "value": "La Belle Ferronière"
+      },
+      {
+        "language": "fr",
+        "value": "La Belle Ferronnière"
+      },
+      {
+        "language": "it",
+        "value": "Belle Ferronnière"
+      },
+      {
+        "language": "ja",
+        "value": "ミラノの貴婦人の肖像"
+      },
+      {
+        "language": "pl",
+        "value": "La Belle Ferronière"
+      },
+      {
+        "language": "pt",
+        "value": "La Belle Ferronière"
+      },
+      {
+        "language": "ru",
+        "value": "Прекрасная Ферроньера"
+      },
+      {
+        "language": "zh",
+        "value": "美麗的費隆妮葉夫人"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_(attrib)-_la_Belle_Ferroniere.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Virgin_and_Child_with_St._Anne_(Leonardo)",
+    "name": [
+      {
+        "language": "ar",
+        "value": "العذراء والطفل مع القديسة آن (لوحة)"
+      },
+      {
+        "language": "en",
+        "value": "The Virgin and Child with St. Anne (Leonardo)"
+      },
+      {
+        "language": "de",
+        "value": "Anna selbdritt (Leonardo da Vinci)"
+      },
+      {
+        "language": "es",
+        "value": "La Virgen, el Niño Jesús y Santa Ana"
+      },
+      {
+        "language": "fr",
+        "value": "La Vierge, l'Enfant Jésus et sainte Anne"
+      },
+      {
+        "language": "it",
+        "value": "Sant'Anna, la Vergine e il Bambino con l'agnellino"
+      },
+      {
+        "language": "ja",
+        "value": "聖アンナと聖母子"
+      },
+      {
+        "language": "pl",
+        "value": "Święta Anna Samotrzecia (obraz Leonarda da Vinci)"
+      },
+      {
+        "language": "nl",
+        "value": "Maria met kind en Sint-Anna"
+      },
+      {
+        "language": "pt",
+        "value": "A Virgem e o Menino com Santa Ana"
+      },
+      {
+        "language": "ru",
+        "value": "Святая Анна с Мадонной и младенцем Христом"
+      },
+      {
+        "language": "zh",
+        "value": "圣母子与圣安妮"
+      }
+    ],
+    "image": "http://en.wikipedia.org/wiki/Special:FilePath/Leonardo_da_Vinci_-_Virgin_and_Child_with_St_Anne_C2RMF_retouched.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Clubfoot",
+    "name": [
+      {
+        "language": "es",
+        "value": "El pie varo"
+      },
+      {
+        "language": "it",
+        "value": "Storpio (Ribera)"
+      },
+      {
+        "language": "nl",
+        "value": "De jongen met de klompvoet"
+      },
+      {
+        "language": "en",
+        "value": "The Clubfoot"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/José_de_Ribera_017.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Doge_on_the_Bucintoro_near_the_Riva_di_Sant'Elena_(painting)",
+    "name": {
+      "language": "en",
+      "value": "The Doge on the Bucintoro near the Riva di Sant'Elena (painting)"
+    },
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Francesco_Guardi_-_The_Doge_on_the_Bucintoro_near_the_Riva_di_Sant'Elena_-_WGA10855.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Madonna_of_the_Rabbit",
+    "name": [
+      {
+        "language": "it",
+        "value": "Madonna del Coniglio"
+      },
+      {
+        "language": "fr",
+        "value": "La Vierge à l'Enfant avec sainte Catherine et un berger"
+      },
+      {
+        "language": "en",
+        "value": "The Madonna of the Rabbit"
+      }
+    ],
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tizian_018.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Village_Fête",
+    "name": {
+      "language": "en",
+      "value": "Village Fête"
+    },
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude_Lorrain_012.jpg"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Coronation_of_Napoleon",
+    "name": [
+      {
+        "language": "ar",
+        "value": "تتويج نابليون"
+      },
+      {
+        "language": "es",
+        "value": "La coronación de Napoleón"
+      },
+      {
+        "language": "fr",
+        "value": "Le Sacre de Napoléon"
+      },
+      {
+        "language": "it",
+        "value": "L'incoronazione di Napoleone"
+      },
+      {
+        "language": "ja",
+        "value": "ナポレオン一世の戴冠式と皇妃ジョゼフィーヌの戴冠"
+      }
+    ],
+    "image": "http://en.wikipedia.org/wiki/Special:FilePath/Jacques-Louis_David,_The_Coronation_of_Napoleon_edit.jpg"
+  }
+]
