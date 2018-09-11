@@ -249,11 +249,13 @@ function jsonld2query(input) {
   var vars = [];
   var filters = asArray(modifiers.$filter);
   var wheres = asArray(modifiers.$where);
+  var mainLang = modifiers.$lang;
 
-  let mpkFun = manageProtoKey(proto, vars, filters, wheres);
+  let mpkFun = manageProtoKey(proto, vars, filters, wheres, mainLang);
   Object.keys(proto).forEach(mpkFun);
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
+  var offset = modifiers.$offset ? 'OFFSET ' + modifiers.$offset : '';
   var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
   var prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
   var values = modifiers.$values ? parseValues(modifiers.$values) : [];
@@ -272,6 +274,7 @@ function jsonld2query(input) {
   ${having}
   ${orderby}
   ${limit}
+  ${offset}
   `;
 
   debug.debug(query);
@@ -315,14 +318,14 @@ function sparqlVar(input) {
 /**
  * Parse a single key in prototype
  */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], prefix = "v", prevRoot = null) {
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null) {
   var _rootId = computeRootId(proto, prefix) || prevRoot || '?id';
 
   return function(k, i) {
     let v = proto[k];
 
     if (typeof v == 'object') {
-      let mpkFun = manageProtoKey(v, vars, filters, wheres, prefix + i, _rootId);
+      let mpkFun = manageProtoKey(v, vars, filters, wheres, mainLang, prefix + i, _rootId);
       Object.keys(v).forEach(mpkFun);
       return;
     }
@@ -345,11 +348,20 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], prefix = "v
     }
     proto[k] = id;
 
-    let _var = options.includes('sample') ?
-      `SAMPLE(${id}) AS ${id}` : id;
+    let _bestlang = options.find(o => o.match('bestlang.*'));
+            console.log(_bestlang);
+
+    let _var = id;
+    if (options.includes('sample')) _var = `SAMPLE(${id}) AS ${id}`;
+    if (_bestlang) {
+      let lng = _bestlang.includes(":") ? _bestlang.split(':')[1] : mainLang;
+      if (!lng) throw new Error('bestlang require a language declared inline or in the root');
+
+      _var = `sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id}`;
+    }
     vars.push(_var);
 
-    let _lang = options.find(o => o.match('lang:.*'));
+    let _lang = options.find(o => o.match('^lang:.*'));
     if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
 
     if (is$) {

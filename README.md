@@ -172,6 +172,7 @@ Some modifiers can be present after, separated by the `$` sign. The `:` prepend 
 |`$required`|n/a| When omitted, the clause is wrapped by `OPTIONAL { ... }`.|
 |`$sample`|n/a|extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
 |`$lang`|`:lang`[string]| FILTER by language.<br>Ex. `$lang:it`, `$lang:en`|
+|`$bestlang`|`:acceptedLangs`[string, optional]| Choose the best match (using `BEST_LANGMATCH`) over the languages according to the list expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). This list can be appended after the `:` or expressed as `$lang` in the root.<br>Ex. `$bestlang`, `$bestlang:en;q=1, it;q=0.7 *;q=0.1`|
 |`$var`|`:var`[string]| Specify the variable that will be assigned in the query, so that it can be referred in the root properties (like `$filter`). If missing, a `$` is prepended. <br> Ex. `$var:myVariable`, `$var:?name`|
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
@@ -186,12 +187,14 @@ The supported properties are:
 |`$where`|string, array| Add where clause in the triple format.<br>Ex. `"$where": "?id a dbo:City"`|
 |`$values`|object| Set `VALUES` for specified variables as a map.<br>Ex. `"$values": {"?id": ["dbr:Bari", "http://dbpedia.org/resource/Bologna"]}`|
 |`$limit` |number| `LIMIT` the SPARQL results |
+|`$offset` |number| `OFFSET` applied to the SPARQL results |
 |`$distinct`|boolean (default `true`)| Set the `DISTINCT` in the select|
 |`$orderby`|string, array| Build an `ORDER BY` on the variables in the input.<br> Ex. `"$orderby":["DESC(?name)","?age"]`|
 |`$groupby`| string, array | Build an `ORDER BY` on the variables in the input. <br> Ex. `"$groupby":"?id"`|
 |`$having`| string, array | Allows to declare the content of `HAVING`. If it is an array, the items are concatenated by `&&`. |
 |`$filter`| string, array |Add the content as a `FILTER`.<br>`"$filter": "?myNum > 3"`|
 |`$prefixes`| object | set the prefixes in the format `"foaf": "http://xmlns.com/foaf/0.1/"`.|
+|`$lang`|`:acceptedLangs`[string]| The default language to use as `$bestlang` (see above), expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). <br>Ex. `$lang:en;q=1, it;q=0.7 *;q=0.1`|
 
 The `@context` property (for the JSON-LD version) will be transferred to the output.
 
