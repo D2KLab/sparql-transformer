@@ -349,7 +349,6 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     proto[k] = id;
 
     let _bestlang = options.find(o => o.match('bestlang.*'));
-            console.log(_bestlang);
 
     let _var = id;
     if (options.includes('sample')) _var = `SAMPLE(${id}) AS ${id}`;
