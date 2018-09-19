@@ -78,7 +78,7 @@ function fitIn(instance, line, options) {
     variable = variable.substring(1);
     let accept = null;
     if (variable.includes("$accept:"))
-      [variable, accept] = variable.split['$accept:'];
+      [variable, accept] = variable.split('$accept:');
 
     // variable not in result, delete from
     if (!line[variable])
@@ -95,7 +95,9 @@ function fitIn(instance, line, options) {
 }
 
 function isEmptyObject(target) {
-  return !Object.getOwnPropertyNames(target).length;
+  return !Object.getOwnPropertyNames(target)
+    .filter(p => p != '@type')
+    .length;
 }
 
 const XSD = 'http://www.w3.org/2001/XMLSchema#';
