@@ -303,7 +303,7 @@ function computeRootId(proto, prefix) {
   }
 
   proto[k] += '$prevRoot';
-  return _rootId;
+  return [_rootId, modifiers.includes('required')];
 }
 
 /**
@@ -319,14 +319,17 @@ function sparqlVar(input) {
  * Parse a single key in prototype
  */
 function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null) {
-  var _rootId = computeRootId(proto, prefix) || prevRoot || '?id';
+  var [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
 
   return function(k, i) {
     let v = proto[k];
 
     if (typeof v == 'object') {
-      let mpkFun = manageProtoKey(v, vars, filters, wheres, mainLang, prefix + i, _rootId);
+      let wheresInternal = [];
+      let mpkFun = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId);
       Object.keys(v).forEach(mpkFun);
+      wheresInternal = wheresInternal.join('.\n');
+      wheres.push(_blockRequired ? wheresInternal : `OPTIONAL { ${wheresInternal }}`);
       return;
     }
 
@@ -338,7 +341,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     if (v.includes('$'))
       [v, ...options] = v.split('$');
 
-    let required = options.includes('required');
+    let required = options.includes('required') || ['id', '@id'].includes(k);
 
     let id = is$ ? ('?' + prefix + i) : v;
     let _id = options.find(o => o.match('var:.*'));

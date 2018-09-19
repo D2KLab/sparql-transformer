@@ -6,13 +6,18 @@
     "name": "$foaf:name$required",
     "image": "$foaf:depiction",
     "birthDate": "$schema:birthDate",
-    "deathDate": "$schema:deathDate"
+    "deathDate": "$schema:deathDate",
+    "birthPlace": {
+      "@type": "Place",
+      "@id": "$dbpprop:birthPlace",
+      "name": "$rdfs:label"
+    }
   }],
   "$where": [
     "?id a ecrm:E21_Person",
     "[] ecrm:P14_carried_out_by ?id"
   ],
-  "$prefix":{
+  "$prefix": {
     "schema": "http://schema.org/",
     "foaf": "http://xmlns.com/foaf/0.1/"
   },
