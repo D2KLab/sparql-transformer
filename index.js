@@ -76,12 +76,19 @@ function fitIn(instance, line, options) {
 
     if (!variable.startsWith('?')) return;
     variable = variable.substring(1);
+    let accept = null;
+    if (variable.includes("$accept:"))
+      [variable, accept] = variable.split['$accept:'];
 
     // variable not in result, delete from
     if (!line[variable])
       delete instance[k];
     else
       instance[k] = toJsonldValue(line[variable], options);
+
+    // I can't accept 0 if I want a string
+    if (accept && typeof instance[k] != accept)
+      delete instance[k];
 
     return instance;
   };
@@ -194,6 +201,7 @@ export default function(input, options = {}) {
     proto,
     query
   } = jsonld2query(input);
+
   var isJsonLD = input['@graph'];
   var voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
   opt.voc = voc;
@@ -235,7 +243,6 @@ export default function(input, options = {}) {
 function jsonld2query(input) {
   var proto = input['@graph'] || input.proto;
   if (Array.isArray(proto)) proto = proto[0];
-
 
   // get all props starting with '$'
   var modifiers = {};
@@ -349,9 +356,9 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       id = _id.split(':')[1];
       if (!id.startsWith('?')) id = '?' + id;
     }
-    proto[k] = id;
-
     let _bestlang = options.find(o => o.match('bestlang.*'));
+    proto[k] = id + (_bestlang ? '$accept:string' : '');
+
 
     let _var = id;
     if (options.includes('sample')) _var = `SAMPLE(${id}) AS ${id}`;
