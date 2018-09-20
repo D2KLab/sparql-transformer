@@ -306,10 +306,10 @@ function computeRootId(proto, prefix) {
   let str = proto[k];
   var [_rootId, ...modifiers] = str.split('$');
 
+  let required = modifiers.includes('required');
+  if(_rootId) required = true;
   let _var = modifiers.find(m => m.match('var:.+'));
-  if (_var) {
-    _rootId = sparqlVar(_var.split(':')[1]);
-  }
+  if (_var) _rootId = sparqlVar(_var.split(':')[1]);
 
   if (!_rootId) {
     _rootId = "?" + prefix + "r";
@@ -317,7 +317,7 @@ function computeRootId(proto, prefix) {
   }
 
   proto[k] += '$prevRoot';
-  return [_rootId, modifiers.includes('required')];
+  return [_rootId, required];
 }
 
 /**
