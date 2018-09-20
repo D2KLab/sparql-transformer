@@ -265,7 +265,7 @@ function jsonld2query(input) {
   var wheres = asArray(modifiers.$where);
   var mainLang = modifiers.$lang;
 
-  let mpkFun = manageProtoKey(proto, vars, filters, wheres, mainLang);
+  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang);
   Object.keys(proto).forEach(mpkFun);
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
@@ -307,7 +307,7 @@ function computeRootId(proto, prefix) {
   var [_rootId, ...modifiers] = str.split('$');
 
   let required = modifiers.includes('required');
-  if(_rootId) required = true;
+  if (_rootId) required = true;
   let _var = modifiers.find(m => m.match('var:.+'));
   if (_var) _rootId = sparqlVar(_var.split(':')[1]);
 
@@ -334,16 +334,15 @@ function sparqlVar(input) {
  */
 function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null) {
   var [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
-
-  return function(k, i) {
+  return [function(k, i) {
     let v = proto[k];
 
     if (typeof v == 'object') {
       let wheresInternal = [];
-      let mpkFun = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId);
+      let [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId);
       Object.keys(v).forEach(mpkFun);
       wheresInternal = wheresInternal.join('.\n');
-      wheres.push(_blockRequired ? wheresInternal : `OPTIONAL { ${wheresInternal }}`);
+      wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal }}`);
       return;
     }
 
@@ -385,7 +384,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       let q = `${subject} ${v} ${id}`;
       wheres.push(required ? q : `OPTIONAL { ${q} }`);
     }
-  };
+  }, _blockRequired];
 }
 
 function prepareGroupby(array = []) {

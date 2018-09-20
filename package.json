@@ -1,6 +1,6 @@
 {
   "name": "sparql-transformer",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.es5.js",
   "jsnext:main": "index.js",
