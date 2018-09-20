@@ -84,11 +84,11 @@ function fitIn(instance, line, options) {
     if (!line[variable])
       delete instance[k];
     else
-      instance[k] = toJsonldValue(line[variable], options);
+      instance[k] = toJsonldValue(line[variable], Object.assign({
+        accept
+      }, options));
 
-    // I can't accept 0 if I want a string
-    if (accept && typeof instance[k] != accept)
-      delete instance[k];
+    if (instance[k] === null) delete instance[k];
 
     return instance;
   };
@@ -140,7 +140,12 @@ function toJsonldValue(input, options) {
 
   let lang = input['xml:lang'];
 
+  // I can't accept 0 if I want a string
+  if (options.accept && typeof value != options.accept)
+    return null;
+
   let voc = options.voc;
+
   if (lang) {
     let obj = {};
     obj[voc.lang] = lang;
