@@ -115,7 +115,8 @@ function toJsonldValue(input, options) {
   } = input;
   switch (datatype) {
     case xsd('boolean'):
-      return value != 'false' && value != 0; // jshint ignore:line
+      value = value != 'false' && value != 0; // jshint ignore:line
+      break;
     case xsd('integer'):
     case xsd('nonPositiveInteger'):
     case xsd('negativeInteger'):
@@ -129,20 +130,25 @@ function toJsonldValue(input, options) {
     case xsd('unsignedInt'):
     case xsd('unsignedShort'):
     case xsd('unsignedByte'):
-      return parseInt(value);
+      value = parseInt(value);
+      break;
     case xsd('decimal'):
     case xsd('float'):
     case xsd('double'):
       value = value.replace('INF', 'Infinity');
-      return parseFloat(value);
+      value = parseFloat(value);
+      break;
   }
-  // if here, it is a string or a date, that are not parsed
-
-  let lang = input['xml:lang'];
 
   // I can't accept 0 if I want a string
   if (options.accept && typeof value != options.accept)
     return null;
+
+  // nothing more to do for other types
+  if (typeof value != 'string') return value;
+
+  // if here, it is a string or a date, that are not parsed
+  let lang = input['xml:lang'];
 
   let voc = options.voc;
 
