@@ -223,22 +223,24 @@ export default function(input, options = {}) {
 
   return sparqlFun(query).then((sparqlRes) => {
     debug.verbose(sparqlRes);
+
     let bindings = sparqlRes.results.bindings;
     // apply the proto
     let instances = bindings.map(b => sparql2proto(b, proto, opt));
     // merge lines with the same id
     let content = [];
-    instances.reduce((old, inst) => {
+    instances.forEach(inst => {
       let id = inst[voc.id];
-      if (old[voc.id] != id) {
+      // search if we have already the same id
+      let match = content.find(x=> x[voc.id]===id);
+      if (!match) {
         // it is a new one
         content.push(inst);
-        return inst;
+        return;
       }
       // otherwise modify previous one
-      mergeObj(old, inst, opt);
-      return old;
-    }, {});
+      mergeObj(match, inst, opt);
+    });
 
     if (isJsonLD)
       return {
