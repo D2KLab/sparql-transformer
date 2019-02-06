@@ -28,7 +28,7 @@ test('DBpedia list of cities and regions (jsonld)', async t => {
   var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'city.region.list.ld.json', 'utf8'));
   var expected = JSON.parse(fs.readFileSync(OUTPUT + 'city.region.list.ld.json', 'utf8'));
   var out = await sparqlTransformer(q);
-  fs.writeFileSync('a.json', JSON.stringify(out, null, 2),'utf-8');
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2),'utf-8');
 
   t.deepEqual(out, expected);
 });

@@ -333,7 +333,7 @@ function computeRootId(proto, prefix) {
  */
 function sparqlVar(input) {
   'use strict';
-  if (input.startsWith['?']) return input;
+  if (input.startsWith('?')) return input;
   return '?' + input;
 }
 
