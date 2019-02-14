@@ -273,7 +273,7 @@ function jsonld2query(input) {
   var wheres = asArray(modifiers.$where);
   var mainLang = modifiers.$lang;
 
-  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang);
+  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang, null, null, modifiers.$values);
   Object.keys(proto).forEach(mpkFun);
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
@@ -340,14 +340,14 @@ function sparqlVar(input) {
 /**
  * Parse a single key in prototype
  */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null) {
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null, values = []) {
   var [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
   return [function(k, i) {
     let v = proto[k];
 
     if (typeof v == 'object') {
       let wheresInternal = [];
-      let [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId);
+      let [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId, values);
       Object.keys(v).forEach(mpkFun);
       wheresInternal = wheresInternal.join('.\n');
       wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal }}`);
@@ -362,7 +362,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     if (v.includes('$'))
       [v, ...options] = v.split('$');
 
-    let required = options.includes('required') || ['id', '@id'].includes(k);
+    let required = options.includes('required') || ['id', '@id'].includes(k) || Object.keys(values).includes(k);
 
     let id = is$ ? ('?' + prefix + i) : v;
     let _id = options.find(o => o.match('var:.*'));

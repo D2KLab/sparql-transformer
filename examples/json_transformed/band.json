@@ -1,0 +1,542 @@
+[
+  {
+    "id": "http://dbpedia.org/resource/Alice_in_Chains",
+    "label": [
+      {
+        "language": "en",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "ar",
+        "value": "\u0623\u0644\u064a\u0633 \u0625\u0646 \u062a\u0634\u0627\u064a\u0646\u0632"
+      },
+      {
+        "language": "de",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "es",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "fr",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "it",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "ja",
+        "value": "\u30a2\u30ea\u30b9\u30fb\u30a4\u30f3\u30fb\u30c1\u30a7\u30a4\u30f3\u30ba"
+      },
+      {
+        "language": "nl",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "pl",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "pt",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "ru",
+        "value": "Alice in Chains"
+      },
+      {
+        "language": "zh",
+        "value": "\u7231\u4e3d\u4e1d\u56da\u5f92"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Soundgarden",
+    "label": [
+      {
+        "language": "en",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "de",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "es",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "fr",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "it",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "ja",
+        "value": "\u30b5\u30a6\u30f3\u30c9\u30ac\u30fc\u30c7\u30f3"
+      },
+      {
+        "language": "nl",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "pl",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "pt",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "ru",
+        "value": "Soundgarden"
+      },
+      {
+        "language": "zh",
+        "value": "\u58f0\u97f3\u82b1\u56ed\u4e50\u961f"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/The_Neighbourhood",
+    "label": [
+      {
+        "language": "de",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "es",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "en",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "it",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "fr",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "nl",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "pl",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "pt",
+        "value": "The Neighbourhood"
+      },
+      {
+        "language": "ru",
+        "value": "The Neighbourhood"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Wolfgang_(band)",
+    "label": [
+      {
+        "language": "es",
+        "value": "Wolfgang (banda)"
+      },
+      {
+        "language": "en",
+        "value": "Wolfgang (band)"
+      },
+      {
+        "language": "pt",
+        "value": "Wolfgang (banda)"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Arrows_of_Love",
+    "label": {
+      "language": "en",
+      "value": "Arrows of Love"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)",
+    "label": [
+      {
+        "language": "de",
+        "value": "Attack! Attack! (walisische Band)"
+      },
+      {
+        "language": "es",
+        "value": "Attack! Attack!"
+      },
+      {
+        "language": "it",
+        "value": "Attack! Attack!"
+      },
+      {
+        "language": "fr",
+        "value": "Attack! Attack!"
+      },
+      {
+        "language": "en",
+        "value": "Attack! Attack! (Welsh band)"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Dead_Confederate",
+    "label": {
+      "language": "en",
+      "value": "Dead Confederate"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Elisium",
+    "label": [
+      {
+        "language": "ru",
+        "value": "\u042d\u043b\u0438\u0437\u0438\u0443\u043c (\u0433\u0440\u0443\u043f\u043f\u0430)"
+      },
+      {
+        "language": "en",
+        "value": "Elisium"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Junkyard_Choir",
+    "label": {
+      "language": "en",
+      "value": "Junkyard Choir"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Jale",
+    "label": {
+      "language": "en",
+      "value": "Jale"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/King_Snake_Roost",
+    "label": [
+      {
+        "language": "en",
+        "value": "King Snake Roost"
+      },
+      {
+        "language": "pt",
+        "value": "King Snake Roost"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Pagoda_(band)",
+    "label": [
+      {
+        "language": "de",
+        "value": "Pagoda"
+      },
+      {
+        "language": "en",
+        "value": "Pagoda (band)"
+      },
+      {
+        "language": "es",
+        "value": "Pagoda (banda)"
+      },
+      {
+        "language": "fr",
+        "value": "Pagoda"
+      },
+      {
+        "language": "it",
+        "value": "Pagoda (gruppo musicale)"
+      },
+      {
+        "language": "pl",
+        "value": "Pagoda (zesp\u00f3\u0142)"
+      },
+      {
+        "language": "ru",
+        "value": "Pagoda"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Pearl_Jam",
+    "label": [
+      {
+        "language": "en",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "ar",
+        "value": "\u0628\u064a\u0631\u0644 \u062c\u0627\u0645"
+      },
+      {
+        "language": "de",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "es",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "fr",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "it",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "ja",
+        "value": "\u30d1\u30fc\u30eb\u30fb\u30b8\u30e3\u30e0"
+      },
+      {
+        "language": "nl",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "pl",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "pt",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "ru",
+        "value": "Pearl Jam"
+      },
+      {
+        "language": "zh",
+        "value": "\u73cd\u73e0\u679c\u9171\u4e50\u961f"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Blind_Zero",
+    "label": [
+      {
+        "language": "de",
+        "value": "Blind Zero"
+      },
+      {
+        "language": "en",
+        "value": "Blind Zero"
+      },
+      {
+        "language": "fr",
+        "value": "Blind Zero"
+      },
+      {
+        "language": "pt",
+        "value": "Blind Zero"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Block_Out_(band)",
+    "label": [
+      {
+        "language": "en",
+        "value": "Block Out (band)"
+      },
+      {
+        "language": "pt",
+        "value": "Block Out"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Blood_Circus_(band)",
+    "label": [
+      {
+        "language": "es",
+        "value": "Blood Circus"
+      },
+      {
+        "language": "en",
+        "value": "Blood Circus (band)"
+      },
+      {
+        "language": "pt",
+        "value": "Blood Circus"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Cosmic_Psychos",
+    "label": [
+      {
+        "language": "en",
+        "value": "Cosmic Psychos"
+      },
+      {
+        "language": "es",
+        "value": "Cosmic Psychos"
+      },
+      {
+        "language": "fr",
+        "value": "Cosmic Psychos"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Mofa_Ha'arnavot_Shel_Dr._Kasper",
+    "label": {
+      "language": "en",
+      "value": "Mofa Ha'arnavot Shel Dr. Kasper"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Renegades_(band)",
+    "label": {
+      "language": "en",
+      "value": "Renegades (band)"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Skin_Yard",
+    "label": [
+      {
+        "language": "de",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "en",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "es",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "fr",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "it",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "ja",
+        "value": "\u30b9\u30ad\u30f3\u30fb\u30e4\u30fc\u30c9"
+      },
+      {
+        "language": "pl",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "pt",
+        "value": "Skin Yard"
+      },
+      {
+        "language": "ru",
+        "value": "Skin Yard"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Toadies",
+    "label": [
+      {
+        "language": "en",
+        "value": "Toadies"
+      },
+      {
+        "language": "es",
+        "value": "Toadies"
+      },
+      {
+        "language": "nl",
+        "value": "Toadies"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Napalm_Beach",
+    "label": {
+      "language": "en",
+      "value": "Napalm Beach"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Nutmeg_(band)",
+    "label": {
+      "language": "en",
+      "value": "Nutmeg (band)"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Green_Apple_Quick_Step",
+    "label": {
+      "language": "en",
+      "value": "Green Apple Quick Step"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Bundle_of_Hiss",
+    "label": [
+      {
+        "language": "en",
+        "value": "Bundle of Hiss"
+      },
+      {
+        "language": "pt",
+        "value": "Bundle of Hiss"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Flowerhead",
+    "label": {
+      "language": "en",
+      "value": "Flowerhead"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Collinz_Room",
+    "label": {
+      "language": "en",
+      "value": "Collinz Room"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  }
+]

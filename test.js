@@ -33,6 +33,15 @@ test('DBpedia list of cities and regions (jsonld)', async t => {
   t.deepEqual(out, expected);
 });
 
+test('DBpedia grunge bands', async t => {
+  var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'band.json', 'utf8'));
+  var expected = JSON.parse(fs.readFileSync(OUTPUT + 'band.json', 'utf8'));
+  var out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2),'utf-8');
+
+  t.deepEqual(out, expected);
+});
+
 // test('DOREMUS list of artists (jsonld)', async t => {
 //   var q = JSON.parse(fs.readFileSync(JSONLD_QUERIES + 'artist.list.ld.json', 'utf8'));
 //
