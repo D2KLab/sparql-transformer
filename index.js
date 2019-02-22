@@ -273,7 +273,7 @@ function jsonld2query(input) {
   var wheres = asArray(modifiers.$where);
   var mainLang = modifiers.$lang;
 
-  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang, null, null, modifiers.$values);
+  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang, undefined, undefined, modifiers.$values);
   Object.keys(proto).forEach(mpkFun);
 
   var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
@@ -340,7 +340,7 @@ function sparqlVar(input) {
 /**
  * Parse a single key in prototype
  */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = "v", prevRoot = null, values = []) {
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
   var [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
   return [function(k, i) {
     let v = proto[k];
@@ -375,12 +375,12 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 
 
     let _var = id;
-    if (options.includes('sample')) _var = `SAMPLE(${id}) AS ${id}`;
+    if (options.includes('sample')) _var = `(SAMPLE(${id}) AS ${id})`;
     if (_bestlang) {
       let lng = _bestlang.includes(":") ? _bestlang.split(':')[1] : mainLang;
       if (!lng) throw new Error('bestlang require a language declared inline or in the root');
 
-      _var = `sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id}`;
+      _var = `(sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id})`;
     }
     vars.push(_var);
 
