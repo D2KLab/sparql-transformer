@@ -385,11 +385,12 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     vars.push(_var);
 
     let _lang = options.find(o => o.match('^lang:.*'));
-    if (_lang) filters.push(`lang(${id}) = '${_lang.split(':')[1]}'`);
+    let _langfilter = '';
+    if (_lang) _langfilter = `.\nFILTER(lang(${id}) = '${_lang.split(':')[1]})'`;
 
     if (is$) {
       let subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
-      let q = `${subject} ${v} ${id}`;
+      let q = `${subject} ${v} ${id} ${_langfilter}`;
       wheres.push(required ? q : `OPTIONAL { ${q} }`);
     }
   }, _blockRequired];
