@@ -9,26 +9,58 @@ import Debugger from './debugger';
 const debug = new Debugger();
 const DEFAULT_OPTIONS = {
   context: 'http://schema.org/',
-  endpoint: 'http://dbpedia.org/sparql'
+  endpoint: 'http://dbpedia.org/sparql',
 };
 
 const KEY_VOCABULARIES = {
   JSONLD: {
     id: '@id',
     lang: '@language',
-    value: '@value'
+    value: '@value',
   },
   PROTO: {
     id: 'id',
     lang: 'language',
-    value: 'value'
-  }
+    value: 'value',
+  },
 };
 
 function defaultSparql(endpoint) {
-  let client = new sparqlClient.Client(endpoint);
-  client.setOptions("application/json");
+  const client = new sparqlClient.Client(endpoint);
+  client.setOptions('application/json');
   return q => client.query(q);
+}
+
+const XSD = 'http://www.w3.org/2001/XMLSchema#';
+
+function xsd(resource) {
+  return XSD + resource;
+}
+
+/*
+ * Return the value as an array
+ */
+function asArray(v) {
+  if (!v) return [];
+  if (!Array.isArray(v)) return [v];
+  return v;
+}
+
+/**
+ * Add the "?" if absent
+ */
+function sparqlVar(input) {
+  if (input.startsWith('?')) return input;
+  return `?${input}`;
+}
+
+/**
+ * An object with just the @type is considered empty
+ */
+function isEmptyObject(target) {
+  return !Object.getOwnPropertyNames(target)
+    .filter(p => p !== '@type')
+    .length;
 }
 
 function parsePrefixes(prefixes) {
@@ -38,84 +70,26 @@ function parsePrefixes(prefixes) {
 
 function parseValues(values) {
   return Object.keys(values)
-    .map(p => {
-      let _v = asArray(values[p]).map(v => {
+    .map((p) => {
+      const vals = asArray(values[p]).map((v) => {
         if (v.startsWith('http')) return `<${v}>`;
         if (v.includes(':')) return v;
         return `"${v}"`;
       });
-      return `VALUES ${sparqlVar(p)} {${_v.join(' ')}}`;
+      return `VALUES ${sparqlVar(p)} {${vals.join(' ')}}`;
     });
 }
 
 /**
- * Apply the prototype to a single line of query results
- */
-function sparql2proto(line, proto, options) {
-  let instance = objectAssignDeep({}, proto);
-
-  let fiiFun = fitIn(instance, line, options);
-  Object.keys(instance).forEach(fiiFun);
-  return instance;
-}
-
-/**
- * Apply the result of SPARQL to a single
- * property of the proto instance
- */
-function fitIn(instance, line, options) {
-  return function(k) {
-    let variable = instance[k];
-    // TODO if value is an obj
-    if (typeof variable == 'object') {
-      let fiiFun = fitIn(variable, line, options);
-      Object.keys(variable).forEach(fiiFun);
-      if (isEmptyObject(variable)) delete instance[k];
-      return;
-    }
-
-    if (!variable.startsWith('?')) return;
-    variable = variable.substring(1);
-    let accept = null;
-    if (variable.includes("$accept:"))
-      [variable, accept] = variable.split('$accept:');
-
-    // variable not in result, delete from
-    if (!line[variable])
-      delete instance[k];
-    else
-      instance[k] = toJsonldValue(line[variable], Object.assign({
-        accept
-      }, options));
-
-    if (instance[k] === null) delete instance[k];
-
-    return instance;
-  };
-}
-
-function isEmptyObject(target) {
-  return !Object.getOwnPropertyNames(target)
-    .filter(p => p != '@type')
-    .length;
-}
-
-const XSD = 'http://www.w3.org/2001/XMLSchema#';
-
-function xsd(resource) {
-  return XSD + resource;
-}
-/**
  * Prepare the output managing languages and datatypes
  */
 function toJsonldValue(input, options) {
-  let {
-    value,
-    datatype
-  } = input;
+  // eslint-disable-next-line prefer-const
+  let { value, datatype } = input;
   switch (datatype) {
     case xsd('boolean'):
-      value = value != 'false' && value != 0; // jshint ignore:line
+      // eslint-disable-next-line eqeqeq
+      value = value !== 'false' && value != 0;
       break;
     case xsd('integer'):
     case xsd('nonPositiveInteger'):
@@ -138,22 +112,25 @@ function toJsonldValue(input, options) {
       value = value.replace('INF', 'Infinity');
       value = parseFloat(value);
       break;
+    default:
+      // nothing to do
+      break;
   }
 
   // I can't accept 0 if I want a string
-  if (options.accept && typeof value != options.accept)
-    return null;
+  // eslint-disable-next-line valid-typeof
+  if (options.accept && typeof value !== options.accept) return null;
 
   // nothing more to do for other types
-  if (typeof value != 'string') return value;
+  if (typeof value !== 'string') return value;
 
   // if here, it is a string or a date, that are not parsed
-  let lang = input['xml:lang'];
+  const lang = input['xml:lang'];
 
-  let voc = options.voc;
+  const { voc } = options;
 
   if (lang) {
-    let obj = {};
+    const obj = {};
     obj[voc.lang] = lang;
     obj[voc.value] = value;
     return obj;
@@ -162,14 +139,61 @@ function toJsonldValue(input, options) {
 }
 
 /**
+ * Apply the result of SPARQL to a single
+ * property of the proto instance
+ */
+function fitIn(instance, line, options) {
+  return function fittingFunction(k) {
+    /* eslint-disable no-param-reassign */
+    let variable = instance[k];
+    // TODO if value is an obj
+    if (typeof variable === 'object') {
+      const fiiFun = fitIn(variable, line, options);
+      Object.keys(variable).forEach(fiiFun);
+      if (isEmptyObject(variable)) delete instance[k];
+      return null;
+    }
+
+    if (!variable.startsWith('?')) return null;
+    variable = variable.substring(1);
+    let accept = null;
+    if (variable.includes('$accept:')) [variable, accept] = variable.split('$accept:');
+
+    // variable not in result, delete from
+    if (!line[variable]) delete instance[k];
+    else {
+      instance[k] = toJsonldValue(line[variable], Object.assign({
+        accept,
+      }, options));
+    }
+
+    if (instance[k] === null) delete instance[k];
+
+    return instance;
+  };
+}
+
+/**
+ * Apply the prototype to a single line of query results
+ */
+function sparql2proto(line, proto, options) {
+  const instance = objectAssignDeep({}, proto);
+
+  const fiiFun = fitIn(instance, line, options);
+  Object.keys(instance).forEach(fiiFun);
+  return instance;
+}
+
+
+/**
  * Merge base and addition, by defining/adding in an
  * array the values in addition to the base object.
  * @return the base object merged.
  */
 function mergeObj(base, addition, options) {
-  Object.keys(addition).forEach(k => {
-    let b = base[k],
-      a = addition[k];
+  Object.keys(addition).forEach((k) => {
+    const b = base[k];
+    const a = addition[k];
 
     if (!b) {
       base[k] = a;
@@ -177,23 +201,163 @@ function mergeObj(base, addition, options) {
     }
 
     if (Array.isArray(b)) {
-      if (!b.find(x => equal(a, x)))
-        b.push(a);
+      if (!b.find(x => equal(a, x))) b.push(a);
       return;
     }
     if (equal(a, b)) return;
 
-    let voc = options.voc;
-    if (a[voc.id] && a[voc.id] == b[voc.id]) //same ids
+    const { voc } = options;
+    // eslint-disable-next-line eqeqeq
+    if (a[voc.id] && a[voc.id] == b[voc.id]) { // same ids
       mergeObj(b, a, options);
-    else base[k] = [b, a];
+    } else base[k] = [b, a];
   });
 
   return base;
 }
 
-export default function(input, options = {}) {
-  let opt = Object.assign({},
+
+function computeRootId(proto, prefix) {
+  let k = Object.keys(KEY_VOCABULARIES).find(key => !!proto[KEY_VOCABULARIES[key].id]);
+  if (!k) return null;
+
+  k = KEY_VOCABULARIES[k].id;
+  const str = proto[k];
+  // eslint-disable-next-line prefer-const
+  let [_rootId, ...modifiers] = str.split('$');
+
+  let required = modifiers.includes('required');
+  if (_rootId) required = true;
+  const aVar = modifiers.find(m => m.match('var:.+'));
+  if (aVar) _rootId = sparqlVar(aVar.split(':')[1]);
+
+  if (!_rootId) {
+    _rootId = `?${prefix}r`;
+    proto[k] += `$var:${_rootId}`;
+  }
+
+  proto[k] += '$prevRoot';
+  return [_rootId, required];
+}
+
+/**
+ * Parse a single key in prototype
+ */
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
+  const [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
+  return [function parsingFunc(k, i) {
+    let v = proto[k];
+
+    if (typeof v === 'object') {
+      let wheresInternal = [];
+      const [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal,
+        mainLang, prefix + i, _rootId, values);
+      Object.keys(v).forEach(mpkFun);
+      wheresInternal = wheresInternal.join('.\n');
+      wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal}}`);
+      return;
+    }
+
+    const is$ = v.startsWith('$');
+    if (!is$ && !v.startsWith('?')) return;
+    if (is$) v = v.substring(1);
+
+    let options = [];
+    if (v.includes('$')) [v, ...options] = v.split('$');
+
+    const required = options.includes('required') || ['id', '@id'].includes(k) || Object.keys(values).includes(k);
+
+    let id = is$ ? (`?${prefix}${i}`) : v;
+    const givenVar = options.find(o => o.match('var:.*'));
+    if (givenVar) {
+      [, id] = givenVar.split(':');
+      if (!id.startsWith('?')) id = `?${id}`;
+    }
+    const bestlang = options.find(o => o.match('bestlang.*'));
+    proto[k] = id + (bestlang ? '$accept:string' : '');
+
+
+    let aVar = id;
+    if (options.includes('sample')) aVar = `(SAMPLE(${id}) AS ${id})`;
+    if (bestlang) {
+      const lng = bestlang.includes(':') ? bestlang.split(':')[1] : mainLang;
+      if (!lng) throw new Error('bestlang require a language declared inline or in the root');
+
+      aVar = `(sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id})`;
+    }
+    vars.push(aVar);
+
+    const lang = options.find(o => o.match('^lang:.*'));
+    let langfilter = '';
+    if (lang) langfilter = `.\nFILTER(lang(${id}) = '${lang.split(':')[1]})'`;
+
+    if (is$) {
+      const subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
+      const q = `${subject} ${v} ${id} ${langfilter}`;
+      wheres.push(required ? q : `OPTIONAL { ${q} }`);
+    }
+  }, _blockRequired];
+}
+
+/**
+ * Read the input and extract the query and the
+ * prototype
+ */
+function jsonld2query(input) {
+  let proto = input['@graph'] || input.proto;
+  if (Array.isArray(proto)) [proto] = proto;
+
+  // get all props starting with '$'
+  const modifiers = {};
+  Object.keys(input)
+    .filter(k => k.startsWith('$'))
+    .forEach((k) => {
+      modifiers[k] = input[k];
+      delete input[k];
+    });
+
+  const vars = [];
+  const filters = asArray(modifiers.$filter);
+  const wheres = asArray(modifiers.$where);
+  const mainLang = modifiers.$lang;
+
+  const [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang,
+    undefined, undefined, modifiers.$values);
+  Object.keys(proto).forEach(mpkFun);
+
+  const limit = modifiers.$limit ? `LIMIT ${modifiers.$limit}` : '';
+  const offset = modifiers.$offset ? `OFFSET ${modifiers.$offset}` : '';
+  const distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
+  const prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
+  const values = modifiers.$values ? parseValues(modifiers.$values) : [];
+  const orderby = modifiers.$orderby ? `ORDER BY ${asArray(modifiers.$orderby).join(' ')}` : '';
+  const groupby = modifiers.$groupby ? `GROUP BY ${asArray(modifiers.$groupby).join(' ')}` : '';
+  const having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
+
+  const query = `${prefixes.join('\n')}
+  SELECT ${distinct} ${vars.join(' ')}
+  WHERE {
+    ${values.join('\n')}
+    ${wheres.join('.\n')}
+    ${filters.map(f => `FILTER(${f})`).join('\n')}
+  }
+  ${groupby}
+  ${having}
+  ${orderby}
+  ${limit}
+  ${offset}
+  `;
+
+  debug.debug(query);
+  return {
+    query,
+    proto,
+  };
+}
+
+
+export default function (input, options = {}) {
+  const opt = Object.assign({},
     DEFAULT_OPTIONS, {
       context: input['@context'],
     }, options);
@@ -207,32 +371,31 @@ export default function(input, options = {}) {
     input = jsonfile.readFileSync(input);
   }
 
-  if (typeof input != 'object')
-    throw new Error(`Input format not valid`);
+  if (typeof input !== 'object') throw new Error('Input format not valid');
 
-  let {
+  const {
     proto,
-    query
+    query,
   } = jsonld2query(input);
 
-  var isJsonLD = input['@graph'];
-  var voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
+  const isJsonLD = input['@graph'];
+  const voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
   opt.voc = voc;
 
-  let sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
+  const sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
 
   return sparqlFun(query).then((sparqlRes) => {
     debug.verbose(sparqlRes);
 
-    let bindings = sparqlRes.results.bindings;
+    const { bindings } = sparqlRes.results;
     // apply the proto
-    let instances = bindings.map(b => sparql2proto(b, proto, opt));
+    const instances = bindings.map(b => sparql2proto(b, proto, opt));
     // merge lines with the same id
-    let content = [];
-    instances.forEach(inst => {
-      let id = inst[voc.id];
+    const content = [];
+    instances.forEach((inst) => {
+      const id = inst[voc.id];
       // search if we have already the same id
-      let match = content.find(x=> x[voc.id]===id);
+      const match = content.find(x => x[voc.id] === id);
       if (!match) {
         // it is a new one
         content.push(inst);
@@ -242,194 +405,12 @@ export default function(input, options = {}) {
       mergeObj(match, inst, opt);
     });
 
-    if (isJsonLD)
+    if (isJsonLD) {
       return {
         '@context': opt.context,
-        '@graph': content
+        '@graph': content,
       };
+    }
     return content;
   });
-}
-
-/**
- * Read the input and extract the query and the
- * prototype
- */
-function jsonld2query(input) {
-  var proto = input['@graph'] || input.proto;
-  if (Array.isArray(proto)) proto = proto[0];
-
-  // get all props starting with '$'
-  var modifiers = {};
-  Object.keys(input)
-    .filter(k => k.startsWith('$'))
-    .forEach(k => {
-      modifiers[k] = input[k];
-      delete input[k];
-    });
-
-  var vars = [];
-  var filters = asArray(modifiers.$filter);
-  var wheres = asArray(modifiers.$where);
-  var mainLang = modifiers.$lang;
-
-  let [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang, undefined, undefined, modifiers.$values);
-  Object.keys(proto).forEach(mpkFun);
-
-  var limit = modifiers.$limit ? 'LIMIT ' + modifiers.$limit : '';
-  var offset = modifiers.$offset ? 'OFFSET ' + modifiers.$offset : '';
-  var distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
-  var prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
-  var values = modifiers.$values ? parseValues(modifiers.$values) : [];
-  var orderby = modifiers.$orderby ? 'ORDER BY ' + asArray(modifiers.$orderby).join(' ') : '';
-  var groupby = modifiers.$groupby ? 'GROUP BY ' + asArray(modifiers.$groupby).join(' ') : '';
-  var having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
-
-  var query = `${prefixes.join('\n')}
-  SELECT ${distinct} ${vars.join(' ')}
-  WHERE {
-    ${values.join('\n')}
-    ${wheres.join('.\n')}
-    ${filters.map(f=>`FILTER(${f})`).join('\n')}
-  }
-  ${groupby}
-  ${having}
-  ${orderby}
-  ${limit}
-  ${offset}
-  `;
-
-  debug.debug(query);
-  return {
-    query,
-    proto
-  };
-}
-
-function computeRootId(proto, prefix) {
-  let k = Object.keys(KEY_VOCABULARIES).find(k => !!proto[KEY_VOCABULARIES[k].id]);
-  if (!k) return;
-
-  k = KEY_VOCABULARIES[k].id;
-  let str = proto[k];
-  var [_rootId, ...modifiers] = str.split('$');
-
-  let required = modifiers.includes('required');
-  if (_rootId) required = true;
-  let _var = modifiers.find(m => m.match('var:.+'));
-  if (_var) _rootId = sparqlVar(_var.split(':')[1]);
-
-  if (!_rootId) {
-    _rootId = "?" + prefix + "r";
-    proto[k] += '$var:' + _rootId;
-  }
-
-  proto[k] += '$prevRoot';
-  return [_rootId, required];
-}
-
-/**
- * Add the "?" if absent
- */
-function sparqlVar(input) {
-  'use strict';
-  if (input.startsWith('?')) return input;
-  return '?' + input;
-}
-
-/**
- * Parse a single key in prototype
- */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
-  var [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
-  return [function(k, i) {
-    let v = proto[k];
-
-    if (typeof v == 'object') {
-      let wheresInternal = [];
-      let [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal, mainLang, prefix + i, _rootId, values);
-      Object.keys(v).forEach(mpkFun);
-      wheresInternal = wheresInternal.join('.\n');
-      wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal }}`);
-      return;
-    }
-
-    let is$ = v.startsWith('$');
-    if (!is$ && !v.startsWith('?')) return;
-    if (is$) v = v.substring(1);
-
-    let options = [];
-    if (v.includes('$'))
-      [v, ...options] = v.split('$');
-
-    let required = options.includes('required') || ['id', '@id'].includes(k) || Object.keys(values).includes(k);
-
-    let id = is$ ? ('?' + prefix + i) : v;
-    let _id = options.find(o => o.match('var:.*'));
-    if (_id) {
-      id = _id.split(':')[1];
-      if (!id.startsWith('?')) id = '?' + id;
-    }
-    let _bestlang = options.find(o => o.match('bestlang.*'));
-    proto[k] = id + (_bestlang ? '$accept:string' : '');
-
-
-    let _var = id;
-    if (options.includes('sample')) _var = `(SAMPLE(${id}) AS ${id})`;
-    if (_bestlang) {
-      let lng = _bestlang.includes(":") ? _bestlang.split(':')[1] : mainLang;
-      if (!lng) throw new Error('bestlang require a language declared inline or in the root');
-
-      _var = `(sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id})`;
-    }
-    vars.push(_var);
-
-    let _lang = options.find(o => o.match('^lang:.*'));
-    let _langfilter = '';
-    if (_lang) _langfilter = `.\nFILTER(lang(${id}) = '${_lang.split(':')[1]})'`;
-
-    if (is$) {
-      let subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
-      let q = `${subject} ${v} ${id} ${_langfilter}`;
-      wheres.push(required ? q : `OPTIONAL { ${q} }`);
-    }
-  }, _blockRequired];
-}
-
-function prepareGroupby(array = []) {
-  array.forEach(s => delete s.desc);
-  return prepareOrderby(array, 'GROUP BY');
-}
-
-function prepareOrderby(array = [], keyword = 'ORDER BY') {
-  if (!array.length) return '';
-  return keyword + ' ' +
-    array.sort((a, b) => b.priority - a.priority)
-    .map(s => s.desc ? `DESC(${s.variable})` : s.variable)
-    .join(' ');
-}
-
-function parseOrder(str, variable) {
-  let ord = {
-    variable
-  };
-  let s = str.split(':');
-
-  s.shift(); // first one is always 'order'
-
-  if (s.includes('desc')) {
-    ord.desc = true;
-    s.splice(s.indexOf('desc'), 1);
-  }
-
-  let priority = s[0] && parseInt(s[0]);
-  ord.priority = priority || 0;
-
-  return ord;
-}
-
-function asArray(v) {
-  if (!v) return [];
-  if (!Array.isArray(v)) return [v];
-  return v;
 }

@@ -1,15 +1,20 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  },
   "rules": {
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
-    "array-bracket-spacing": [
-      "error",
-      "always"
-    ]
+    "no-param-reassign": "off",
+    "no-console": "warn",
+    "no-plusplus": "off",
+    "no-continue": "off",
+    "no-restricted-syntax": "off",
+    "radix": "off"
   },
   "plugins": [
     "import"
