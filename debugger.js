@@ -1,9 +1,10 @@
-/*******************
+/* eslint no-underscore-dangle: "off" */
+
+/** *****************
  * Debugging methods
  * (inspired from https://github.com/tilleps/debug-levels)
- ********************/
-import nodeNoop from 'node-noop';
-const noop = nodeNoop.noop;
+ ******************* */
+const noop = () => {};
 
 const logLevels = [
   'error',
@@ -11,16 +12,15 @@ const logLevels = [
   'log',
   'debug',
   'info',
-  'verbose'
+  'verbose',
 ];
 
 function getConsoleMethodFor(l) {
   let m = console.log;
-  if (l != 'debug' && console[l])
-    m = console[l];
+  if (l !== 'debug' && console[l]) m = console[l];
 
-  return function() {
-    Function.prototype.apply.call(m, console, arguments);
+  return function log(...args) {
+    Function.prototype.apply.call(m, console, args);
   };
 }
 
@@ -30,9 +30,8 @@ export default class Debugger {
   }
 
   set level(level) {
-    var key = logLevels.indexOf(level);
-    if (key == -1)
-      throw new Error('Log level found in allowed levels');
+    const key = logLevels.indexOf(level);
+    if (key === -1) throw new Error('Log level found in allowed levels');
     this._level = key;
     this._updateLoggers();
   }
@@ -42,13 +41,12 @@ export default class Debugger {
   }
 
   _updateLoggers() {
-    let allowed = logLevels.slice(0, this._level + 1);
-    let locked = logLevels.slice(this._level + 1);
+    const allowed = logLevels.slice(0, this._level + 1);
+    const locked = logLevels.slice(this._level + 1);
 
-    for (let l of allowed) {
+    for (const l of allowed) {
       this[l] = getConsoleMethodFor(l);
     }
-    for (let l of locked)
-      this[l] = noop;
+    for (const l of locked) this[l] = noop;
   }
 }

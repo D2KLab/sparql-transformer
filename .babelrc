@@ -1,17 +1,17 @@
 {
   "presets": [
-    "es2015"
-  ],
-  "plugins": [
-    "add-module-exports"
+    "@babel/env"
   ],
   "env": {
     "production": {
       "plugins": [
-        ["transform-rename-import", {
-          "original": "^(.{1,2})/(.+[^5])$",
-          "replacement": "$1/$2.es5"
-        }]
+        [
+          "transform-rename-import",
+          {
+            "original": "^(.{1,2})/(.+[^5])$",
+            "replacement": "$1/$2.es5"
+          }
+        ]
       ]
     }
   }
