@@ -205,16 +205,31 @@ The output of this query is intended to be:
 
 ## How to use
 
+#### Install in nodeJS
 Install by npm.
 
 ```bash
 npm install sparql-transformer
 ```
-Use in your JS application (node or browser).
+
+
+Add to the application.
 
 ```js
 import sparqlTransformer from 'sparql-transformer';
+```
 
+#### Install in the browser
+
+SPARQL Tranformer is exposed as [ES Module](https://jakearchibald.com/2017/es-modules-in-browsers/). We rely on [getlibs](https://www.npmjs.com/package/getlibs) until the technology will allow to use ["bare" import specifier](https://github.com/WICG/import-maps#bare-specifiers).
+
+```html
+<script src="https://unpkg.com/getlibs"></script>
+<script>sparqlTransformer = System.import('https://unpkg.com/sparql-transformer')</script>
+```
+
+#### Use
+```js
 sparqlTransformer(query, options)
   .then(res => console.log(res))
   .catch(err => console.error(err););
@@ -249,4 +264,4 @@ https://doi.org/10.1145/3184558.3188739
 
 ---
 
-<b id="f1">1</b>: Using [virtuoso-sparql-client](https://github.com/crs4/virtuoso-sparql-client).
+<b id="f1">1</b>: Using a [lightweight SPARQL client](./src/sparql-client.mjs).

@@ -26,7 +26,7 @@ function getConsoleMethodFor(l) {
 
 export default class Debugger {
   constructor(level) {
-    this.level = level || process.env.DEBUG_LEVEL || 'log';
+    this.level = level || 'log';
   }
 
   set level(level) {

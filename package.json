@@ -3,15 +3,16 @@
   "version": "1.6.6",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.es5.js",
-  "jsnext:main": "index.js",
+  "module": "index.mjs",
+  "browser": "dist/bundle.js",
   "files": [
-    "*.es5.js"
+    "*.mjs",
+    "*.js"
   ],
   "repository": "https://github.com/D2KLab/sparql-transformer",
   "scripts": {
     "test": " DEBUG_LEVEL=debug ava",
-    "prepublishOnly": "BABEL_ENV=production babel index.js --out-file index.es5.js && babel debugger.js --out-file debugger.es5.js",
-    "postpublish": "rimraf *.es5.js && git push --follow-tags"
+    "postpublish": "git push --follow-tags"
   },
   "keywords": [
     "json-ld",
@@ -20,29 +21,19 @@
   ],
   "author": "Pasquale Lisena <pasquale.lisena@eurecom.fr> (http://pasqlisena.github.io/)",
   "license": "Apache-2.0",
-  "jshintConfig": {
-    "esversion": 6
-  },
   "ava": {
     "require": [
-      "@babel/polyfill",
-      "@babel/register"
+      "esm"
     ]
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@babel/register": "^7.0.0",
     "ava": "^1.3.1",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-transform-rename-import": "^2.3.0",
     "eslint": "^5.15.1",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.2.5",
-    "detect-node": "^2.0.4",
+    "axios": "^0.18.0",
+    "esm": "^3.2.14",
     "fast-deep-equal": "^2.0.1",
     "is-valid-path": "^0.1.1",
     "jsonfile": "^5.0.0",
