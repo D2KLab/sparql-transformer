@@ -153,7 +153,7 @@ function fitIn(instance, line, options) {
       if (isEmptyObject(variable)) delete instance[k];
       return null;
     }
-
+    if (typeof variable !== 'string') return null;
     if (!variable.startsWith('?')) return null;
     variable = variable.substring(1);
     let accept = null;
@@ -257,6 +257,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal}}`);
       return;
     }
+    if (typeof v !== 'string') return;
 
     const is$ = v.startsWith('$');
     if (!is$ && !v.startsWith('?')) return;
