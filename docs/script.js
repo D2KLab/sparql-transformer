@@ -19,7 +19,7 @@ const application = new Vue({
   el: '#app',
   data: {
     input: JSON.stringify(jq, null, 2),
-    endpoint: 'http://dbpedia.org/sparql',
+    endpoint: 'https://dbpedia.org/sparql',
     loading: false,
     sparql: '',
     frogJson: null,

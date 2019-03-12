@@ -2,7 +2,10 @@ SPARQL Transformer
 ===================
 
 Write your SPARQL query directly in the JSON-LD you would like to have in output.
-JavaScript package. Looking for the [Python one](https://github.com/D2KLab/py-sparql-transformer)?
+
+JavaScript package. Try it with the [Playground](https://d2klab.github.io/sparql-transformer/).
+
+> Looking for the [Python one](https://github.com/D2KLab/py-sparql-transformer)?
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
