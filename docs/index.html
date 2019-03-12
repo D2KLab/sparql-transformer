@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>SPARQL Transformer playground</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/getlibs"></script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">SPARQL Transformer playground</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="https://github.com/D2KLab/sparql-transformer/blob/master/README.md">Docs</a></li>
+        <li><a href="https://github.com/D2KLab/sparql-transformer">Repo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="app">
+    <div class="row">
+
+      <section class="col s12 m6">
+        <p class="card-panel red lighten-4">INPUT: JSON query</p>
+        <textarea v-model="input" @input="computeSparql" rows="15" cols="80"></textarea>
+      </section>
+
+      <section class="col s12 m6">
+        <p class="card-panel red lighten-4">OUTPUT: SPARQL query</p>
+
+        <pre>{{sparql}}</pre>
+      </section>
+    </div>
+    <div class="container center-align">
+      <label>Endpoint:
+        <input type="url" v-model="endpoint" class="center-align" /></label>
+      <button class="waves-effect waves-light btn-large" @click="execute">EXECUTE</button>
+    </div>
+    <div class="progress" v-if="loading">
+      <div class="indeterminate"></div>
+    </div>
+    <p v-if="jsonError" class="card-panel red darken-1">{{jsonError}}</p>
+
+    <div class="row outputz" v-if="princeJson">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a class="active" href="#prince">Transformed</a></li>
+          <li class="tab col s3"><a href="#frog">Original</a></li>
+        </ul>
+      </div>
+      <pre id="prince" class="small col s12" v-html="princeJson"></pre>
+      <pre id="frog" class="small col s12" v-html="frogJson"></pre>
+    </div>
+
+  </div>
+  <script>
+    System.import('./script.js')
+  </script>
+</body>
+
+</html>
