@@ -2,7 +2,7 @@
   "proto": {
     "id" : "?id",
     "name": "$rdfs:label$required",
-    "image": "$foaf:depiction$required",
+    "image": "$foaf:depiction",
     "region": {
       "id" : "$dbo:region$required$var:region",
       "name": "$rdfs:label$lang:it"
