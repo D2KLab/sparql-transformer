@@ -4,7 +4,7 @@
     "name": "$rdfs:label$required",
     "image": "$foaf:depiction$required",
     "region": {
-      "@id" : "$dbo:region$required$var:region",
+      "id" : "$dbo:region$required$var:region",
       "name": "$rdfs:label$lang:it"
     }
   },
