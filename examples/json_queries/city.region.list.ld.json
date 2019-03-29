@@ -4,7 +4,11 @@
     "@type": "City",
     "@id": "?id",
     "name": "$rdfs:label$required$bestlang",
-    "image": "$foaf:depiction$required"
+    "image": "$foaf:depiction$required",
+    "containedInPlace": {
+      "id" : "$dbo:region$required$var:region",
+      "name": "$rdfs:label$lang:it"
+    }
   }],
   "$where": [
     "?id a dbo:City",
