@@ -286,7 +286,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 
     const lang = options.find(o => o.match('^lang:.*'));
     let langfilter = '';
-    if (lang) langfilter = `.\nFILTER(lang(${id}) = '${lang.split(':')[1]})'`;
+    if (lang) langfilter = `.\nFILTER(lang(${id}) = '${lang.split(':')[1]}')`;
 
     if (is$) {
       const subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
