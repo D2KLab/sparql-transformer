@@ -1,0 +1,13 @@
+SELECT DISTINCT ?city ?label ?picture ?region ?region_label
+WHERE {
+    ?city a dbo:City ;
+       dbo:country dbr:Italy ;
+       rdfs:label ?label .
+    OPTIONAL { ?city foaf:depiction ?pic  }.
+    
+    ?city dbo:region ?region .
+    OPTIONAL {
+       ?region rdfs:label ?region_label .
+       FILTER(lang(?region_label) = 'it')
+    }
+} LIMIT 100
