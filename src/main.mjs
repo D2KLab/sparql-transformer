@@ -315,12 +315,16 @@ function jsonld2query(input) {
 
   const vars = [];
   const filters = asArray(modifiers.$filter);
-  const wheres = asArray(modifiers.$where);
+  let wheres = asArray(modifiers.$where);
   const mainLang = modifiers.$lang;
 
   const [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang,
     undefined, undefined, modifiers.$values);
   Object.keys(proto).forEach(mpkFun);
+
+  wheres = wheres.map(w => w.trim())
+    .filter(w => w)
+    .map(w => `    ${w}`);
 
   const limit = modifiers.$limit ? `LIMIT ${modifiers.$limit}` : '';
   const offset = modifiers.$offset ? `OFFSET ${modifiers.$offset}` : '';
@@ -335,7 +339,7 @@ function jsonld2query(input) {
   SELECT ${distinct} ${vars.join(' ')}
   WHERE {
     ${values.join('\n')}
-    ${wheres.join('.\n')}
+  ${wheres.join('.\n')}
     ${filters.map(f => `FILTER(${f})`).join('\n')}
   }
   ${groupby}

@@ -224,7 +224,7 @@ import sparqlTransformer from 'sparql-transformer';
 
 #### Install in the browser
 
-SPARQL Tranformer is exposed as [ES Module](https://jakearchibald.com/2017/es-modules-in-browsers/). We rely on [getlibs](https://www.npmjs.com/package/getlibs) until the technology will allow to use ["bare" import specifier](https://github.com/WICG/import-maps#bare-specifiers).
+SPARQL Transformer is exposed as [ES Module](https://jakearchibald.com/2017/es-modules-in-browsers/). We rely on [getlibs](https://www.npmjs.com/package/getlibs) until the technology will allow to use ["bare" import specifier](https://github.com/WICG/import-maps#bare-specifiers).
 
 ```html
 <script src="https://unpkg.com/getlibs"></script>
