@@ -28,6 +28,7 @@ const application = new Vue({
   },
   created() {
     this.computeSparql();
+    document.querySelector('body').classList.remove('loading');
   },
   methods: {
     computeSparql() {
