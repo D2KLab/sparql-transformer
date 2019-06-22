@@ -3,93 +3,163 @@
   "@graph": [
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Catanzaro",
+      "@id": "http://dbpedia.org/resource/Cantù",
       "name": {
         "@language": "en",
-        "@value": "Catanzaro"
+        "@value": "Cantù"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_-_Catanzaro.png"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Piazza_garibaldi_cantù.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Bologna",
+      "@id": "http://dbpedia.org/resource/Thiene",
       "name": {
         "@language": "en",
-        "@value": "Bologna"
+        "@value": "Thiene"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+      "image": "http://en.wikipedia.org/wiki/Special:FilePath/Thiene_Castle.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Veneto",
+        "name": {
+          "@language": "it",
+          "@value": "Veneto"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Cento",
+      "@id": "http://dbpedia.org/resource/Salerno",
       "name": {
         "@language": "en",
-        "@value": "Cento"
+        "@value": "Salerno"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La_Rocca_Cento,_Fe_01.JPG"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/SalernoCanalone.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Aosta",
+      "@id": "http://dbpedia.org/resource/Altamura",
       "name": {
         "@language": "en",
-        "@value": "Aosta"
+        "@value": "Altamura"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Aosta.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Puglia_Altamura1_tango7174.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Cremona",
+      "@id": "http://dbpedia.org/resource/Viareggio",
       "name": {
         "@language": "en",
-        "@value": "Cremona"
+        "@value": "Viareggio"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cremona_centro.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Viareggio,_royal_2.JPG",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Tuscany",
+        "name": {
+          "@language": "it",
+          "@value": "Toscana"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Metropolitan_City_of_Milan",
+      "@id": "http://dbpedia.org/resource/Città_di_Castello",
       "name": {
         "@language": "en",
-        "@value": "Metropolitan City of Milan"
+        "@value": "Città di Castello"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Milano_skyline_02.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Città_di_Castello_Panorama.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Umbria",
+        "name": {
+          "@language": "it",
+          "@value": "Umbria"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Gaeta",
+      "@id": "http://dbpedia.org/resource/Ferrara",
       "name": {
         "@language": "en",
-        "@value": "Gaeta"
+        "@value": "Ferrara"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/GaetaSErasmoDaSFrancesco_Wiki.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Castello_esterno.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Emilia-Romagna",
+        "name": {
+          "@language": "it",
+          "@value": "Emilia-Romagna"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Vignola",
+      "@id": "http://dbpedia.org/resource/Torre_del_Greco",
       "name": {
         "@language": "en",
-        "@value": "Vignola"
+        "@value": "Torre del Greco"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vignola_castello.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Torre_del_greco_porto.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Campania",
+        "name": {
+          "@language": "it",
+          "@value": "Campania"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Reggio_Calabria",
+      "@id": "http://dbpedia.org/resource/Busto_Arsizio",
       "name": {
         "@language": "en",
-        "@value": "Reggio Calabria"
+        "@value": "Busto Arsizio"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Collage_Reggio_Calabria.jpg"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/20071226SMaria.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Lombardy",
+        "name": {
+          "@language": "it",
+          "@value": "Lombardia"
+        }
+      }
     },
     {
       "@type": "City",
-      "@id": "http://dbpedia.org/resource/Ciminna",
+      "@id": "http://dbpedia.org/resource/Ostuni",
       "name": {
         "@language": "en",
-        "@value": "Ciminna"
+        "@value": "Ostuni"
       },
-      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ciminna-Stemma.gif"
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ostuni.jpg",
+      "containedInPlace": {
+        "id": "http://dbpedia.org/resource/Apulia",
+        "name": {
+          "@language": "it",
+          "@value": "Puglia"
+        }
+      }
     }
   ]
 }

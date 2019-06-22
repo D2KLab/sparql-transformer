@@ -1,7 +1,9 @@
 import test from 'ava';
 import fs from 'fs';
 
-import sparqlTransformer from './index';
+import lib from './index';
+
+const sparqlTransformer = lib.default;
 
 const OUTPUT = './examples/json_transformed/';
 const JSONLD_QUERIES = './examples/json_queries/';
