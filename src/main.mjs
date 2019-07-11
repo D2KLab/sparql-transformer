@@ -195,20 +195,27 @@ function mergeObj(base, addition, options) {
       base[k] = a;
       return;
     }
+    const { voc } = options;
 
     if (Array.isArray(b)) {
+      if (a[voc.id]) {
+        const a0 = b.find(x => a[voc.id] == x[voc.id]);   // same ids
+        if (a0) {
+          mergeObj(a0, a, options);
+          return;
+        }
+      }
       if (!b.find(x => equal(a, x))) b.push(a);
       return;
     }
     if (equal(a, b)) return;
 
-    const { voc } = options;
     // eslint-disable-next-line eqeqeq
     if (a[voc.id] && a[voc.id] == b[voc.id]) { // same ids
       mergeObj(b, a, options);
     } else base[k] = [b, a];
   });
-
+  
   return base;
 }
 
