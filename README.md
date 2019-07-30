@@ -260,10 +260,15 @@ See [`test.js`](./test.js) for further examples.
 
 If you use this module for your research work, please cite:
 
+> Pasquale Lisena, Albert Meroño-Peñuela, Tobias Kuhn and Raphaël Troncy. Easy Web API Development with SPARQL Transformer. In 18th International Semantic Web Conference (ISWC), Auckland, New Zealand, October 26-30, 2019.
+
+[BIB file](./bib/lisena2019easyweb.bib)
+
+
 > Pasquale Lisena and Raphaël Troncy. Transforming the JSON Output of SPARQL Queries for Linked Data Clients. In WWW'18 Companion: The 2018 Web Conference Companion, April 23–27, 2018, Lyon, France.
 https://doi.org/10.1145/3184558.3188739
 
-[BIB file](./lisena2018sparqltransformer.bib)
+[BIB file](./bib/lisena2018sparqltransformer.bib)
 
 ---
 
