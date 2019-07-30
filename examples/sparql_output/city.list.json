@@ -1,0 +1,1516 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "id",
+      "v1",
+      "v2"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Bologna"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "بولونيا (إيطاليا)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Bologna"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Bolonia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Bologne"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Bologna"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "ボローニャ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Bologna (stad)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Bolonia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Bolonha"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Болонья"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "博洛尼亚"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "سيينا"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Sienne"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "シエーナ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Siena (stad)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Siena"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Сиена"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Siena"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "锡耶纳"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "أفولا"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "アーヴォラ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Avola (gemeente)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Avola"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Авола (город)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Avola"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "阿沃拉"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Avola_panorama.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "كايفانو"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "カイヴァーノ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Caivano"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Кайвано"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Caivano"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "卡伊瓦诺"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Caivano.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Cólico (Italia)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "コーリコ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Colico"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Колико"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "科利科"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "ムッジョ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Muggiò"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Муджо"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Muggiò"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "穆吉奥"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Vista_Muggiò.JPG"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "أورسارا دي بوليا"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "オルサーラ・ディ・プーリア"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Orsara di Puglia"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Орсара-ди-Пулья"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "奥尔萨拉迪普利亚"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "روبيو (بافيا)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "ロッビオ"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Robbio"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Роббьо"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Robbio"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "罗比奥"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Robbio_SanPietro_abside.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Potenza"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "بوتنسا"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Potenza"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Potenza"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Potenza"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Potenza"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Potenza (Italia)"
+        },
+        "v2": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Potenza1.jpg"
+        }
+      }
+    ]
+  }
+}

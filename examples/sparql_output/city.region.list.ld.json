@@ -1,0 +1,208 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "id",
+      "v2",
+      "v3",
+      "v4r",
+      "v41"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Giugliano_in_Campania"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Giugliano in Campania"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Annunziata_Giugliano.jpg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/San_Benedetto_del_Tronto"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "San Benedetto del Tronto"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanbenedettodeltronto05.jpg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Colico"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Colico"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Rome"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Rome"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Rome.svg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grosseto"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Grosseto"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Comune_grosseto_citta.jpg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Miggiano"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Miggiano"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Miggiano-Stemma.png"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Perugia"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Perugia"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Perugia_panoramic.jpg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Sulmona"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Sulmona"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PanoramaSulmona.JPG"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Itri"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Itri"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/ItriCittàAlta.jpg"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Orsara di Puglia"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+        },
+        "v4r": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesee_River"
+        }
+      }
+    ]
+  }
+}
