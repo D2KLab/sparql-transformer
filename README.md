@@ -11,109 +11,12 @@ JavaScript package. Try it with the [Playground](https://d2klab.github.io/sparql
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**
 
-- [Motivation](#motivation)
+- [Motivation](./motivation.md)
 - [Query in JSON](#query-in-json)
 - [How to use](#how-to-use)
 - [Credits](#credits)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Motivation
-
-[Slides at the WebConf 2018.](https://goo.gl/s5FoDv)
-
-The output of SPARQL endpoints (i.e. [Virtuoso](https://virtuoso.openlinksw.com/)) is not so practical. It simply presents the results as an array of all possible sets of variables that satisfy the query.
-
-As an example, I retrieve from DBpedia all the Italian cities, with name and an image.
-
-```sql
-SELECT *
-WHERE {
- ?city a dbo:City ;
-      dbo:country dbr:Italy ;
-      foaf:depiction ?image ;
-      rdfs:label ?name .
-} LIMIT 100
-```
-Extract of the [json results](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+*%0D%0AWHERE+%7B%0D%0A+%3Fcity+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FCity%3E+%3B%0D%0A++++++dbo%3Acountry+dbr%3AItaly+%3B%0D%0A++++++foaf%3Adepiction+%3Fimage+%3B%0D%0A++++++rdfs%3Alabel+%3Fname+.%0D%0A%7D+LIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+):
-
-```json
-{
-  "head": { ... },
-  "results": {
-    "distinct": false,
-    "ordered": true,
-    "bindings": [{
-        "city": {
-          "type": "uri",
-          "value": "http://dbpedia.org/resource/Bologna"
-        },
-        "image": {
-          "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
-        },
-        "label": {
-          "type": "literal",
-          "xml:lang": "fr",
-          "value": "Bologne"
-        }
-      }, {
-        "city": {
-          "type": "uri",
-          "value": "http://dbpedia.org/resource/Bologna"
-        },
-        "image": {
-          "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
-        },
-        "label": {
-          "type": "literal",
-          "xml:lang": "it",
-          "value": "Bologna"
-        }
-      }, {
-        "city": {
-          "type": "uri",
-          "value": "http://dbpedia.org/resource/Siena"
-        },
-        "image": {
-        "type": "uri",
-        "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
-        },
-        "label": {
-          "type": "literal",
-          "xml:lang": "en",
-          "value": "Siena"
-        }
-      }]
-  }
-}
-```
-
-The output is hard to read and manipulate. Displaying all the names of Bologna means to merge the results of the first two lines, being careful to keep all the different names of the city and the unique but repeated value for the image.
-
-More practical would be an output of this shape, following the specification of JSON-LD:
-```json
-{
-  "@context": "http://schema.org",
-  "@graph": [{
-    "@type": "City",
-    "@id" : "http://dbpedia.org/resource/Bologna",
-    "name": [
-       {"@value":"Bologna","@language":"it"},
-       {"@value":"Bologne","@language":"fr"}
-     ],
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
-  }, {
-    "@type": "City",
-    "@id" : "http://dbpedia.org/resource/Siena",
-    "name": { "@value":"Siena", "@language":"en" },
-    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/PiazzadelCampoSiena.jpg"
-  }]
-}
-```
-
-Here is clear that there are 2 results, each one with an image and 2 (the first) or 1 (the second) value for the name.
 
 ## Query in JSON
 
@@ -166,18 +69,19 @@ The `@graph`/`proto` property contains the prototype of the result as I expect i
 
     $<SPARQL PREDICATE>[$modifier[:option...]...]
 
-The subject of the predicate is the variable (declared of automatically assigned) of the closer `@id`/`id` in the structure (if it exists, otherwise is the default `?id`).
-The object is manually (with the `$var` modifier) or automatically assigned.
+The subject of the predicate is the variable (declared of automatically assigned) of the closer **mergin anchor** in the structure, which is the `@id`/`id` property (if it exists, otherwise is the default `?id`).
+The SPARQL variable name is manually (with the `$var` modifier) or automatically assigned.
 
 Some modifiers can be present after, separated by the `$` sign. The `:` prepend the options for a given modifier.
 
 |MODIFIER|OPTIONS|NOTE|
 |---|---|---|
 |`$required`|n/a| When omitted, the clause is wrapped by `OPTIONAL { ... }`.|
-|`$sample`|n/a|extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
+|`$sample`|n/a|Extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
 |`$lang`|`:lang`[string]| FILTER by language.<br>Ex. `$lang:it`, `$lang:en`|
 |`$bestlang`|`:acceptedLangs`[string, optional]| Choose the best match (using `BEST_LANGMATCH`) over the languages according to the list expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). This list can be appended after the `:` or expressed as `$lang` in the root.<br>Ex. `$bestlang`, `$bestlang:en;q=1, it;q=0.7 *;q=0.1`|
 |`$var`|`:var`[string]| Specify the variable that will be assigned in the query, so that it can be referred in the root properties (like `$filter`). If missing, a `$` is prepended. <br> Ex. `$var:myVariable`, `$var:?name`|
+|`$anchor`|n/a|Set this property as merging anchor. The set is valid for the current level in the JSON tree, ignoring eventual `id`/`@id` sibling properties. Ex. `"a":"?example$anchor"` sets`?example` as subject of SPARQL statements and merges the final results on the `a` property.|
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 

@@ -1,6 +1,6 @@
 [
   {
-    "id": "http://dbpedia.org/resource/Alice_in_Chains",
+    "band": "http://dbpedia.org/resource/Alice_in_Chains",
     "label": [
       {
         "language": "en",
@@ -54,7 +54,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Soundgarden",
+    "band": "http://dbpedia.org/resource/Soundgarden",
     "label": [
       {
         "language": "en",
@@ -104,7 +104,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/The_Neighbourhood",
+    "band": "http://dbpedia.org/resource/The_Neighbourhood",
     "label": [
       {
         "language": "de",
@@ -146,7 +146,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Wolfgang_(band)",
+    "band": "http://dbpedia.org/resource/Wolfgang_(band)",
     "label": [
       {
         "language": "es",
@@ -164,7 +164,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Arrows_of_Love",
+    "band": "http://dbpedia.org/resource/Arrows_of_Love",
     "label": {
       "language": "en",
       "value": "Arrows of Love"
@@ -172,7 +172,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)",
+    "band": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)",
     "label": [
       {
         "language": "de",
@@ -198,7 +198,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Dead_Confederate",
+    "band": "http://dbpedia.org/resource/Dead_Confederate",
     "label": {
       "language": "en",
       "value": "Dead Confederate"
@@ -206,7 +206,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Elisium",
+    "band": "http://dbpedia.org/resource/Elisium",
     "label": [
       {
         "language": "ru",
@@ -220,7 +220,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Junkyard_Choir",
+    "band": "http://dbpedia.org/resource/Junkyard_Choir",
     "label": {
       "language": "en",
       "value": "Junkyard Choir"
@@ -228,7 +228,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Jale",
+    "band": "http://dbpedia.org/resource/Jale",
     "label": {
       "language": "en",
       "value": "Jale"
@@ -236,7 +236,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/King_Snake_Roost",
+    "band": "http://dbpedia.org/resource/King_Snake_Roost",
     "label": [
       {
         "language": "en",
@@ -250,7 +250,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Pagoda_(band)",
+    "band": "http://dbpedia.org/resource/Pagoda_(band)",
     "label": [
       {
         "language": "de",
@@ -284,7 +284,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Pearl_Jam",
+    "band": "http://dbpedia.org/resource/Pearl_Jam",
     "label": [
       {
         "language": "en",
@@ -338,7 +338,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Blind_Zero",
+    "band": "http://dbpedia.org/resource/Blind_Zero",
     "label": [
       {
         "language": "de",
@@ -360,7 +360,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Block_Out_(band)",
+    "band": "http://dbpedia.org/resource/Block_Out_(band)",
     "label": [
       {
         "language": "en",
@@ -374,7 +374,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Blood_Circus_(band)",
+    "band": "http://dbpedia.org/resource/Blood_Circus_(band)",
     "label": [
       {
         "language": "es",
@@ -392,7 +392,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Cosmic_Psychos",
+    "band": "http://dbpedia.org/resource/Cosmic_Psychos",
     "label": [
       {
         "language": "en",
@@ -410,7 +410,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Mofa_Ha'arnavot_Shel_Dr._Kasper",
+    "band": "http://dbpedia.org/resource/Mofa_Ha'arnavot_Shel_Dr._Kasper",
     "label": {
       "language": "en",
       "value": "Mofa Ha'arnavot Shel Dr. Kasper"
@@ -418,7 +418,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Renegades_(band)",
+    "band": "http://dbpedia.org/resource/Renegades_(band)",
     "label": {
       "language": "en",
       "value": "Renegades (band)"
@@ -426,7 +426,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Skin_Yard",
+    "band": "http://dbpedia.org/resource/Skin_Yard",
     "label": [
       {
         "language": "de",
@@ -468,7 +468,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Toadies",
+    "band": "http://dbpedia.org/resource/Toadies",
     "label": [
       {
         "language": "en",
@@ -486,7 +486,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Napalm_Beach",
+    "band": "http://dbpedia.org/resource/Napalm_Beach",
     "label": {
       "language": "en",
       "value": "Napalm Beach"
@@ -494,7 +494,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Nutmeg_(band)",
+    "band": "http://dbpedia.org/resource/Nutmeg_(band)",
     "label": {
       "language": "en",
       "value": "Nutmeg (band)"
@@ -502,7 +502,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Green_Apple_Quick_Step",
+    "band": "http://dbpedia.org/resource/Green_Apple_Quick_Step",
     "label": {
       "language": "en",
       "value": "Green Apple Quick Step"
@@ -510,7 +510,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Bundle_of_Hiss",
+    "band": "http://dbpedia.org/resource/Bundle_of_Hiss",
     "label": [
       {
         "language": "en",
@@ -524,7 +524,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Flowerhead",
+    "band": "http://dbpedia.org/resource/Flowerhead",
     "label": {
       "language": "en",
       "value": "Flowerhead"
@@ -532,7 +532,7 @@
     "genre": "http://dbpedia.org/resource/Grunge"
   },
   {
-    "id": "http://dbpedia.org/resource/Collinz_Room",
+    "band": "http://dbpedia.org/resource/Collinz_Room",
     "label": {
       "language": "en",
       "value": "Collinz Room"

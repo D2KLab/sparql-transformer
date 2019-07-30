@@ -1,6 +1,6 @@
 {
   "proto": {
-    "id": "?id",
+    "band": "?id$anchor",
     "label": "$rdfs:label$required",
     "genre": "$dbo:genre$var:?genre"
   },

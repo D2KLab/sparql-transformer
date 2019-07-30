@@ -55,7 +55,7 @@ function sparqlVar(input) {
  */
 function isEmptyObject(target) {
   return !Object.getOwnPropertyNames(target)
-    .filter(p => p !== '@type')
+    .filter(p => ['@type', '$anchor'].includes(p))
     .length;
 }
 
@@ -142,7 +142,7 @@ function fitIn(instance, line, options) {
   return function fittingFunction(k) {
     /* eslint-disable no-param-reassign */
     let variable = instance[k];
-    // TODO if value is an obj
+    // if value is an obj
     if (typeof variable === 'object') {
       const fiiFun = fitIn(variable, line, options);
       Object.keys(variable).forEach(fiiFun);
@@ -158,9 +158,7 @@ function fitIn(instance, line, options) {
     // variable not in result, delete from
     if (!line[variable]) delete instance[k];
     else {
-      instance[k] = toJsonldValue(line[variable], Object.assign({
-        accept,
-      }, options));
+      instance[k] = toJsonldValue(line[variable], Object.assign({ accept }, options));
     }
 
     if (instance[k] === null) delete instance[k];
@@ -173,7 +171,7 @@ function fitIn(instance, line, options) {
  * Apply the prototype to a single line of query results
  */
 function sparql2proto(line, proto, options) {
-  const instance = objectAssignDeep({}, proto);
+  const instance = objectAssignDeep({}, proto); // clone proto
 
   const fiiFun = fitIn(instance, line, options);
   Object.keys(instance).forEach(fiiFun);
@@ -186,23 +184,25 @@ function sparql2proto(line, proto, options) {
  * array the values in addition to the base object.
  * @return the base object merged.
  */
-function mergeObj(base, addition, options) {
+function mergeObj(base, addition) {
   Object.keys(addition).forEach((k) => {
+    if (k === '$anchor') return;
+
     const b = base[k];
     const a = addition[k];
+    const anchor = a.$anchor;
 
     if (!b) {
       base[k] = a;
       return;
     }
-    const { voc } = options;
 
     if (Array.isArray(b)) {
-      if (a[voc.id]) {
+      if (a[anchor]) {
         /* eslint-disable eqeqeq */
-        const a0 = b.find(x => a[voc.id] == x[voc.id]); // same ids
+        const a0 = b.find(x => a[anchor] == x[anchor]); // same ids
         if (a0) {
-          mergeObj(a0, a, options);
+          mergeObj(a0, a);
           return;
         }
       }
@@ -212,8 +212,8 @@ function mergeObj(base, addition, options) {
     if (equal(a, b)) return;
 
     // eslint-disable-next-line eqeqeq
-    if (a[voc.id] && a[voc.id] == b[voc.id]) { // same ids
-      mergeObj(b, a, options);
+    if (a[anchor] && a[anchor] == b[anchor]) { // same ids
+      mergeObj(b, a);
     } else base[k] = [b, a];
   });
 
@@ -222,10 +222,17 @@ function mergeObj(base, addition, options) {
 
 
 function computeRootId(proto, prefix) {
-  let k = Object.keys(KEY_VOCABULARIES).find(key => !!proto[KEY_VOCABULARIES[key].id]);
-  if (!k) return null;
+  // check if an anchor is set
+  let k = Object.keys(proto).find(key => typeof proto[key] === 'string' && proto[key].includes('$anchor'));
 
-  k = KEY_VOCABULARIES[k].id;
+  // otherwise, check if one of the default anchors is there
+  if (!k) {
+    k = Object.keys(KEY_VOCABULARIES).find(key => !!proto[KEY_VOCABULARIES[key].id]);
+    if (!k) return null;
+
+    k = KEY_VOCABULARIES[k].id;
+  }
+
   const str = proto[k];
   // eslint-disable-next-line prefer-const
   let [_rootId, ...modifiers] = str.split('$');
@@ -240,7 +247,7 @@ function computeRootId(proto, prefix) {
     proto[k] += `$var:${_rootId}`;
   }
 
-  proto[k] += '$prevRoot';
+  proto.$anchor = k;
   return [_rootId, required];
 }
 
@@ -250,6 +257,7 @@ function computeRootId(proto, prefix) {
 function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
   const [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
   return [function parsingFunc(k, i) {
+    if (k === '$anchor') return;
     let v = proto[k];
 
     if (typeof v === 'object') {
@@ -302,6 +310,17 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       wheres.push(required ? q : `OPTIONAL { ${q} }`);
     }
   }, _blockRequired];
+}
+
+/**
+* Remove development properties
+*/
+function cleanRecursively(instance) {
+  if (typeof instance !== 'object') return; // if not object neither array
+  if (Array.isArray(instance)) instance.forEach(cleanRecursively);
+
+  delete instance.$anchor;
+  Object.keys(instance).forEach(k => cleanRecursively(instance[k]));
 }
 
 /**
@@ -395,18 +414,23 @@ export default function (input, options = {}) {
     const instances = bindings.map(b => sparql2proto(b, proto, opt));
     // merge lines with the same id
     const content = [];
+
+    const anchor = instances[0].$anchor;
     instances.forEach((inst) => {
-      const id = inst[voc.id];
+      const id = inst[anchor];
       // search if we have already the same id
-      const match = content.find(x => x[voc.id] === id);
+      const match = content.find(x => x[anchor] === id);
       if (!match) {
         // it is a new one
         content.push(inst);
         return;
       }
       // otherwise modify previous one
-      mergeObj(match, inst, opt);
+      mergeObj(match, inst);
     });
+
+    // remove anchor tag
+    instances.forEach(cleanRecursively);
 
     if (isJsonLD) {
       return {
