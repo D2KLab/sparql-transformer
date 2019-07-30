@@ -1,5 +1,5 @@
-import sparqlTransformer from 'sparql-transformer@2.0.5';
-import sparqlClient from 'sparql-transformer@2.0.5/src/sparql-client.mjs';
+import sparqlTransformer from 'sparql-transformer@2.1.0';
+import SparqlClient from 'sparql-transformer@2.1.0/src/sparql-client.mjs';
 import AsyncComputed from 'vue-async-computed';
 
 const jq = {
@@ -14,6 +14,30 @@ const jq = {
   ],
   $limit: 100,
 };
+
+
+function syntaxHighlight(json) {
+  if (typeof json !== 'string') {
+    json = JSON.stringify(json, undefined, 2);
+  }
+  json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, (match) => {
+    let cls = 'number';
+    if (/^"/.test(match)) {
+      if (/:$/.test(match)) {
+        cls = 'key';
+      } else {
+        cls = 'string';
+      }
+    } else if (/true|false/.test(match)) {
+      cls = 'boolean';
+    } else if (/null/.test(match)) {
+      cls = 'null';
+    }
+    return `<span class="${cls}">${match}</span>`;
+  });
+}
+
 
 const application = new Vue({
   el: '#app',
@@ -46,7 +70,7 @@ const application = new Vue({
           app.sparql = sparql;
           return Promise.reject();
         },
-      }).catch(() => {});
+      }).catch(() => { });
     },
     execute() {
       const app = this;
@@ -64,7 +88,7 @@ const application = new Vue({
       this.loading = true;
       sparqlTransformer(jsonQuery, {
         sparqlFunction(sparql) {
-          const client = new sparqlClient(app.endpoint);
+          const client = new SparqlClient(app.endpoint);
           return client.query(sparql)
             .then((res) => {
               app.frogJson = syntaxHighlight(res);
@@ -86,26 +110,3 @@ const application = new Vue({
     },
   },
 });
-
-
-function syntaxHighlight(json) {
-  if (typeof json !== 'string') {
-    json = JSON.stringify(json, undefined, 2);
-  }
-  json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
-    let cls = 'number';
-    if (/^"/.test(match)) {
-      if (/:$/.test(match)) {
-        cls = 'key';
-      } else {
-        cls = 'string';
-      }
-    } else if (/true|false/.test(match)) {
-      cls = 'boolean';
-    } else if (/null/.test(match)) {
-      cls = 'null';
-    }
-    return `<span class="${cls}">${match}</span>`;
-  });
-}
