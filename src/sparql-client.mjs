@@ -11,7 +11,7 @@ function validURL(str) {
   return !!pattern.test(str);
 }
 
-export default class sparqlClient {
+export default class SparqlClient {
   constructor(endpoint) {
     if (!endpoint || !validURL(endpoint)) throw new Error(`Not valid endpoint: ${endpoint}`);
 

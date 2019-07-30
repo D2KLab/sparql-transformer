@@ -1,7 +1,7 @@
 import equal from 'fast-deep-equal';
 import objectAssignDeep from 'object-assign-deep';
-import Debugger from './debugger.mjs';
-import sparqlClient from './sparql-client.mjs';
+import Debugger from './debugger';
+import SparqlClient from './sparql-client';
 
 const debug = new Debugger();
 const DEFAULT_OPTIONS = {
@@ -23,7 +23,7 @@ const KEY_VOCABULARIES = {
 };
 
 function defaultSparql(endpoint) {
-  const client = new sparqlClient(endpoint);
+  const client = new SparqlClient(endpoint);
   return q => client.query(q);
 }
 
@@ -199,7 +199,8 @@ function mergeObj(base, addition, options) {
 
     if (Array.isArray(b)) {
       if (a[voc.id]) {
-        const a0 = b.find(x => a[voc.id] == x[voc.id]);   // same ids
+        /* eslint-disable eqeqeq */
+        const a0 = b.find(x => a[voc.id] == x[voc.id]); // same ids
         if (a0) {
           mergeObj(a0, a, options);
           return;
@@ -215,7 +216,7 @@ function mergeObj(base, addition, options) {
       mergeObj(b, a, options);
     } else base[k] = [b, a];
   });
-  
+
   return base;
 }
 
