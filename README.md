@@ -7,16 +7,16 @@ JavaScript package. Try it with the [Playground](https://d2klab.github.io/sparql
 
 > Looking for the [Python one](https://github.com/D2KLab/py-sparql-transformer)?
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## News
+
+- It is now possible to set a different **merging anchor** instead of `id`/`@id` using the `$anchor` modifier.
+
 **Table of Contents**
 
 - [Motivation](./motivation.md)
 - [Query in JSON](#query-in-json)
 - [How to use](#how-to-use)
 - [Credits](#credits)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Query in JSON
 
