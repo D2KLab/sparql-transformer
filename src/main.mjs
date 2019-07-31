@@ -255,7 +255,8 @@ function computeRootId(proto, prefix) {
  * Parse a single key in prototype
  */
 function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
-  const [_rootId, _blockRequired] = computeRootId(proto, prefix) || prevRoot || '?id';
+  let [_rootId, _blockRequired] = computeRootId(proto, prefix);
+  _rootId = _rootId || prevRoot || '?id';
   return [function parsingFunc(k, i) {
     if (k === '$anchor') return;
     let v = proto[k];
@@ -317,7 +318,10 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 */
 function cleanRecursively(instance) {
   if (typeof instance !== 'object') return; // if not object neither array
-  if (Array.isArray(instance)) instance.forEach(cleanRecursively);
+  if (Array.isArray(instance)) {
+    instance.forEach(cleanRecursively);
+    return;
+  }
 
   delete instance.$anchor;
   Object.keys(instance).forEach(k => cleanRecursively(instance[k]));
@@ -430,7 +434,7 @@ export default function (input, options = {}) {
     });
 
     // remove anchor tag
-    instances.forEach(cleanRecursively);
+    content.forEach(cleanRecursively);
 
     if (isJsonLD) {
       return {
