@@ -1,0 +1,31 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "id",
+      "v2",
+      "v3"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bologna"
+        },
+        "v2": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Bologna"
+        },
+        "v3": {
+          "type": "uri",
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+        }
+      }
+    ]
+  }
+}

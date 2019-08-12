@@ -3,12 +3,13 @@
   "@graph": [{
     "@type": "City",
     "@id" : "?id",
-    "name": "$rdfs:label$required",
+    "name": "$rdfs:label$required$lang:it",
     "image": "$foaf:depiction$required"
   }],
   "$where": [
     "?id a dbo:City",
     "?id dbo:country dbr:Italy"
   ],
-  "$limit": 100
+  "$langTag": "hide",
+  "$limit": 1
 }

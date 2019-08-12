@@ -7,6 +7,7 @@ const debug = new Debugger();
 const DEFAULT_OPTIONS = {
   context: 'http://schema.org/',
   endpoint: 'http://dbpedia.org/sparql',
+  langTag: 'show',
 };
 
 const KEY_VOCABULARIES = {
@@ -123,9 +124,9 @@ function toJsonldValue(input, options) {
   // if here, it is a string or a date, that are not parsed
   const lang = input['xml:lang'];
 
-  const { voc } = options;
+  const { voc, langTag } = options;
 
-  if (lang) {
+  if (lang && langTag != 'hide') {
     const obj = {};
     obj[voc.lang] = lang;
     obj[voc.value] = value;
@@ -153,12 +154,14 @@ function fitIn(instance, line, options) {
     if (!variable.startsWith('?')) return null;
     variable = variable.substring(1);
     let accept = null;
+    let { langTag } = options;
     if (variable.includes('$accept:')) [variable, accept] = variable.split('$accept:');
+    if (variable.includes('$langTag:')) [variable, langTag] = variable.split('$langTag:');
 
     // variable not in result, delete from
     if (!line[variable]) delete instance[k];
     else {
-      instance[k] = toJsonldValue(line[variable], Object.assign({ accept }, options));
+      instance[k] = toJsonldValue(line[variable], Object.assign({}, options, { accept, langTag }));
     }
 
     if (instance[k] === null) delete instance[k];
@@ -290,6 +293,8 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     const bestlang = options.find(o => o.match('bestlang.*'));
     proto[k] = id + (bestlang ? '$accept:string' : '');
 
+    const langTag = options.find(o => o.match('langTag.*'));
+    if (langTag) proto[k] = `${proto[k]}$${langTag}`;
 
     let aVar = id;
     if (options.includes('sample')) aVar = `(SAMPLE(${id}) AS ${id})`;
@@ -400,6 +405,9 @@ export default function (input, options = {}) {
   debug.verbose('options:', JSON.stringify(opt, null, 2));
 
   if (typeof input !== 'object') throw new Error('Input format not valid');
+
+  // I save the info about hideLang before it is destroyed
+  opt.langTag = input.$langTag || opt.langTag;
 
   const {
     proto,

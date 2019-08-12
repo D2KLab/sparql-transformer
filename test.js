@@ -57,3 +57,14 @@ test('DBpedia grunge bands', async (t) => {
 
   t.deepEqual(out, expected);
 });
+
+test('No lang tag', async (t) => {
+  const file = 'city.list.ld.json';
+  const [orig, q, expected] = loadFiles(file);
+  mock(orig);
+
+  const out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
+
+  t.deepEqual(out, expected);
+});

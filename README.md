@@ -103,6 +103,7 @@ The supported properties are:
 |`$filter`| string, array |Add the content as a `FILTER`.<br>`"$filter": "?myNum > 3"`|
 |`$prefixes`| object | set the prefixes in the format `"foaf": "http://xmlns.com/foaf/0.1/"`.|
 |`$lang`|`:acceptedLangs`[string]| The default language to use as `$bestlang` (see above), expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). <br>Ex. `$lang:en;q=1, it;q=0.7 *;q=0.1`|
+|`$langTag`|`"hide"`, `"show"` (default)| When `hide`, language tags are not included in the output.<br> Ex. `hide` => `"label":"Bologna"` ;<br>  `show` => `"label":{"value": "Bologna", "language": "it"}` |
 
 The `@context` property (for the JSON-LD version) will be transferred to the output.
 

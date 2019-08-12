@@ -1,0 +1,11 @@
+{
+  "@context": "http://schema.org/",
+  "@graph": [
+    {
+      "@type": "City",
+      "@id": "http://dbpedia.org/resource/Bologna",
+      "name":  "Bologna",
+      "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bologna_postcard.jpg"
+    }
+  ]
+}
