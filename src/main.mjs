@@ -311,7 +311,8 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     if (lang) langfilter = `.\nFILTER(lang(${id}) = '${lang.split(':')[1]}')`;
 
     if (is$) {
-      const subject = options.includes('prevRoot') && prevRoot ? prevRoot : _rootId;
+      const usePrevRoot = (id == _rootId) || (options.includes('prevRoot') && prevRoot);
+      const subject = usePrevRoot ? prevRoot : _rootId;
       const q = `${subject} ${v} ${id} ${langfilter}`;
       wheres.push(required ? q : `OPTIONAL { ${q} }`);
     }
@@ -422,27 +423,31 @@ export default function (input, options = {}) {
 
   return sparqlFun(query).then((sparqlRes) => {
     const { bindings } = sparqlRes.results;
-    // apply the proto
-    const instances = bindings.map(b => sparql2proto(b, proto, opt));
-    // merge lines with the same id
     const content = [];
 
-    const anchor = instances[0].$anchor;
-    instances.forEach((inst) => {
-      const id = inst[anchor];
-      // search if we have already the same id
-      const match = content.find(x => x[anchor] === id);
-      if (!match) {
-        // it is a new one
-        content.push(inst);
-        return;
-      }
-      // otherwise modify previous one
-      mergeObj(match, inst);
-    });
+    if (bindings.length) {
+      console.log('qui', bindings);
+      // apply the proto
+      const instances = bindings.map(b => sparql2proto(b, proto, opt));
+      // merge lines with the same id
 
-    // remove anchor tag
-    content.forEach(cleanRecursively);
+      const anchor = instances[0] && instances[0].$anchor;
+      instances.forEach((inst) => {
+        const id = inst[anchor];
+        // search if we have already the same id
+        const match = content.find(x => x[anchor] === id);
+        if (!match) {
+          // it is a new one
+          content.push(inst);
+          return;
+        }
+        // otherwise modify previous one
+        mergeObj(match, inst);
+      });
+
+      // remove anchor tag
+      content.forEach(cleanRecursively);
+    }
 
     if (isJsonLD) {
       return {
