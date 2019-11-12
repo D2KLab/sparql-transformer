@@ -8,5 +8,6 @@
     "?id a dbo:City",
     "?id dbo:country dbr:Italy"
   ],
+  "$from": "http://dbpedia.org",
   "$limit": 100
 }

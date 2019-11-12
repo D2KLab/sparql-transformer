@@ -95,6 +95,7 @@ The supported properties are:
 |`$where`|string, array| Add where clause in the triple format.<br>Ex. `"$where": "?id a dbo:City"`|
 |`$values`|object| Set `VALUES` for specified variables as a map.<br>Ex. `"$values": {"?id": ["dbr:Bari", "http://dbpedia.org/resource/Bologna"]}`|
 |`$limit` |number| `LIMIT` the SPARQL results |
+|`$from` |string(uri)| Define the graph `FROM` which selecting the results |
 |`$offset` |number| `OFFSET` applied to the SPARQL results |
 |`$distinct`|boolean (default `true`)| Set the `DISTINCT` in the select|
 |`$orderby`|string, array| Build an `ORDER BY` on the variables in the input.<br> Ex. `"$orderby":["DESC(?name)","?age"]`|

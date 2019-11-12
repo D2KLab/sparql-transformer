@@ -4,6 +4,7 @@ import Debugger from './debugger';
 import SparqlClient from './sparql-client';
 
 const debug = new Debugger();
+const INDENT = '    ';
 const DEFAULT_OPTIONS = {
   context: 'http://schema.org/',
   endpoint: 'http://dbpedia.org/sparql',
@@ -126,7 +127,7 @@ function toJsonldValue(input, options) {
 
   const { voc, langTag } = options;
 
-  if (lang && langTag != 'hide') {
+  if (lang && langTag !== 'hide') {
     const obj = {};
     obj[voc.lang] = lang;
     obj[voc.value] = value;
@@ -308,13 +309,13 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 
     const lang = options.find(o => o.match('^lang:.*'));
     let langfilter = '';
-    if (lang) langfilter = `.\nFILTER(lang(${id}) = '${lang.split(':')[1]}')`;
+    if (lang) langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang.split(':')[1]}')`;
 
     if (is$) {
       const usePrevRoot = (id == _rootId) || (options.includes('prevRoot') && prevRoot);
       const subject = usePrevRoot ? prevRoot : _rootId;
       const q = `${subject} ${v} ${id} ${langfilter}`;
-      wheres.push(required ? q : `OPTIONAL { ${q} }`);
+      wheres.push(required ? q : `${INDENT}OPTIONAL { ${q} }`);
     }
   }, _blockRequired];
 }
@@ -361,8 +362,9 @@ function jsonld2query(input) {
 
   wheres = wheres.map(w => w.trim())
     .filter(w => w)
-    .map(w => `    ${w}`);
+    .map(w => INDENT + w);
 
+  const from = modifiers.$from ? `FROM <${modifiers.$from}>` : '';
   const limit = modifiers.$limit ? `LIMIT ${modifiers.$limit}` : '';
   const offset = modifiers.$offset ? `OFFSET ${modifiers.$offset}` : '';
   const distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
@@ -374,17 +376,19 @@ function jsonld2query(input) {
 
   const query = `${prefixes.join('\n')}
   SELECT ${distinct} ${vars.join(' ')}
+  ${from}
   WHERE {
-    ${values.join('\n')}
-  ${wheres.join('.\n')}
-    ${filters.map(f => `FILTER(${f})`).join('\n')}
+${values.map(v => INDENT + v).join('\n')}
+${wheres.join('.\n')}
+${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
   }
   ${groupby}
   ${having}
   ${orderby}
   ${limit}
   ${offset}
-  `;
+  `.replace(/\n+/g, '\n')
+    .replace(/\n\s+\n/g, '\n');
 
   debug.debug(query);
   return {
