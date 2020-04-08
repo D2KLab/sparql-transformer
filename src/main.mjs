@@ -430,7 +430,8 @@ export default function (input, options = {}) {
     const content = [];
 
     if (bindings.length) {
-      console.log('qui', bindings);
+      if(opt.logBindings)
+        console.log('qui', bindings);
       // apply the proto
       const instances = bindings.map(b => sparql2proto(b, proto, opt));
       // merge lines with the same id
