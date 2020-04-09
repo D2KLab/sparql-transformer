@@ -374,7 +374,7 @@ function jsonld2query(input) {
   const groupby = modifiers.$groupby ? `GROUP BY ${asArray(modifiers.$groupby).join(' ')}` : '';
   const having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
 
-  const query = `${prefixes.join('\n')}
+  let query = `${prefixes.join('\n')}
   SELECT ${distinct} ${vars.join(' ')}
   ${from}
   WHERE {
@@ -387,8 +387,11 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
   ${orderby}
   ${limit}
   ${offset}
-  `.replace(/\n+/g, '\n')
-    .replace(/\n\s+\n/g, '\n');
+  `;
+
+  query = query.replace(/\n+/g, '\n')
+    .replace(/\n\s+\n/g, '\n')
+    .replace(/\.+/g, '.');
 
   debug.debug(query);
   return {
@@ -430,7 +433,6 @@ export default function (input, options = {}) {
     const content = [];
 
     if (bindings.length) {
-      console.log('qui', bindings);
       // apply the proto
       const instances = bindings.map(b => sparql2proto(b, proto, opt));
       // merge lines with the same id
