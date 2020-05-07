@@ -311,10 +311,14 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     let langfilter = '';
     if (lang) langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang.split(':')[1]}')`;
 
+    const reverse = options.includes('reverse');
     if (is$) {
       const usePrevRoot = (id == _rootId) || (options.includes('prevRoot') && prevRoot);
       const subject = usePrevRoot ? prevRoot : _rootId;
-      const q = `${subject} ${v} ${id} ${langfilter}`;
+
+      const subj = reverse ? id : subject;
+      const obj = reverse ? subject : id;
+      const q = `${subj} ${v} ${obj} ${langfilter}`;
       wheres.push(required ? q : `${INDENT}OPTIONAL { ${q} }`);
     }
   }, _blockRequired];

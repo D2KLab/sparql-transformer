@@ -1,0 +1,1015 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "id",
+      "band"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Asia_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Emerson,_Lake_&_Palmer"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesis_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Marillion"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Radiohead"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Residents"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Tool_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Yes_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Amazulu_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Ataxia_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dalek_I_Love_You"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Art_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Gazpacho_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Britpop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blur_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Britpop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Supergrass"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Britpop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Gene_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Britpop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Lodger_(British_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Polka"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Brave_Combo"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Asia_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Deep_Purple"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Emerson,_Lake_&_Palmer"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Genesis_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Opeth"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Tool_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Yes_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Aerodrom_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Brainchild_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Cressida_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Crippled_Black_Phoenix"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Gazpacho_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/God_Street_Wine"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Headband_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Lite_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Nurse_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Prophet_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Sadistic_Mika_Band"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Speed_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Manowar"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Speed_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Aion_(Japanese_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Trance_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dash_Berlin"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Trance_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Moodswings_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Trip_hop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Sneaker_Pimps"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Trip_hop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Chemical_Brothers"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/World_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Australis_(musical_project)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/World_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Beyond_(Swiss_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Big_beat"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Chemical_Brothers"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Psychedelic_folk"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Nurses_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Psychedelic_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Love_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Psychedelic_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Monkees"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Psychedelic_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Nurses_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Cream_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Deep_Purple"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dr._Feelgood_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Doors"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/ZZ_Top"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Pack_A.D."
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Evgeny_Margulis"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Geordie_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Girish_and_The_Chronicles"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/McGuinness_Flint"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blues_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Monolith_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/K-pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/April_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/K-pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Exo_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/K-pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/F(x)_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/K-pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/IKon_(South_Korean_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/K-pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Secret_(South_Korean_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/New-age_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Australis_(musical_project)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Progressive_house"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dash_Berlin"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Post-disco"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Telex_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Post-disco"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Imagination_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dancehall"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/ReQuest_Dance_Crew"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Manowar"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Narnia_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Sanctuary_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Aion_(Japanese_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/DGM_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dreamtone_&_Iris_Mavraki's_Neverland"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Lethal_(American_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Memento_Mori_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Psychobilly"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Cramps"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Worldbeat"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Brave_Combo"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Doom_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Confessor_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Doom_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Memento_Mori_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Love_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Monkees"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Pogues"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Traveling_Wilburys"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Candidate_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Goanna_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Honk_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Los_Bunkers"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Lovestone_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Folk_rock"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/McGuinness_Flint"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Funk_metal"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Lock_Up_(American_band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Gospel_music"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blue_Murder_(folk)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Klezmer"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Beyond_the_Pale_(band)"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bay_City_Rollers"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Buzzcocks"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Marcy_Playground"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Power_pop"
+        },
+        "band": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Weezer"
+        }
+      }
+    ]
+  }
+}

@@ -43,7 +43,6 @@
     "fast-deep-equal": "^3.1.1",
     "is-valid-path": "^0.1.1",
     "jsonfile": "^6.0.1",
-    "object-assign-deep": "^0.4.0",
-    "virtuoso-sparql-client": "^0.2.2"
+    "object-assign-deep": "^0.4.0"
   }
 }

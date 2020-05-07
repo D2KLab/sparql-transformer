@@ -1,0 +1,14 @@
+{
+  "proto": {
+    "id": "?id",
+    "band": "$dbo:genre$required$reverse$var:band"
+  },
+  "$prefixes": {
+    "dbo": "http://dbpedia.org/ontology/"
+  },
+  "$limit": 100,
+  "$where": [
+    "?band a dbo:Band",
+    "?id  a dbo:TopicalConcept"
+  ]
+}

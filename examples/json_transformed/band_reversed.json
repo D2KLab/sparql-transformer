@@ -1,0 +1,215 @@
+[
+  {
+    "id": "http://dbpedia.org/resource/Art_rock",
+    "band": [
+      "http://dbpedia.org/resource/Asia_(band)",
+      "http://dbpedia.org/resource/Emerson,_Lake_&_Palmer",
+      "http://dbpedia.org/resource/Genesis_(band)",
+      "http://dbpedia.org/resource/Marillion",
+      "http://dbpedia.org/resource/Radiohead",
+      "http://dbpedia.org/resource/The_Residents",
+      "http://dbpedia.org/resource/Tool_(band)",
+      "http://dbpedia.org/resource/Yes_(band)",
+      "http://dbpedia.org/resource/Amazulu_(band)",
+      "http://dbpedia.org/resource/Ataxia_(band)",
+      "http://dbpedia.org/resource/Dalek_I_Love_You",
+      "http://dbpedia.org/resource/Gazpacho_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Britpop",
+    "band": [
+      "http://dbpedia.org/resource/Blur_(band)",
+      "http://dbpedia.org/resource/Supergrass",
+      "http://dbpedia.org/resource/Gene_(band)",
+      "http://dbpedia.org/resource/Lodger_(British_band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Grunge",
+    "band": [
+      "http://dbpedia.org/resource/Alice_in_Chains",
+      "http://dbpedia.org/resource/Soundgarden"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Polka",
+    "band": "http://dbpedia.org/resource/Brave_Combo"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Progressive_rock",
+    "band": [
+      "http://dbpedia.org/resource/Asia_(band)",
+      "http://dbpedia.org/resource/Deep_Purple",
+      "http://dbpedia.org/resource/Emerson,_Lake_&_Palmer",
+      "http://dbpedia.org/resource/Genesis_(band)",
+      "http://dbpedia.org/resource/Opeth",
+      "http://dbpedia.org/resource/Tool_(band)",
+      "http://dbpedia.org/resource/Yes_(band)",
+      "http://dbpedia.org/resource/Aerodrom_(band)",
+      "http://dbpedia.org/resource/Brainchild_(band)",
+      "http://dbpedia.org/resource/Cressida_(band)",
+      "http://dbpedia.org/resource/Crippled_Black_Phoenix",
+      "http://dbpedia.org/resource/Gazpacho_(band)",
+      "http://dbpedia.org/resource/God_Street_Wine",
+      "http://dbpedia.org/resource/Headband_(band)",
+      "http://dbpedia.org/resource/Lite_(band)",
+      "http://dbpedia.org/resource/Nurse_(band)",
+      "http://dbpedia.org/resource/Prophet_(band)",
+      "http://dbpedia.org/resource/Sadistic_Mika_Band"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Speed_metal",
+    "band": [
+      "http://dbpedia.org/resource/Manowar",
+      "http://dbpedia.org/resource/Aion_(Japanese_band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Trance_music",
+    "band": [
+      "http://dbpedia.org/resource/Dash_Berlin",
+      "http://dbpedia.org/resource/Moodswings_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Trip_hop",
+    "band": [
+      "http://dbpedia.org/resource/Sneaker_Pimps",
+      "http://dbpedia.org/resource/The_Chemical_Brothers"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/World_music",
+    "band": [
+      "http://dbpedia.org/resource/Australis_(musical_project)",
+      "http://dbpedia.org/resource/Beyond_(Swiss_band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Big_beat",
+    "band": "http://dbpedia.org/resource/The_Chemical_Brothers"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Psychedelic_folk",
+    "band": "http://dbpedia.org/resource/Nurses_(band)"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Psychedelic_pop",
+    "band": [
+      "http://dbpedia.org/resource/Love_(band)",
+      "http://dbpedia.org/resource/The_Monkees",
+      "http://dbpedia.org/resource/Nurses_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Blues_rock",
+    "band": [
+      "http://dbpedia.org/resource/Cream_(band)",
+      "http://dbpedia.org/resource/Deep_Purple",
+      "http://dbpedia.org/resource/Dr._Feelgood_(band)",
+      "http://dbpedia.org/resource/The_Doors",
+      "http://dbpedia.org/resource/ZZ_Top",
+      "http://dbpedia.org/resource/The_Pack_A.D.",
+      "http://dbpedia.org/resource/Evgeny_Margulis",
+      "http://dbpedia.org/resource/Geordie_(band)",
+      "http://dbpedia.org/resource/Girish_and_The_Chronicles",
+      "http://dbpedia.org/resource/McGuinness_Flint",
+      "http://dbpedia.org/resource/Monolith_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/K-pop",
+    "band": [
+      "http://dbpedia.org/resource/April_(band)",
+      "http://dbpedia.org/resource/Exo_(band)",
+      "http://dbpedia.org/resource/F(x)_(band)",
+      "http://dbpedia.org/resource/IKon_(South_Korean_band)",
+      "http://dbpedia.org/resource/Secret_(South_Korean_band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/New-age_music",
+    "band": "http://dbpedia.org/resource/Australis_(musical_project)"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Progressive_house",
+    "band": "http://dbpedia.org/resource/Dash_Berlin"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Post-disco",
+    "band": [
+      "http://dbpedia.org/resource/Telex_(band)",
+      "http://dbpedia.org/resource/Imagination_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Dancehall",
+    "band": "http://dbpedia.org/resource/ReQuest_Dance_Crew"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Power_metal",
+    "band": [
+      "http://dbpedia.org/resource/Manowar",
+      "http://dbpedia.org/resource/Narnia_(band)",
+      "http://dbpedia.org/resource/Sanctuary_(band)",
+      "http://dbpedia.org/resource/Aion_(Japanese_band)",
+      "http://dbpedia.org/resource/DGM_(band)",
+      "http://dbpedia.org/resource/Dreamtone_&_Iris_Mavraki's_Neverland",
+      "http://dbpedia.org/resource/Lethal_(American_band)",
+      "http://dbpedia.org/resource/Memento_Mori_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Psychobilly",
+    "band": "http://dbpedia.org/resource/The_Cramps"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Worldbeat",
+    "band": "http://dbpedia.org/resource/Brave_Combo"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Doom_metal",
+    "band": [
+      "http://dbpedia.org/resource/Confessor_(band)",
+      "http://dbpedia.org/resource/Memento_Mori_(band)"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Folk_rock",
+    "band": [
+      "http://dbpedia.org/resource/Love_(band)",
+      "http://dbpedia.org/resource/The_Monkees",
+      "http://dbpedia.org/resource/The_Pogues",
+      "http://dbpedia.org/resource/Traveling_Wilburys",
+      "http://dbpedia.org/resource/Candidate_(band)",
+      "http://dbpedia.org/resource/Goanna_(band)",
+      "http://dbpedia.org/resource/Honk_(band)",
+      "http://dbpedia.org/resource/Los_Bunkers",
+      "http://dbpedia.org/resource/Lovestone_(band)",
+      "http://dbpedia.org/resource/McGuinness_Flint"
+    ]
+  },
+  {
+    "id": "http://dbpedia.org/resource/Funk_metal",
+    "band": "http://dbpedia.org/resource/Lock_Up_(American_band)"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Gospel_music",
+    "band": "http://dbpedia.org/resource/Blue_Murder_(folk)"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Klezmer",
+    "band": "http://dbpedia.org/resource/Beyond_the_Pale_(band)"
+  },
+  {
+    "id": "http://dbpedia.org/resource/Power_pop",
+    "band": [
+      "http://dbpedia.org/resource/Bay_City_Rollers",
+      "http://dbpedia.org/resource/Buzzcocks",
+      "http://dbpedia.org/resource/Marcy_Playground",
+      "http://dbpedia.org/resource/Weezer"
+    ]
+  }
+]

@@ -13,7 +13,9 @@
     "no-plusplus": "off",
     "no-continue": "off",
     "no-restricted-syntax": "off",
-    "radix": "off"
+    "radix": "off",
+    "arrow-parens": "off",
+    "prefer-object-spread": "off"
   },
   "plugins": [
     "import"
