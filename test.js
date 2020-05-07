@@ -1,8 +1,8 @@
-import test from 'ava';
-import fs from 'fs';
-import nock from 'nock';
+const test = require('ava');
+const fs = require('fs');
+const nock = require('nock');
 
-import lib from './index';
+const lib = require('./index');
 
 const sparqlTransformer = lib.default;
 

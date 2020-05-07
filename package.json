@@ -28,21 +28,21 @@
     ]
   },
   "devDependencies": {
-    "ava": "^2.2.0",
-    "eslint": "^5.3.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "nock": "^10.0.6",
-    "rimraf": "^2.6.3",
-    "rollup": "^1.17.0",
+    "ava": "^3.8.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nock": "^12.0.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.8.2",
     "rollup-plugin-cleanup": "^3.1.1"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.19.2",
     "esm": "^3.2.25",
-    "fast-deep-equal": "^2.0.1",
+    "fast-deep-equal": "^3.1.1",
     "is-valid-path": "^0.1.1",
-    "jsonfile": "^5.0.0",
+    "jsonfile": "^6.0.1",
     "object-assign-deep": "^0.4.0",
     "virtuoso-sparql-client": "^0.2.2"
   }
