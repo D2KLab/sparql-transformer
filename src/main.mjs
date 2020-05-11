@@ -283,8 +283,6 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     let options = [];
     if (v.includes('$')) [v, ...options] = v.split('$');
 
-    const required = options.includes('required') || ['id', '@id'].includes(k) || Object.keys(values).includes(k);
-
     let id = is$ ? (`?${prefix}${i}`) : v;
     const givenVar = options.find(o => o.match('var:.*'));
     if (givenVar) {
@@ -310,6 +308,8 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     const lang = options.find(o => o.match('^lang:.*'));
     let langfilter = '';
     if (lang) langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang.split(':')[1]}')`;
+
+    const required = options.includes('required') || ['id', '@id'].includes(k) || values.includes(id);
 
     const reverse = options.includes('reverse');
     if (is$) {
@@ -360,8 +360,9 @@ function jsonld2query(input) {
   let wheres = asArray(modifiers.$where);
   const mainLang = modifiers.$lang;
 
+  const valuesKey = Object.keys(modifiers.$values || {}).map(sparqlVar);
   const [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang,
-    undefined, undefined, modifiers.$values);
+    undefined, undefined, valuesKey);
   Object.keys(proto).forEach(mpkFun);
 
   wheres = wheres.map(w => w.trim())
