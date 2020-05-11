@@ -16,191 +16,241 @@
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Giugliano_in_Campania"
+          "value": "http://dbpedia.org/resource/Cantù"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Giugliano in Campania"
+          "value": "Cantù"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Annunziata_Giugliano.jpg"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Piazza_garibaldi_cantù.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Lombardy"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Lombardia"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/San_Benedetto_del_Tronto"
+          "value": "http://dbpedia.org/resource/Thiene"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "San Benedetto del Tronto"
+          "value": "Thiene"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Sanbenedettodeltronto05.jpg"
+          "value": "http://en.wikipedia.org/wiki/Special:FilePath/Thiene_Castle.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Veneto"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Veneto"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Colico"
+          "value": "http://dbpedia.org/resource/Salerno"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Colico"
+          "value": "Salerno"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Colico.JPG"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/SalernoCanalone.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Campania"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Campania"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Rome"
+          "value": "http://dbpedia.org/resource/Altamura"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Rome"
+          "value": "Altamura"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Flag_of_Rome.svg"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Puglia_Altamura1_tango7174.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Apulia"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Puglia"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Grosseto"
+          "value": "http://dbpedia.org/resource/Viareggio"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Grosseto"
+          "value": "Viareggio"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Comune_grosseto_citta.jpg"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Viareggio,_royal_2.JPG"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Tuscany"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Toscana"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Miggiano"
+          "value": "http://dbpedia.org/resource/Città_di_Castello"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Miggiano"
+          "value": "Città di Castello"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Miggiano-Stemma.png"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Città_di_Castello_Panorama.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Umbria"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Umbria"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Perugia"
+          "value": "http://dbpedia.org/resource/Ferrara"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Perugia"
+          "value": "Ferrara"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Perugia_panoramic.jpg"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Castello_esterno.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Emilia-Romagna"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Emilia-Romagna"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Sulmona"
+          "value": "http://dbpedia.org/resource/Torre_del_Greco"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Sulmona"
+          "value": "Torre del Greco"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/PanoramaSulmona.JPG"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Torre_del_greco_porto.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Campania"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Campania"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Itri"
+          "value": "http://dbpedia.org/resource/Busto_Arsizio"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Itri"
+          "value": "Busto Arsizio"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/ItriCittàAlta.jpg"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/20071226SMaria.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Lombardy"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Lombardia"
         }
       },
       {
         "id": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Orsara_di_Puglia"
+          "value": "http://dbpedia.org/resource/Ostuni"
         },
         "v2": {
           "type": "literal",
           "xml:lang": "en",
-          "value": "Orsara di Puglia"
+          "value": "Ostuni"
         },
         "v3": {
           "type": "uri",
-          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/OrsaradiPuglia-Stemma.gif"
+          "value": "http://commons.wikimedia.org/wiki/Special:FilePath/Ostuni.jpg"
         },
         "v4r": {
           "type": "uri",
-          "value": "http://dbpedia.org/resource/Genesee_River"
+          "value": "http://dbpedia.org/resource/Apulia"
+        },
+        "v41": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Puglia"
         }
       }
     ]
