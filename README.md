@@ -78,7 +78,7 @@ Some modifiers can be present after, separated by the `$` sign. The `:` prepend 
 |---|---|---|
 |`$required`|n/a| When omitted, the clause is wrapped by `OPTIONAL { ... }`.|
 |`$sample`|n/a|Extract a single value for that property by adding a `SAMPLE(?v)` in the SELECT|
-|`$lang`|`:lang`[string]| FILTER by language.<br>Ex. `$lang:it`, `$lang:en`|
+|`$lang`|`:lang`[string, optional]| FILTER by language. In absence of a language, pick the first value of `$lang` in the root.<br>Ex. `$lang:it`, `$lang:en`, `$lang`. |
 |`$bestlang`|`:acceptedLangs`[string, optional]| Choose the best match (using `BEST_LANGMATCH`) over the languages according to the list expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). This list can be appended after the `:` or expressed as `$lang` in the root.<br>Ex. `$bestlang`, `$bestlang:en;q=1, it;q=0.7 *;q=0.1`|
 |`$var`|`:var`[string]| Specify the variable that will be assigned in the query, so that it can be referred in the root properties (like `$filter`). If missing, a `$` is prepended. <br> Ex. `$var:myVariable`, `$var:?name`|
 |`$anchor`|n/a|Set this property as merging anchor. The set is valid for the current level in the JSON tree, ignoring eventual `id`/`@id` sibling properties. Ex. `"a":"?example$anchor"` sets`?example` as subject of SPARQL statements and merges the final results on the `a` property.|

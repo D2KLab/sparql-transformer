@@ -305,9 +305,13 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     }
     vars.push(aVar);
 
-    const lang = options.find(o => o.match('^lang:.*'));
+    const LANG_REGEX = /^lang(?::(.+))?/i;
+    const langStr = options.find(o => o.match(LANG_REGEX));
     let langfilter = '';
-    if (lang) langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang.split(':')[1]}')`;
+    if (langStr) {
+      const lang = langStr.match(LANG_REGEX)[1] || mainLang.split(/[;,]/)[0];
+      langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang}')`;
+    }
 
     const required = options.includes('required') || ['id', '@id'].includes(k) || values.includes(id);
 
