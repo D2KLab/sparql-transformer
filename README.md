@@ -94,7 +94,7 @@ The supported properties are:
 |PROPERTY|INPUT|NOTE|
 |--------|-----|----|
 |`$where`|string, array| Add where clause in the triple format.<br>Ex. `"$where": "?id a dbo:City"`|
-|`$values`|object| Set `VALUES` for specified variables as a map.<br>Ex. `"$values": {"?id": ["dbr:Bari", "http://dbpedia.org/resource/Bologna"]}`|
+|`$values`|object| Set `VALUES` for specified variables as a map. The presence of a lang tag or of the '$lang' attribute attached to the related property is taken in account. <br>Ex. `"$values": {"?id": ["dbr:Bari", "http://dbpedia.org/resource/Bologna"]}`|
 |`$limit` |number| `LIMIT` the SPARQL results |
 |`$from` |string(uri)| Define the graph `FROM` which selecting the results |
 |`$offset` |number| `OFFSET` applied to the SPARQL results |

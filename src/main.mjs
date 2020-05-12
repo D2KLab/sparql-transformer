@@ -24,6 +24,8 @@ const KEY_VOCABULARIES = {
   },
 };
 
+const LANG_REGEX = /^lang(?::(.+))?/i;
+
 function defaultSparql(endpoint) {
   const client = new SparqlClient(endpoint);
   return q => client.query(q);
@@ -72,9 +74,13 @@ function parseValues(values) {
       const vals = asArray(values[p]).map((v) => {
         if (v.startsWith('http')) return `<${v}>`;
         if (v.includes(':')) return v;
+        if (v.match(/^.+@[a-z]{2,3}(_[A-Z]{2)?$/)) { // if language tag
+          const x = v.split('@', 2);
+          return `"${x[0]}"@${x[1]}`;
+        }
         return `"${v}"`;
       });
-      return `VALUES ${sparqlVar(p)} {${vals.join(' ')}}`;
+      return `VALUES ${p} {${vals.join(' ')}}`;
     });
 }
 
@@ -258,7 +264,7 @@ function computeRootId(proto, prefix) {
 /**
  * Parse a single key in prototype
  */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = []) {
+function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = {}) {
   let [_rootId, _blockRequired] = computeRootId(proto, prefix);
   _rootId = _rootId || prevRoot || '?id';
   return [function parsingFunc(k, i) {
@@ -305,15 +311,18 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     }
     vars.push(aVar);
 
-    const LANG_REGEX = /^lang(?::(.+))?/i;
     const langStr = options.find(o => o.match(LANG_REGEX));
     let langfilter = '';
     if (langStr) {
-      const lang = langStr.match(LANG_REGEX)[1] || mainLang.split(/[;,]/)[0];
-      langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang}')`;
+      const lang = langStr.match(LANG_REGEX)[1] || mainLang.split(/[;,]/)[0].trim();
+      if (values[id] && typeof (values[id]) === 'string') {
+        values[id] += `@${lang}`;
+      } else {
+        langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang}')`;
+      }
     }
 
-    const required = options.includes('required') || ['id', '@id'].includes(k) || values.includes(id);
+    const required = options.includes('required') || ['id', '@id'].includes(k) || values[id];
 
     const reverse = options.includes('reverse');
     if (is$) {
@@ -343,6 +352,20 @@ function cleanRecursively(instance) {
 }
 
 /**
+ * Transform all key of a object to a sparqlVariable
+ * adding the '?' if required
+ */
+function normalizeValues(values) {
+  if (!values) return undefined;
+  const out = {};
+  for (const [key, value] of Object.entries(values)) {
+    out[sparqlVar(key)] = value;
+  }
+  console.log(out);
+  return out;
+}
+
+/**
  * Read the input and extract the query and the
  * prototype
  */
@@ -364,9 +387,9 @@ function jsonld2query(input) {
   let wheres = asArray(modifiers.$where);
   const mainLang = modifiers.$lang;
 
-  const valuesKey = Object.keys(modifiers.$values || {}).map(sparqlVar);
+  const valuesNormalized = normalizeValues(modifiers.$values);
   const [mpkFun] = manageProtoKey(proto, vars, filters, wheres, mainLang,
-    undefined, undefined, valuesKey);
+    undefined, undefined, valuesNormalized);
   Object.keys(proto).forEach(mpkFun);
 
   wheres = wheres.map(w => w.trim())
@@ -378,7 +401,7 @@ function jsonld2query(input) {
   const offset = modifiers.$offset ? `OFFSET ${modifiers.$offset}` : '';
   const distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
   const prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
-  const values = modifiers.$values ? parseValues(modifiers.$values) : [];
+  const values = modifiers.$values ? parseValues(valuesNormalized) : [];
   const orderby = modifiers.$orderby ? `ORDER BY ${asArray(modifiers.$orderby).join(' ')}` : '';
   const groupby = modifiers.$groupby ? `GROUP BY ${asArray(modifiers.$groupby).join(' ')}` : '';
   const having = modifiers.$having ? `HAVING (${asArray(modifiers.$having).join(' && ')})` : '';
