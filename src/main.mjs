@@ -361,7 +361,6 @@ function normalizeValues(values) {
   for (const [key, value] of Object.entries(values)) {
     out[sparqlVar(key)] = value;
   }
-  console.log(out);
   return out;
 }
 
