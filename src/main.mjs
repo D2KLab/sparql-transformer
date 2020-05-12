@@ -74,7 +74,7 @@ function parseValues(values) {
       const vals = asArray(values[p]).map((v) => {
         if (v.startsWith('http')) return `<${v}>`;
         if (v.includes(':')) return v;
-        if (v.match(/^.+@[a-z]{2,3}(_[A-Z]{2)?$/)) { // if language tag
+        if (v.match(/^.+@[a-z]{2,3}(_[A-Z]{2})?$/)) { // if language tag
           const x = v.split('@', 2);
           return `"${x[0]}"@${x[1]}`;
         }
@@ -314,11 +314,13 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     const langStr = options.find(o => o.match(LANG_REGEX));
     let langfilter = '';
     if (langStr) {
-      const lang = langStr.match(LANG_REGEX)[1] || mainLang.split(/[;,]/)[0].trim();
-      if (values[id] && typeof (values[id]) === 'string') {
-        values[id] += `@${lang}`;
-      } else {
-        langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang}')`;
+      const lang = langStr.match(LANG_REGEX)[1] || (mainLang && mainLang.split(/[;,]/)[0].trim());
+      if (lang) {
+        if (values[id] && typeof (values[id]) === 'string') {
+          values[id] += `@${lang}`;
+        } else {
+          langfilter = `.\n${INDENT}FILTER(lang(${id}) = '${lang}')`;
+        }
       }
     }
 
