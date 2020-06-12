@@ -436,7 +436,8 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
 }
 
 
-export default function (input, options = {}) {
+export default function (baseInput, options = {}) {
+  const input = objectAssignDeep({}, baseInput);
   const opt = Object.assign({},
     DEFAULT_OPTIONS, {
       context: input['@context'],
