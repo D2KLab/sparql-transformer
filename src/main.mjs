@@ -309,7 +309,9 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 
       aVar = `(sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id})`;
     }
-    vars.push(aVar);
+    if (!vars.includes(aVar)) {
+      vars.push(aVar);
+    }
 
     const langStr = options.find(o => o.match(LANG_REGEX));
     let langfilter = '';

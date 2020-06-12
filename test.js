@@ -79,3 +79,14 @@ test('No lang tag', async (t) => {
 
   t.deepEqual(out, expected);
 });
+
+test('Duplicate variable name', async (t) => {
+  const file = 'issue_10_duplicate_vars.json';
+  const [orig, q, expected] = loadFiles(file);
+  mock(orig);
+
+  const out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
+
+  t.deepEqual(out, expected);
+});
