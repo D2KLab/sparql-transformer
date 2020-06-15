@@ -1,0 +1,82 @@
+{
+  "head": {
+    "link": [],
+    "vars": ["label"]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Acre, Israel"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "\u0639\u0643\u0627"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Akkon"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Acre (Israel)"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Acre (Isra\u00EBl)"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Acri (Israele)"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "\u30A2\u30C3\u30B3"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Akko (stad)"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Akka"
+        }
+      },
+      {
+        "label": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Acre (Israel)"
+        }
+      }
+    ]
+  }
+}

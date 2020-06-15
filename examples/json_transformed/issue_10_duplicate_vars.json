@@ -1,0 +1,102 @@
+[
+  {
+    "id": {
+      "language": "en",
+      "value": "Acre, Israel"
+    },
+    "name": {
+      "language": "en",
+      "value": "Acre, Israel"
+    }
+  },
+  {
+    "id": {
+      "language": "ar",
+      "value": "عكا"
+    },
+    "name": {
+      "language": "ar",
+      "value": "عكا"
+    }
+  },
+  {
+    "id": {
+      "language": "de",
+      "value": "Akkon"
+    },
+    "name": {
+      "language": "de",
+      "value": "Akkon"
+    }
+  },
+  {
+    "id": {
+      "language": "es",
+      "value": "Acre (Israel)"
+    },
+    "name": {
+      "language": "es",
+      "value": "Acre (Israel)"
+    }
+  },
+  {
+    "id": {
+      "language": "fr",
+      "value": "Acre (Israël)"
+    },
+    "name": {
+      "language": "fr",
+      "value": "Acre (Israël)"
+    }
+  },
+  {
+    "id": {
+      "language": "it",
+      "value": "Acri (Israele)"
+    },
+    "name": {
+      "language": "it",
+      "value": "Acri (Israele)"
+    }
+  },
+  {
+    "id": {
+      "language": "ja",
+      "value": "アッコ"
+    },
+    "name": {
+      "language": "ja",
+      "value": "アッコ"
+    }
+  },
+  {
+    "id": {
+      "language": "nl",
+      "value": "Akko (stad)"
+    },
+    "name": {
+      "language": "nl",
+      "value": "Akko (stad)"
+    }
+  },
+  {
+    "id": {
+      "language": "pl",
+      "value": "Akka"
+    },
+    "name": {
+      "language": "pl",
+      "value": "Akka"
+    }
+  },
+  {
+    "id": {
+      "language": "pt",
+      "value": "Acre (Israel)"
+    },
+    "name": {
+      "language": "pt",
+      "value": "Acre (Israel)"
+    }
+  }
+]

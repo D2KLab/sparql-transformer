@@ -309,7 +309,9 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
 
       aVar = `(sql:BEST_LANGMATCH(${id}, "${lng}", "en") AS ${id})`;
     }
-    vars.push(aVar);
+    if (!vars.includes(aVar)) {
+      vars.push(aVar);
+    }
 
     const langStr = options.find(o => o.match(LANG_REGEX));
     let langfilter = '';
@@ -434,7 +436,8 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
 }
 
 
-export default function (input, options = {}) {
+export default function (baseInput, options = {}) {
+  const input = objectAssignDeep({}, baseInput);
   const opt = Object.assign({},
     DEFAULT_OPTIONS, {
       context: input['@context'],

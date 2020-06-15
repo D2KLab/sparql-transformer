@@ -1,0 +1,11 @@
+{
+  "proto": {
+    "id": "?label$required",
+    "name": "?label$required"
+  },
+  "$where": [
+    "?id a dbo:City",
+    "?id rdfs:label ?label"
+  ],
+  "$limit": 10
+}
