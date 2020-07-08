@@ -1,5 +1,6 @@
 const test = require('ava');
 const fs = require('fs');
+const path = require('path');
 const nock = require('nock');
 
 const lib = require('./index');
@@ -8,6 +9,7 @@ const sparqlTransformer = lib.default;
 
 const OUTPUT = './examples/json_transformed/';
 const JSONLD_QUERIES = './examples/json_queries/';
+const SPARQL_QUERIES = './examples/sparql_queries/';
 const SPARQL_OUTPUTS = './examples/sparql_output/';
 
 function mock(file) {
@@ -17,29 +19,52 @@ function mock(file) {
     .reply(200, file);
 }
 
+async function getSparqlQuery(q) {
+  let sparqlQuery = null;
+  try {
+    await sparqlTransformer(q, {
+      debug: false,
+      sparqlFunction: async (query) => {
+        sparqlQuery = `  ${query.trim()}`;
+        return Promise.reject();
+      },
+    });
+  } catch (e) {
+    // eslint-disable-next-line no-empty
+  }
+  return sparqlQuery;
+}
+
 function loadFiles(file) {
   const orig = fs.readFileSync(`${SPARQL_OUTPUTS}${file}`, 'utf8');
   const q = JSON.parse(fs.readFileSync(`${JSONLD_QUERIES}${file}`, 'utf8'));
+  const sparql = fs.readFileSync(`${SPARQL_QUERIES}${path.basename(file, path.extname(file))}.rq`, 'utf8');
   const expected = JSON.parse(fs.readFileSync(`${OUTPUT}${file}`, 'utf8'));
 
-  return [orig, q, expected];
+  return [orig, q, sparql, expected];
 }
 
 test('DBpedia list of cities (proto)', async (t) => {
   const file = 'city.list.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
 
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
+
   const out = await sparqlTransformer(q);
-  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2),'utf-8');
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
 
   t.deepEqual(out, expected);
 });
 
 test('DBpedia list of cities and regions (jsonld)', async (t) => {
   const file = 'city.region.list.ld.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
@@ -49,8 +74,11 @@ test('DBpedia list of cities and regions (jsonld)', async (t) => {
 
 test('DBpedia grunge bands', async (t) => {
   const file = 'band.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
@@ -60,8 +88,11 @@ test('DBpedia grunge bands', async (t) => {
 
 test('DBpedia genres with bands', async (t) => {
   const file = 'band_reversed.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
@@ -71,8 +102,11 @@ test('DBpedia genres with bands', async (t) => {
 
 test('No lang tag', async (t) => {
   const file = 'city.list.ld.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
@@ -82,8 +116,11 @@ test('No lang tag', async (t) => {
 
 test('Duplicate variable name', async (t) => {
   const file = 'issue_10_duplicate_vars.json';
-  const [orig, q, expected] = loadFiles(file);
+  const [orig, q, sparql, expected] = loadFiles(file);
   mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');

@@ -1,0 +1,11 @@
+  SELECT DISTINCT ?id (sql:BEST_LANGMATCH(?v2, "en;q=1, it;q=0.7 *;q=0.1", "en") AS ?v2) ?v3 ?v4r ?v41
+  WHERE {
+    ?id a dbo:City.
+    ?id dbo:country dbr:Italy.
+    ?id rdfs:label ?v2.
+    ?id foaf:depiction ?v3.
+    ?id dbo:region ?v4r .
+    OPTIONAL { ?v4r rdfs:label ?v41 .
+    FILTER(lang(?v41) = 'it') }
+  }
+  LIMIT 10

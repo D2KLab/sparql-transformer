@@ -1,0 +1,9 @@
+  SELECT DISTINCT ?id ?v2 ?v3
+  WHERE {
+    ?id a dbo:City.
+    ?id dbo:country dbr:Italy.
+    ?id rdfs:label ?v2 .
+    FILTER(lang(?v2) = 'it').
+    ?id foaf:depiction ?v3
+  }
+  LIMIT 1

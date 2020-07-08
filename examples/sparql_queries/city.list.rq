@@ -1,0 +1,9 @@
+  SELECT DISTINCT ?id ?v1 ?v2
+  FROM <http://dbpedia.org>
+  WHERE {
+    ?id a dbo:City.
+    ?id dbo:country dbr:Italy.
+    ?id rdfs:label ?v1.
+    ?id foaf:depiction ?v2
+  }
+  LIMIT 100
