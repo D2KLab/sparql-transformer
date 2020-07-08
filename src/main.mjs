@@ -444,7 +444,9 @@ export default function (baseInput, options = {}) {
     }, options);
 
   if (opt.env && opt.env.DEBUG_LEVEL) debug.level = opt.env.DEBUG_LEVEL;
-  if (opt.debug) debug.level = 'debug';
+  // Override debug level if `debug` option is set
+  if (opt.debug === true) debug.level = 'debug';
+  if (opt.debug === false) debug.level = 'log';
 
   debug.verbose('options:', JSON.stringify(opt, null, 2));
 
