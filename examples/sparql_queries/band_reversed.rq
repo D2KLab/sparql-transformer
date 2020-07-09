@@ -1,0 +1,8 @@
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  SELECT DISTINCT ?id ?band
+  WHERE {
+    ?band a dbo:Band.
+    ?id  a dbo:TopicalConcept.
+    ?band dbo:genre ?id
+  }
+  LIMIT 100

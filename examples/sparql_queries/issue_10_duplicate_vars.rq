@@ -1,0 +1,6 @@
+  SELECT DISTINCT ?label
+  WHERE {
+    ?id a dbo:City.
+    ?id rdfs:label ?label
+  }
+  LIMIT 10
