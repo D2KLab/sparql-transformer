@@ -289,7 +289,8 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     let options = [];
     if (v.includes('$')) [v, ...options] = v.split('$');
 
-    let id = is$ ? (`?${prefix}${i}`) : v;
+    const originalId = is$ ? (`?${prefix}${i}`) : v;
+    let id = originalId;
     const givenVar = options.find(o => o.match('var:.*'));
     if (givenVar) {
       [, id] = givenVar.split(':');
@@ -302,7 +303,13 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     if (langTag) proto[k] = `${proto[k]}$${langTag}`;
 
     let aVar = id;
-    if (options.includes('sample')) aVar = `(SAMPLE(${id}) AS ${id})`;
+    const aggregates = ['sample', 'count', 'sum', 'min', 'max', 'avg'];
+    const aggregate = aggregates.filter(aggr => options.includes(aggr))[0];
+    if (aggregate) {
+      if (!givenVar) id = is$ ? originalId : `?${k}`;
+      const isDistinct = options.includes('distinct');
+      aVar = `(${aggregate.toUpperCase()}(${isDistinct ? 'DISTINCT ' : ''}${originalId}) AS ${id})`;
+    }
     if (bestlang) {
       const lng = bestlang.includes(':') ? bestlang.split(':')[1] : mainLang;
       if (!lng) throw new Error('bestlang require a language declared inline or in the root');

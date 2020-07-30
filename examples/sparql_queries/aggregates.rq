@@ -1,0 +1,4 @@
+  SELECT DISTINCT (COUNT(DISTINCT ?v) AS ?total) (SUM(?v) AS ?sum) (MIN(?v) AS ?min) (MAX(?v) AS ?max) (AVG(?v) AS ?average)
+  WHERE {
+    VALUES (?v) { (10.5) (20.5) }
+  }

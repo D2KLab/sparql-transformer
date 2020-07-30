@@ -1,0 +1,12 @@
+{
+  "proto": {
+    "count": "?v$count$distinct$var:total",
+    "sum": "?v$sum",
+    "min": "?v$min",
+    "max": "?v$max",
+    "avg": "?v$avg$var:average"
+  },
+  "$where": [
+    "VALUES (?v) { (10.5) (20.5) }"
+  ]
+}

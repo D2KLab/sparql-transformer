@@ -100,6 +100,20 @@ test('DBpedia genres with bands', async (t) => {
   t.deepEqual(out, expected);
 });
 
+test('Aggregates', async (t) => {
+  const file = 'aggregates.json';
+  const [orig, q, sparql, expected] = loadFiles(file);
+  mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
+
+  const out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
+
+  t.deepEqual(out, expected);
+});
+
 test('No lang tag', async (t) => {
   const file = 'city.list.ld.json';
   const [orig, q, sparql, expected] = loadFiles(file);
