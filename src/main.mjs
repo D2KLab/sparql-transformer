@@ -238,7 +238,7 @@ function computeRootId(proto, prefix) {
   // otherwise, check if one of the default anchors is there
   if (!k) {
     k = Object.keys(KEY_VOCABULARIES).find(key => !!proto[KEY_VOCABULARIES[key].id]);
-    if (!k) return null;
+    if (!k) return [null, false];
 
     k = KEY_VOCABULARIES[k].id;
   }
