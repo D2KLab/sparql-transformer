@@ -1,0 +1,37 @@
+{
+  "head": {
+    "link": [],
+    "vars": ["total", "sum", "min", "max", "average"]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [{
+      "total": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+        "value": "2"
+      },
+      "sum": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "value": "31"
+      },
+      "min": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "value": "10.5"
+      },
+      "max": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "value": "20.5"
+      },
+      "average": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "value": "15.5"
+      }
+    }]
+  }
+}
