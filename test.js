@@ -106,7 +106,7 @@ test('Aggregates', async (t) => {
   mock(orig);
 
   const outSparql = await getSparqlQuery(q);
-  t.deepEqual(outSparql, sparql);
+  t.deepEqual(outSparql.trim(), sparql.trim());
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');

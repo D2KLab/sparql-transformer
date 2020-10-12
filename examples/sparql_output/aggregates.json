@@ -1,7 +1,7 @@
 {
   "head": {
     "link": [],
-    "vars": ["total", "sum", "min", "max", "average"]
+    "vars": ["total", "sum_v", "min_v", "max_v", "average"]
   },
   "results": {
     "distinct": false,
@@ -12,17 +12,17 @@
         "datatype": "http://www.w3.org/2001/XMLSchema#integer",
         "value": "2"
       },
-      "sum": {
+      "sum_v": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
         "value": "31"
       },
-      "min": {
+      "min_v": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
         "value": "10.5"
       },
-      "max": {
+      "max_v": {
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
         "value": "20.5"

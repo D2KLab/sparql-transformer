@@ -26,6 +26,8 @@ const KEY_VOCABULARIES = {
 
 const LANG_REGEX = /^lang(?::(.+))?/i;
 
+const AGGREGATES = ['sample', 'count', 'sum', 'min', 'max', 'avg'];
+
 function defaultSparql(endpoint) {
   const client = new SparqlClient(endpoint);
   return q => client.query(q);
@@ -188,7 +190,6 @@ function sparql2proto(line, proto, options) {
   return instance;
 }
 
-
 /**
  * Merge base and addition, by defining/adding in an
  * array the values in addition to the base object.
@@ -229,7 +230,6 @@ function mergeObj(base, addition) {
 
   return base;
 }
-
 
 function computeRootId(proto, prefix) {
   // check if an anchor is set
@@ -297,16 +297,17 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       if (!id.startsWith('?')) id = `?${id}`;
     }
     const bestlang = options.find(o => o.match('bestlang.*'));
+    const aggregate = AGGREGATES.filter(aggr => options.includes(aggr))[0];
+    if (aggregate && !givenVar) id = is$ ? originalId : `?${aggregate}_${originalId.replace('?', '')}`;
+
+    // assign a clean id to the prototype
     proto[k] = id + (bestlang ? '$accept:string' : '');
 
     const langTag = options.find(o => o.match('langTag.*'));
     if (langTag) proto[k] = `${proto[k]}$${langTag}`;
 
     let aVar = id;
-    const aggregates = ['sample', 'count', 'sum', 'min', 'max', 'avg'];
-    const aggregate = aggregates.filter(aggr => options.includes(aggr))[0];
     if (aggregate) {
-      if (!givenVar) id = is$ ? originalId : `?${k}`;
       const isDistinct = options.includes('distinct');
       aVar = `(${aggregate.toUpperCase()}(${isDistinct ? 'DISTINCT ' : ''}${originalId}) AS ${id})`;
     }
@@ -441,7 +442,6 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
     proto,
   };
 }
-
 
 export default function (baseInput, options = {}) {
   const input = objectAssignDeep({}, baseInput);
