@@ -83,6 +83,8 @@ Some modifiers can be present after, separated by the `$` sign. The `:` prepend 
 |`$var`|`:var`[string]| Specify the variable that will be assigned in the query, so that it can be referred in the root properties (like `$filter`). If missing, a `$` is prepended. <br> Ex. `$var:myVariable`, `$var:?name`|
 |`$anchor`|n/a|Set this property as merging anchor. The set is valid for the current level in the JSON tree, ignoring eventual `id`/`@id` sibling properties. Ex. `"a":"?example$anchor"` sets`?example` as subject of SPARQL statements and merges the final results on the `a` property.|
 |`$reverse`|n/a|Set this property for use the current variable as subject of the SPARQL predicate, rather than object.|
+|`$count` `$sum` `$min` `$max` `$avg`| n/a | Return the respective aggregate function (COUNT, SUM, MIN, MAX, AVG) on the variable. |
+
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 

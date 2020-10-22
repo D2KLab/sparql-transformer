@@ -1,5 +1,5 @@
-import sparqlTransformer from 'sparql-transformer@2.3.1';
-import SparqlClient from 'sparql-transformer@2.3.1/src/sparql-client.mjs';
+import sparqlTransformer from 'sparql-transformer@2.5.0';
+import SparqlClient from 'sparql-transformer@2.5.0/src/sparql-client.mjs';
 import AsyncComputed from 'vue-async-computed';
 
 const jq = {
@@ -14,7 +14,6 @@ const jq = {
   ],
   $limit: 100,
 };
-
 
 function syntaxHighlight(json) {
   if (typeof json !== 'string') {
@@ -37,7 +36,6 @@ function syntaxHighlight(json) {
     return `<span class="${cls}">${match}</span>`;
   });
 }
-
 
 const application = new Vue({
   el: '#app',
