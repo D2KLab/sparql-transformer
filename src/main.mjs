@@ -298,7 +298,11 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     }
     const bestlang = options.find(o => o.match('bestlang.*'));
     const aggregate = AGGREGATES.filter(aggr => options.includes(aggr))[0];
-    if (aggregate && !givenVar) id = is$ ? originalId : `?${aggregate}_${originalId.replace('?', '')}`;
+
+    const aggrWhat = is$ ? (givenVar || id) : originalId;
+    if (aggregate && !givenVar) {
+      id = is$ ? originalId : `?${aggregate}_${originalId.replace('?', '')}`;
+    }
 
     // assign a clean id to the prototype
     proto[k] = id + (bestlang ? '$accept:string' : '');
@@ -309,7 +313,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     let aVar = id;
     if (aggregate) {
       const isDistinct = options.includes('distinct');
-      aVar = `(${aggregate.toUpperCase()}(${isDistinct ? 'DISTINCT ' : ''}${originalId}) AS ${id})`;
+      aVar = `(${aggregate.toUpperCase()}(${isDistinct ? 'DISTINCT ' : ''}${aggrWhat}) AS ${id})`;
     }
     if (bestlang) {
       const lng = bestlang.includes(':') ? bestlang.split(':')[1] : mainLang;
