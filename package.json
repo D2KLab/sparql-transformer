@@ -1,6 +1,6 @@
 {
   "name": "sparql-transformer",
-  "version": "2.5.2",
+  "version": "2.5.3",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.js",
   "module": "src/main.mjs",
@@ -34,7 +34,7 @@
     "eslint-plugin-import": "^2.22.1",
     "nock": "^13.0.4",
     "rimraf": "^3.0.2",
-    "rollup": "^2.29.0",
+    "rollup": "^2.32.1",
     "rollup-plugin-cleanup": "^3.2.1"
   },
   "dependencies": {

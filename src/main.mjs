@@ -338,7 +338,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
       }
     }
 
-    const required = options.includes('required') || ['id', '@id'].includes(k) || values[id];
+    const required = options.includes('required') || ['id', '@id'].includes(k) || values[id] || (aggregate && is$);
 
     const reverse = options.includes('reverse');
     if (is$) {
