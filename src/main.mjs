@@ -299,7 +299,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = 
     const bestlang = options.find(o => o.match('bestlang.*'));
     const aggregate = AGGREGATES.filter(aggr => options.includes(aggr))[0];
 
-    const aggrWhat = is$ ? (givenVar || id) : originalId;
+    const aggrWhat = is$ ? id : originalId;
     if (aggregate && !givenVar) {
       id = is$ ? originalId : `?${aggregate}_${originalId.replace('?', '')}`;
     }
