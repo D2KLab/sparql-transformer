@@ -18,6 +18,8 @@ JavaScript package. Try it with the [Playground](https://d2klab.github.io/sparql
 - [How to use](#how-to-use)
 - [Credits](#credits)
 
+You want to learn more? Watch this [Tutorial](https://d2klab.github.io/swapi2020/slides.html)
+
 ## Query in JSON
 
 The core idea of this module is writing in a single file the query and the expected output in JSON.
