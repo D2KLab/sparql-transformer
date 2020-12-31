@@ -264,8 +264,12 @@ function computeRootId(proto, prefix) {
 /**
  * Parse a single key in prototype
  */
-function manageProtoKey(proto, vars = [], filters = [], wheres = [], mainLang = null, prefix = 'v', prevRoot = null, values = {}) {
+function manageProtoKey(proto, vars = [], filters = [], wheres = [],
+  mainLang = null, prefix = 'v', prevRoot = null, values = {}) {
   let [_rootId, _blockRequired] = computeRootId(proto, prefix);
+  if (_rootId && Object.keys(values).includes(_rootId)) {
+    _blockRequired = true;
+  }
   _rootId = _rootId || prevRoot || '?id';
   return [function parsingFunc(k, i) {
     if (k === '$anchor') return;
