@@ -141,3 +141,17 @@ test('Duplicate variable name', async (t) => {
 
   t.deepEqual(out, expected);
 });
+
+test('List-required fieds', async (t) => {
+  const file = 'band_forcelist.json';
+  const [orig, q, sparql, expected] = loadFiles(file);
+  mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql, sparql);
+
+  const out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
+
+  t.deepEqual(out, expected);
+});

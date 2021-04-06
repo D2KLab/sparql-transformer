@@ -1,0 +1,210 @@
+[
+  {
+    "band": "http://dbpedia.org/resource/Alice_in_Chains",
+    "label": [
+      "Alice in Chains",
+      "أليس إن تشاينز",
+      "アリス・イン・チェインズ",
+      "爱丽丝囚徒"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Soundgarden",
+    "label": [
+      "Soundgarden",
+      "サウンドガーデン",
+      "声音花园乐队"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/The_Neighbourhood",
+    "label": [
+      "The Neighbourhood"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Wolfgang_(band)",
+    "label": [
+      "Wolfgang (banda)",
+      "Wolfgang (band)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Arrows_of_Love",
+    "label": [
+      "Arrows of Love"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)",
+    "label": [
+      "Attack! Attack! (walisische Band)",
+      "Attack! Attack!",
+      "Attack! Attack! (Welsh band)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Dead_Confederate",
+    "label": [
+      "Dead Confederate"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Elisium",
+    "label": [
+      "Элизиум (группа)",
+      "Elisium"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Junkyard_Choir",
+    "label": [
+      "Junkyard Choir"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Jale",
+    "label": [
+      "Jale"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/King_Snake_Roost",
+    "label": [
+      "King Snake Roost"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Pagoda_(band)",
+    "label": [
+      "Pagoda",
+      "Pagoda (band)",
+      "Pagoda (banda)",
+      "Pagoda (gruppo musicale)",
+      "Pagoda (zespół)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Pearl_Jam",
+    "label": [
+      "Pearl Jam",
+      "بيرل جام",
+      "パール・ジャム",
+      "珍珠果酱乐队"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Blind_Zero",
+    "label": [
+      "Blind Zero"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Block_Out_(band)",
+    "label": [
+      "Block Out (band)",
+      "Block Out"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Blood_Circus_(band)",
+    "label": [
+      "Blood Circus",
+      "Blood Circus (band)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Cosmic_Psychos",
+    "label": [
+      "Cosmic Psychos"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Mofa_Ha'arnavot_Shel_Dr._Kasper",
+    "label": [
+      "Mofa Ha'arnavot Shel Dr. Kasper"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Renegades_(band)",
+    "label": [
+      "Renegades (band)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Skin_Yard",
+    "label": [
+      "Skin Yard",
+      "スキン・ヤード"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Toadies",
+    "label": [
+      "Toadies"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Napalm_Beach",
+    "label": [
+      "Napalm Beach"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Nutmeg_(band)",
+    "label": [
+      "Nutmeg (band)"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Green_Apple_Quick_Step",
+    "label": [
+      "Green Apple Quick Step"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Bundle_of_Hiss",
+    "label": [
+      "Bundle of Hiss"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Flowerhead",
+    "label": [
+      "Flowerhead"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Collinz_Room",
+    "label": [
+      "Collinz Room"
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  }
+]

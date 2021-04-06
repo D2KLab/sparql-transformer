@@ -86,6 +86,9 @@ Some modifiers can be present after, separated by the `$` sign. The `:` prepend 
 |`$anchor`|n/a|Set this property as merging anchor. The set is valid for the current level in the JSON tree, ignoring eventual `id`/`@id` sibling properties. Ex. `"a":"?example$anchor"` sets`?example` as subject of SPARQL statements and merges the final results on the `a` property.|
 |`$reverse`|n/a|Set this property for use the current variable as subject of the SPARQL predicate, rather than object.|
 |`$count` `$sum` `$min` `$max` `$avg`| n/a | Return the respective aggregate function (COUNT, SUM, MIN, MAX, AVG) on the variable. |
+|`$langTag`|`"hide"`, `"show"` (default)| When `hide`, language tags are not included in the output.<br> Ex. `hide` => `"label":"Bologna"` ;<br>  `show` => `"label":{"value": "Bologna", "language": "it"}` |
+|`$accept`|`"string"`, `"number"`, `"boolean"`| If set, values of type different from the specified one are discarded. |
+|`$asList`|n/a| When set, the interested property value would always be a list, even if with a single element. |
 
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
@@ -109,7 +112,7 @@ The supported properties are:
 |`$filter`| string, array |Add the content as a `FILTER`.<br>`"$filter": "?myNum > 3"`|
 |`$prefixes`| object | set the prefixes in the format `"foaf": "http://xmlns.com/foaf/0.1/"`.|
 |`$lang`|`:acceptedLangs`[string]| The default language to use as `$bestlang` (see above), expressed through the [Accept-Language standard](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4). <br>Ex. `$lang:en;q=1, it;q=0.7 *;q=0.1`|
-|`$langTag`|`"hide"`, `"show"` (default)| When `hide`, language tags are not included in the output.<br> Ex. `hide` => `"label":"Bologna"` ;<br>  `show` => `"label":{"value": "Bologna", "language": "it"}` |
+|`$langTag`|`"hide"`, `"show"` (default)| When `hide`, language tags are not included in the output. Similar to the inline `$langTag`, but acting at a global level.<br> Ex. `hide` => `"label":"Bologna"` ;<br>  `show` => `"label":{"value": "Bologna", "language": "it"}` |
 
 The `@context` property (for the JSON-LD version) will be transferred to the output.
 

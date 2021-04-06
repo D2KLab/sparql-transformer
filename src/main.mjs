@@ -128,7 +128,9 @@ function toJsonldValue(input, options) {
   if (options.accept && typeof value !== options.accept) return null;
 
   // nothing more to do for other types
-  if (typeof value !== 'string') return value;
+  if (typeof value !== 'string') {
+    return options.asList ? [value] : value;
+  }
 
   // if here, it is a string or a date, that are not parsed
   const lang = input['xml:lang'];
@@ -141,7 +143,7 @@ function toJsonldValue(input, options) {
     obj[voc.value] = value;
     return obj;
   }
-  return value;
+  return options.asList ? [value] : value;
 }
 
 /**
@@ -164,13 +166,16 @@ function fitIn(instance, line, options) {
     variable = variable.substring(1);
     let accept = null;
     let { langTag } = options;
+    const asList = variable.includes('$list');
+    variable = variable.replace('$list', '');
     if (variable.includes('$accept:')) [variable, accept] = variable.split('$accept:');
     if (variable.includes('$langTag:')) [variable, langTag] = variable.split('$langTag:');
 
     // variable not in result, delete from
     if (!line[variable]) delete instance[k];
     else {
-      instance[k] = toJsonldValue(line[variable], Object.assign({}, options, { accept, langTag }));
+      instance[k] = toJsonldValue(line[variable],
+        Object.assign({}, options, { accept, langTag, asList }));
     }
 
     if (instance[k] === null) delete instance[k];
@@ -200,13 +205,16 @@ function mergeObj(base, addition) {
     if (k === '$anchor') return;
 
     const b = base[k];
-    const a = addition[k];
+    let a = addition[k];
     const anchor = a.$anchor;
 
     if (!b) {
       base[k] = a;
       return;
     }
+
+    // if a is array, I take its value
+    if (Array.isArray(a)) [a] = a;
 
     if (Array.isArray(b)) {
       if (a[anchor]) {
@@ -300,7 +308,9 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
       [, id] = givenVar.split(':');
       if (!id.startsWith('?')) id = `?${id}`;
     }
-    const bestlang = options.find(o => o.match('bestlang.*'));
+    const bestlang = options.find(o => o.match('bestlang[^$]*'));
+    const accept = options.find(o => o.match('accept[^$]*'));
+    const langTag = options.find(o => o.match('langTag[^$]*'));
     const aggregate = AGGREGATES.filter(aggr => options.includes(aggr))[0];
 
     const aggrWhat = is$ ? id : originalId;
@@ -309,10 +319,12 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
     }
 
     // assign a clean id to the prototype
-    proto[k] = id + (bestlang ? '$accept:string' : '');
+    proto[k] = id;
 
-    const langTag = options.find(o => o.match('langTag.*'));
-    if (langTag) proto[k] = `${proto[k]}$${langTag}`;
+    if (langTag) proto[k] += `$${langTag}`;
+    if (bestlang) proto[k] += '$accept:string';
+    else if (accept) proto[k] += `$${accept}`;
+    if (options.includes('list')) proto[k] += '$list';
 
     let aVar = id;
     if (aggregate) {

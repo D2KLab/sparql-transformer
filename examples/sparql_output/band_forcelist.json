@@ -1,0 +1,1516 @@
+{
+  "head": {
+    "link": [],
+    "vars": [
+      "id",
+      "v1",
+      "genre"
+    ]
+  },
+  "results": {
+    "distinct": false,
+    "ordered": true,
+    "bindings": [
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "أليس إن تشاينز"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "アリス・イン・チェインズ"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Alice in Chains"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Alice_in_Chains"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "爱丽丝囚徒"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "サウンドガーデン"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Soundgarden"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Soundgarden"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "声音花园乐队"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/The_Neighbourhood"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "The Neighbourhood"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Wolfgang_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Wolfgang (banda)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Wolfgang_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Wolfgang (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Wolfgang_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Wolfgang (banda)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Arrows_of_Love"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Arrows of Love"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Attack! Attack! (walisische Band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Attack! Attack!"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Attack! Attack!"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Attack! Attack!"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Attack!_Attack!_(Welsh_band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Attack! Attack! (Welsh band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Dead_Confederate"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Dead Confederate"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Elisium"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Элизиум (группа)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Elisium"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Elisium"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Junkyard_Choir"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Junkyard Choir"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Jale"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Jale"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/King_Snake_Roost"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "King Snake Roost"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/King_Snake_Roost"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "King Snake Roost"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Pagoda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Pagoda (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Pagoda (banda)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Pagoda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Pagoda (gruppo musicale)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Pagoda (zespół)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pagoda_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Pagoda"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ar",
+          "value": "بيرل جام"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "パール・ジャム"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Pearl Jam"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Pearl_Jam"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "zh",
+          "value": "珍珠果酱乐队"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blind_Zero"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Blind Zero"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blind_Zero"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Blind Zero"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blind_Zero"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Blind Zero"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blind_Zero"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Blind Zero"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Block_Out_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Block Out (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Block_Out_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Block Out"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blood_Circus_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Blood Circus"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blood_Circus_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Blood Circus (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Blood_Circus_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Blood Circus"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Cosmic_Psychos"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Cosmic Psychos"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Cosmic_Psychos"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Cosmic Psychos"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Cosmic_Psychos"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Cosmic Psychos"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Mofa_Ha'arnavot_Shel_Dr._Kasper"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Mofa Ha'arnavot Shel Dr. Kasper"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Renegades_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Renegades (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "de",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "fr",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ja",
+          "value": "スキン・ヤード"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pl",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Skin_Yard"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "ru",
+          "value": "Skin Yard"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Toadies"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Toadies"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Toadies"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "es",
+          "value": "Toadies"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Toadies"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "nl",
+          "value": "Toadies"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Napalm_Beach"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Napalm Beach"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Nutmeg_(band)"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Nutmeg (band)"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Green_Apple_Quick_Step"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Green Apple Quick Step"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bundle_of_Hiss"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Bundle of Hiss"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Bundle_of_Hiss"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "pt",
+          "value": "Bundle of Hiss"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Flowerhead"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Flowerhead"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      },
+      {
+        "id": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Collinz_Room"
+        },
+        "v1": {
+          "type": "literal",
+          "xml:lang": "en",
+          "value": "Collinz Room"
+        },
+        "genre": {
+          "type": "uri",
+          "value": "http://dbpedia.org/resource/Grunge"
+        }
+      }
+    ]
+  }
+}
