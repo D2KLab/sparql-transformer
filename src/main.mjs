@@ -154,13 +154,19 @@ function fitIn(instance, line, options) {
   return function fittingFunction(k) {
     /* eslint-disable no-param-reassign */
     let variable = instance[k];
+
     // if value is an obj
     if (typeof variable === 'object') {
+      const objAsList = variable.$list;
+
       const fiiFun = fitIn(variable, line, options);
       Object.keys(variable).forEach(fiiFun);
+
       if (isEmptyObject(variable)) delete instance[k];
+      else if (objAsList) instance[k] = [instance[k]];
       return null;
     }
+
     if (typeof variable !== 'string') return null;
     if (!variable.startsWith('?')) return null;
     variable = variable.substring(1);
@@ -266,6 +272,7 @@ function computeRootId(proto, prefix) {
   }
 
   proto.$anchor = k;
+  proto.$list = proto[k].includes('$list');
   return [_rootId, required];
 }
 
@@ -280,7 +287,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
   }
   _rootId = _rootId || prevRoot || '?id';
   return [function parsingFunc(k, i) {
-    if (k === '$anchor') return;
+    if (k === '$anchor' || k === '$list') return;
     let v = proto[k];
 
     if (typeof v === 'object') {
@@ -324,7 +331,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
     if (langTag) proto[k] += `$${langTag}`;
     if (bestlang) proto[k] += '$accept:string';
     else if (accept) proto[k] += `$${accept}`;
-    if (options.includes('list')) proto[k] += '$list';
+    if (options.includes('list') && id != _rootId) proto[k] += '$list';
 
     let aVar = id;
     if (aggregate) {
@@ -380,6 +387,7 @@ function cleanRecursively(instance) {
   }
 
   delete instance.$anchor;
+  delete instance.$list;
   Object.keys(instance).forEach(k => cleanRecursively(instance[k]));
 }
 
