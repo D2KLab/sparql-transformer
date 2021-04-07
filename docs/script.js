@@ -1,5 +1,5 @@
-import sparqlTransformer from 'sparql-transformer@2.5.3';
-import SparqlClient from 'sparql-transformer@2.5.3/src/sparql-client.mjs';
+import sparqlTransformer from 'sparql-transformer@2.6.1';
+import SparqlClient from 'sparql-transformer@2.6.1/src/sparql-client.mjs';
 import AsyncComputed from 'vue-async-computed';
 
 const jq = {
