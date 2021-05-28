@@ -530,7 +530,7 @@ export default function (baseInput, options = {}) {
 
     if (baseInput.$limit && baseInput.$limitMode == 'library') {
       const offset = baseInput.$offset || 0;
-      content = content.slice(offset, offset + 1 + baseInput.$limit);
+      content = content.slice(offset, offset + baseInput.$limit);
     }
 
     if (isJsonLD) {

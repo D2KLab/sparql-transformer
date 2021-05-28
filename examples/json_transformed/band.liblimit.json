@@ -154,35 +154,5 @@
       }
     ],
     "genre": "http://dbpedia.org/resource/Grunge"
-  },
-  {
-    "band": "http://dbpedia.org/resource/Truly",
-    "label": [
-      {
-        "language": "de",
-        "value": "Truly (Band)"
-      },
-      {
-        "language": "en",
-        "value": "Truly"
-      },
-      {
-        "language": "es",
-        "value": "Truly"
-      },
-      {
-        "language": "fr",
-        "value": "Truly"
-      },
-      {
-        "language": "it",
-        "value": "Truly"
-      },
-      {
-        "language": "ru",
-        "value": "Truly"
-      }
-    ],
-    "genre": "http://dbpedia.org/resource/Grunge"
   }
 ]
