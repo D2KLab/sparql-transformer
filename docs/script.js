@@ -1,4 +1,4 @@
-import sparqlTransformer from 'sparql-transformer@2.6.1';
+import sparqlTransformer from 'sparql-transformer@2.7.2';
 import SparqlClient from 'sparql-transformer@2.6.1/src/sparql-client.mjs';
 import AsyncComputed from 'vue-async-computed';
 
