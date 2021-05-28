@@ -1,0 +1,8 @@
+  PREFIX dbo: <http://dbpedia.org/ontology/>
+  SELECT DISTINCT ?id ?v1 ?genre
+  WHERE {
+    VALUES ?genre {dbr:Grunge}
+    ?id a dbo:Band.
+    ?id rdfs:label ?v1.
+    ?id dbo:genre ?genre
+  }

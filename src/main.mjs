@@ -436,8 +436,8 @@ function jsonld2query(input) {
     .map(w => INDENT + w);
 
   const from = modifiers.$from ? `FROM <${modifiers.$from}>` : '';
-  const limit = modifiers.$limit ? `LIMIT ${modifiers.$limit}` : '';
-  const offset = modifiers.$offset ? `OFFSET ${modifiers.$offset}` : '';
+  const limit = (modifiers.$limit && modifiers.$limitMode != 'library') ? `LIMIT ${modifiers.$limit}` : '';
+  const offset = (modifiers.$offset && modifiers.$limitMode != 'library') ? `OFFSET ${modifiers.$offset}` : '';
   const distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
   const prefixes = modifiers.$prefixes ? parsePrefixes(modifiers.$prefixes) : [];
   const values = modifiers.$values ? parseValues(valuesNormalized) : [];
@@ -503,7 +503,7 @@ export default function (baseInput, options = {}) {
 
   return sparqlFun(query).then((sparqlRes) => {
     const { bindings } = sparqlRes.results;
-    const content = [];
+    let content = [];
 
     if (bindings.length) {
       // apply the proto
@@ -526,6 +526,11 @@ export default function (baseInput, options = {}) {
 
       // remove anchor tag
       content.forEach(cleanRecursively);
+    }
+
+    if (baseInput.$limit && baseInput.$limitMode == 'library') {
+      const offset = baseInput.$offset || 0;
+      content = content.slice(offset, offset + 1 + baseInput.$limit);
     }
 
     if (isJsonLD) {

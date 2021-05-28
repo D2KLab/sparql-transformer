@@ -9,6 +9,7 @@ JavaScript package. Try it with the [Playground](https://d2klab.github.io/sparql
 
 ## News
 
+- The parameter `$libraryMode` allows to perform the pagination on the merged objects, obtaining exactly `n=$limit` objects
 - It is now possible to set a different **merging anchor** instead of `id`/`@id` using the `$anchor` modifier.
 
 **Table of Contents**
@@ -103,6 +104,7 @@ The supported properties are:
 |`$where`|string, array| Add where clause in the triple format.<br>Ex. `"$where": "?id a dbo:City"`|
 |`$values`|object| Set `VALUES` for specified variables as a map. The presence of a lang tag or of the '$lang' attribute attached to the related property is taken in account. <br>Ex. `"$values": {"?id": ["dbr:Bari", "http://dbpedia.org/resource/Bologna"]}`|
 |`$limit` |number| `LIMIT` the SPARQL results |
+|`$limitMode` |`query` (default) or `library`| Perform the LIMIT operation in the query or on the obtained results (`library`) |
 |`$from` |string(uri)| Define the graph `FROM` which selecting the results |
 |`$offset` |number| `OFFSET` applied to the SPARQL results |
 |`$distinct`|boolean (default `true`)| Set the `DISTINCT` in the select|

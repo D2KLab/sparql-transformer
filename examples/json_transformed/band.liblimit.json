@@ -1,0 +1,188 @@
+[
+  {
+    "band": "http://dbpedia.org/resource/Verdena",
+    "label": [
+      {
+        "language": "de",
+        "value": "Verdena"
+      },
+      {
+        "language": "en",
+        "value": "Verdena"
+      },
+      {
+        "language": "it",
+        "value": "Verdena"
+      },
+      {
+        "language": "uk",
+        "value": "Verdena"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Rufus_King_(band)",
+    "label": {
+      "language": "en",
+      "value": "Rufus King (band)"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Season_(band)",
+    "label": {
+      "language": "en",
+      "value": "Season (band)"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Seaweed_(band)",
+    "label": [
+      {
+        "language": "de",
+        "value": "Seaweed (Band)"
+      },
+      {
+        "language": "es",
+        "value": "Seaweed"
+      },
+      {
+        "language": "en",
+        "value": "Seaweed (band)"
+      },
+      {
+        "language": "fr",
+        "value": "Seaweed"
+      },
+      {
+        "language": "it",
+        "value": "Seaweed"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Flowerhead",
+    "label": {
+      "language": "en",
+      "value": "Flowerhead"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Some_Velvet_Sidewalk",
+    "label": {
+      "language": "en",
+      "value": "Some Velvet Sidewalk"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Hamakor_(band)",
+    "label": {
+      "language": "en",
+      "value": "Hamakor (band)"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Hammerbox",
+    "label": [
+      {
+        "language": "en",
+        "value": "Hammerbox"
+      },
+      {
+        "language": "es",
+        "value": "Hammerbox"
+      },
+      {
+        "language": "ja",
+        "value": "ハンマーボックス"
+      },
+      {
+        "language": "nl",
+        "value": "Hammerbox (band)"
+      },
+      {
+        "language": "pt",
+        "value": "Hammerbox"
+      },
+      {
+        "language": "ru",
+        "value": "Hammerbox"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Hank_&_Cupcakes",
+    "label": {
+      "language": "en",
+      "value": "Hank & Cupcakes"
+    },
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Local_H",
+    "label": [
+      {
+        "language": "de",
+        "value": "Local H"
+      },
+      {
+        "language": "en",
+        "value": "Local H"
+      },
+      {
+        "language": "es",
+        "value": "Local H"
+      },
+      {
+        "language": "it",
+        "value": "Local H"
+      },
+      {
+        "language": "ru",
+        "value": "Local H"
+      },
+      {
+        "language": "sv",
+        "value": "Local H"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  },
+  {
+    "band": "http://dbpedia.org/resource/Truly",
+    "label": [
+      {
+        "language": "de",
+        "value": "Truly (Band)"
+      },
+      {
+        "language": "en",
+        "value": "Truly"
+      },
+      {
+        "language": "es",
+        "value": "Truly"
+      },
+      {
+        "language": "fr",
+        "value": "Truly"
+      },
+      {
+        "language": "it",
+        "value": "Truly"
+      },
+      {
+        "language": "ru",
+        "value": "Truly"
+      }
+    ],
+    "genre": "http://dbpedia.org/resource/Grunge"
+  }
+]

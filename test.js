@@ -92,7 +92,7 @@ test('DBpedia genres with bands', async (t) => {
   mock(orig);
 
   const outSparql = await getSparqlQuery(q);
-  t.deepEqual(outSparql, sparql);
+  t.deepEqual(outSparql.trim(), sparql.trim());
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
@@ -149,6 +149,20 @@ test('List-required fieds', async (t) => {
 
   const outSparql = await getSparqlQuery(q);
   t.deepEqual(outSparql, sparql);
+
+  const out = await sparqlTransformer(q);
+  // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');
+
+  t.deepEqual(out, expected);
+});
+
+test('Library limit', async (t) => {
+  const file = 'band.liblimit.json';
+  const [orig, q, sparql, expected] = loadFiles(file);
+  mock(orig);
+
+  const outSparql = await getSparqlQuery(q);
+  t.deepEqual(outSparql.trim(), sparql.trim());
 
   const out = await sparqlTransformer(q);
   // fs.writeFileSync('a.json', JSON.stringify(out, null, 2), 'utf-8');

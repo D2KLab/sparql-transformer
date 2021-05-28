@@ -1,0 +1,17 @@
+{
+  "proto": {
+    "band": "?id$anchor",
+    "label": "$rdfs:label$required",
+    "genre": "$dbo:genre$var:?genre"
+  },
+  "$prefixes": {
+    "dbo": "http://dbpedia.org/ontology/"
+  },
+  "$limit": 10,
+  "$offset": 5,
+  "$limitMode": "library",
+  "$where": "?id a dbo:Band",
+  "$values": {
+    "genre": "dbr:Grunge"
+  }
+}
