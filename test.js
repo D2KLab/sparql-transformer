@@ -14,7 +14,7 @@ const SPARQL_OUTPUTS = './examples/sparql_output/';
 
 function mock(file) {
   nock('http://dbpedia.org')
-    .get('/sparql')
+    .post('/sparql')
     .query(true)
     .reply(200, file);
 }
