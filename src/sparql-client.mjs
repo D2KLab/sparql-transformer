@@ -19,8 +19,8 @@ export default class SparqlClient {
   }
 
   query(q) {
-    return axios.get(this.endpoint, {
-      params: { query: q },
+    return axios.post(this.endpoint, {
+      body: { query: q },
     }).then((res) => {
       if (res.status === 200) return res.data;
       throw new Error(res.statusText);
