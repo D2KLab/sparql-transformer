@@ -30,7 +30,7 @@ const AGGREGATES = ['sample', 'count', 'sum', 'min', 'max', 'avg'];
 
 function defaultSparql(endpoint) {
   const client = new SparqlClient(endpoint);
-  return q => client.query(q);
+  return (q, params) => client.query(q, params);
 }
 
 const XSD = 'http://www.w3.org/2001/XMLSchema#';
@@ -501,7 +501,7 @@ export default function (baseInput, options = {}) {
 
   const sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
 
-  return sparqlFun(query).then((sparqlRes) => {
+  return sparqlFun(query, opt.params).then((sparqlRes) => {
     const { bindings } = sparqlRes.results;
     let content = [];
 
