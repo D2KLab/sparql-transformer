@@ -1,6 +1,6 @@
 {
   "name": "sparql-transformer",
-  "version": "2.7.4",
+  "version": "2.8.0",
   "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
   "main": "index.js",
   "module": "src/main.mjs",
@@ -28,13 +28,13 @@
     ]
   },
   "devDependencies": {
-    "ava": "^4.2.0",
-    "eslint": "^8.14.0",
+    "ava": "^4.3.1",
+    "eslint": "^8.20.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
-    "nock": "^13.2.4",
+    "nock": "^13.2.9",
     "rimraf": "^3.0.2",
-    "rollup": "^2.71.1",
+    "rollup": "^2.77.0",
     "rollup-plugin-cleanup": "^3.2.1"
   },
   "dependencies": {
