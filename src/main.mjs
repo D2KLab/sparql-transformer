@@ -295,8 +295,10 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
       const [mpkFun, bkReq] = manageProtoKey(v, vars, filters, wheresInternal,
         mainLang, prefix + i, _rootId, values);
       Object.keys(v).forEach(mpkFun);
-      wheresInternal = wheresInternal.join('.\n');
-      wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal}}`);
+      if (wheresInternal.length > 0) {
+        wheresInternal = wheresInternal.join('.\n');
+        wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal}}`);
+      }
       return;
     }
     if (typeof v !== 'string') return;
