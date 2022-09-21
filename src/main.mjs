@@ -296,12 +296,12 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
         mainLang, prefix + i, _rootId, values);
       Object.keys(v).forEach(mpkFun);
 
-    if (wheresInternal.length > 0) {
-        wheresInternal = wheresInternal.join('.\n');
+      if (wheresInternal.length > 0) {
+        wheresInternal = wheresInternal.filter(x => x).join('.\n');
         wheres.push(bkReq ? wheresInternal : `OPTIONAL { ${wheresInternal}}`);
       }
 
-    return;
+      return;
     }
     if (typeof v !== 'string') return;
 
@@ -475,12 +475,12 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
   };
 }
 
-export default function (baseInput, options = {}) {
+export default function(baseInput, options = {}) {
   const input = objectAssignDeep({}, baseInput);
   const opt = Object.assign({},
     DEFAULT_OPTIONS, {
-      context: input['@context'],
-    }, options);
+    context: input['@context'],
+  }, options);
 
   if (opt.env && opt.env.DEBUG_LEVEL) debug.level = opt.env.DEBUG_LEVEL;
   // Override debug level if `debug` option is set
