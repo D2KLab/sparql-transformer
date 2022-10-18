@@ -439,7 +439,7 @@ function jsonld2query(input) {
     .filter(w => w)
     .map(w => INDENT + w);
 
-  const from = modifiers.$from ? `FROM <${modifiers.$from}>` : '';
+  const from = modifiers.$from ? asArray(modifiers.$from).map(from => `FROM <${from}>`).join('\n') : '';
   const limit = (modifiers.$limit && modifiers.$limitMode != 'library') ? `LIMIT ${modifiers.$limit}` : '';
   const offset = (modifiers.$offset && modifiers.$limitMode != 'library') ? `OFFSET ${modifiers.$offset}` : '';
   const distinct = modifiers.$distinct === false ? '' : 'DISTINCT';
