@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "SPARQL Transformer"
+url: https://github.com/D2KLab/sparql-transformer
+date-released: 2023-01-26
+type: software
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Lisena"
+    given-names: "Pasquale"
+    orcid: "https://orcid.org/0000-0003-3094-5585"
+    email: pasquale.lisena@eurecom.fr
+  - family-names: "Meroño-Peñuela"
+    given-names: "Albert"
+    orcid: "https://orcid.org/0000-0003-4646-5842"
+  - family-names: "Kuhn"
+    given-names: "Tobias"
+    orcid: "https://orcid.org/0000-0002-1267-0234"
+  - family-names: "Troncy"
+    given-names: "Raphael"
+    orcid: "https://orcid.org/0000−0003−0457−1436"
+  doi: "10.1007/978-3-030-30796-7_28"
+  title: "Easy Web API Development with SPARQL Transformer"
+  conference:
+    name: "18th International Semantic Web Conference (ISWC)"
+    address: "Auckland, New Zealand"
+  month: 10
+  year: 2019
