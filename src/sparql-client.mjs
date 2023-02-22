@@ -25,7 +25,7 @@ export default class SparqlClient {
 
     query(q, params = {}) {
         return axios.post(this.endpoint, new URLSearchParams({...params, query: q })).then((res) => {
-            if (res.status % 100 == 2) return res.data; // all 2xx status (200, 206, ...)
+            if (Math.floor(res.status / 100) == 2) return res.data; // all 2xx status (200, 206, ...)
             throw new Error(res.statusText);
         });
     }
