@@ -1,5 +1,6 @@
 .DS_Store
 # Generated files
+.jekyll-cache
 dist/
 
 # Logs

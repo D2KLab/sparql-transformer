@@ -89,8 +89,7 @@ Some modifiers can be present after, separated by the `$` sign. The `:` prepend 
 |`$count` `$sum` `$min` `$max` `$avg`| n/a | Return the respective aggregate function (COUNT, SUM, MIN, MAX, AVG) on the variable. |
 |`$langTag`|`"hide"`, `"show"` (default)| When `hide`, language tags are not included in the output.<br> Ex. `hide` => `"label":"Bologna"` ;<br>  `show` => `"label":{"value": "Bologna", "language": "it"}` |
 |`$accept`|`"string"`, `"number"`, `"boolean"`| If set, values of type different from the specified one are discarded. |
-|`$asList`|n/a| When set, the interested property value would always be a list, even if with a single element. |
-
+|`$alist`|n/a| When set, the interested property value would always be a list, even if with a single element.|
 
 In this way, I specify a mapping between the JSON-LD output properties and the ones in the endpoint. The values non prepended by a `$` are transferred as is to the output.
 

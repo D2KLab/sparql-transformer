@@ -157,7 +157,7 @@ function fitIn(instance, line, options) {
 
         // if value is an obj
         if (typeof variable === 'object') {
-            const objAsList = variable.$list;
+            const objAsList = variable.$list || variable.$asList;
 
             const fiiFun = fitIn(variable, line, options);
             Object.keys(variable).forEach(fiiFun);
@@ -172,16 +172,16 @@ function fitIn(instance, line, options) {
         variable = variable.substring(1);
         let accept = null;
         let { langTag } = options;
-        const asList = variable.includes('$list');
-        variable = variable.replace('$list', '');
+        const asList = variable.includes('$list') || variable.includes('$asList');
+        variable = variable.replaceAll(/\$(asL|l)ist/g, '');
         if (variable.includes('$accept:'))[variable, accept] = variable.split('$accept:');
         if (variable.includes('$langTag:'))[variable, langTag] = variable.split('$langTag:');
 
         // variable not in result, delete from
         if (!line[variable]) delete instance[k];
         else {
-            instance[k] = toJsonldValue(line[variable],
-                Object.assign({}, options, { accept, langTag, asList }));
+            let opts = Object.assign({}, options, { accept, langTag, asList })
+            instance[k] = toJsonldValue(line[variable], opts);
         }
 
         if (instance[k] === null) delete instance[k];
@@ -272,7 +272,7 @@ function computeRootId(proto, prefix) {
     }
 
     proto.$anchor = k;
-    proto.$list = proto[k].includes('$list');
+    proto.$list = proto[k].includes('$list') || proto[k].includes('$asList');
     return [_rootId, required];
 }
 
@@ -287,7 +287,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
     }
     _rootId = _rootId || prevRoot || '?id';
     return [function parsingFunc(k, i) {
-        if (k === '$anchor' || k === '$list') return;
+        if (['$anchor', '$list', '$asList'].includes(k)) return;
         let v = proto[k];
 
         if (typeof v === 'object') {
@@ -335,7 +335,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
         if (langTag) proto[k] += `$${langTag}`;
         if (bestlang) proto[k] += '$accept:string';
         else if (accept) proto[k] += `$${accept}`;
-        if (options.includes('list') && id != _rootId) proto[k] += '$list';
+        if ((options.includes('list') || options.includes('asList')) && id != _rootId) proto[k] += '$list';
 
         let aVar = id;
         if (aggregate) {
@@ -392,6 +392,7 @@ function cleanRecursively(instance) {
 
     delete instance.$anchor;
     delete instance.$list;
+    delete instance.$asList;
     Object.keys(instance).forEach(k => cleanRecursively(instance[k]));
 }
 
