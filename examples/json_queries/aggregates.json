@@ -4,9 +4,11 @@
     "sum": "?v$sum",
     "min": "?v$min",
     "max": "?v$max",
-    "avg": "?v$avg$var:average"
+    "avg": "?v$avg$var:average",
+    "value_sum": "?value$sum"
   },
   "$where": [
-    "VALUES (?v) { (10.5) (20.5) }"
+    "VALUES (?v) { (10.5) (20.5) }",
+    "?id schema:value ?value"
   ]
 }

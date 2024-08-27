@@ -4,6 +4,7 @@
      "count": 2,
      "max": 20.5,
      "min": 10.5,
-     "sum": 31
+     "sum": 31,
+     "value_sum": 42
   }
 ]
