@@ -9,7 +9,6 @@ export default {
   external: [
     'fast-deep-equal',
     'object-assign-deep',
-    'axios',
   ],
   plugins: [cleanup({
     extensions: ['js', 'mjs'],

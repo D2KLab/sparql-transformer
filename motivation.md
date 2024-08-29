@@ -17,7 +17,7 @@ WHERE {
       rdfs:label ?name .
 } LIMIT 100
 ```
-Extract of the [json results](http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+*%0D%0AWHERE+%7B%0D%0A+%3Fcity+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FCity%3E+%3B%0D%0A++++++dbo%3Acountry+dbr%3AItaly+%3B%0D%0A++++++foaf%3Adepiction+%3Fimage+%3B%0D%0A++++++rdfs%3Alabel+%3Fname+.%0D%0A%7D+LIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+):
+Extract of the [json results](https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=SELECT+*%0D%0AWHERE+%7B%0D%0A+%3Fcity+a+%3Chttp%3A%2F%2Fdbpedia.org%2Fontology%2FCity%3E+%3B%0D%0A++++++dbo%3Acountry+dbr%3AItaly+%3B%0D%0A++++++foaf%3Adepiction+%3Fimage+%3B%0D%0A++++++rdfs%3Alabel+%3Fname+.%0D%0A%7D+LIMIT+100&format=text%2Fhtml&CXML_redir_for_subjs=121&CXML_redir_for_hrefs=&timeout=30000&debug=on&run=+Run+Query+):
 
 ```json
 {

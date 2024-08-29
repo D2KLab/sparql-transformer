@@ -7,7 +7,7 @@ const debug = new Debugger();
 const INDENT = '    ';
 const DEFAULT_OPTIONS = {
     context: 'http://schema.org/',
-    endpoint: 'http://dbpedia.org/sparql',
+    endpoint: 'https://dbpedia.org/sparql',
     langTag: 'show',
 };
 

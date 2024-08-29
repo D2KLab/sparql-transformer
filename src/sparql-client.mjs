@@ -1,6 +1,4 @@
 /* Minimal SPARQL client */
-import axios from 'axios';
-
 function validURL(str) {
     const pattern = new RegExp('^(https?:\\/\\/)?' // protocol
         +
@@ -23,10 +21,25 @@ export default class SparqlClient {
         this.endpoint = endpoint;
     }
 
-    query(q, params = {}) {
-        return axios.post(this.endpoint, new URLSearchParams({...params, query: q })).then((res) => {
-            if (Math.floor(res.status / 100) == 2) return res.data; // all 2xx status (200, 206, ...)
-            throw new Error(res.statusText);
+    async query(q, params = {}) {
+        // Query to the SPARQL endpoint
+        const response = await fetch(this.endpoint, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/sparql-results+json',
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                ...params,
+                query: q,
+            }),
         });
+
+        if (!response.ok) {
+            console.log('reponse ont ok:', response.statusText);
+            throw new Error(response.statusText);
+        }
+
+        return response.json();
     }
 }
