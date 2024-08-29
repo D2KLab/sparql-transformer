@@ -8,6 +8,7 @@
     "node": true
   },
   "rules": {
+    "indent": ["error", 4],
     "no-param-reassign": "off",
     "no-console": "warn",
     "no-plusplus": "off",
