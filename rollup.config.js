@@ -1,4 +1,6 @@
 import cleanup from 'rollup-plugin-cleanup';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
 
 export default {
   input: 'src/main.mjs',
@@ -6,11 +8,7 @@ export default {
     file: 'dist/browser.mjs',
     format: 'esm',
   },
-  external: [
-    'fast-deep-equal',
-    'object-assign-deep',
-  ],
-  plugins: [cleanup({
+  plugins: [commonjs(), resolve(), cleanup({
     extensions: ['js', 'mjs'],
   })],
 };
