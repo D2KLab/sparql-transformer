@@ -21,9 +21,9 @@ export default class SparqlClient {
         this.endpoint = endpoint;
     }
 
-    async query(q, params = {}) {
+    query(q, params = {}) {
         // Query to the SPARQL endpoint
-        const response = await fetch(this.endpoint, {
+        return fetch(this.endpoint, {
             method: 'POST',
             headers: {
                 'Accept': 'application/sparql-results+json',
@@ -33,13 +33,12 @@ export default class SparqlClient {
                 ...params,
                 query: q,
             }),
+        }).then((response) => {
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+
+            return response.json();
         });
-
-        if (!response.ok) {
-            console.log('reponse ont ok:', response.statusText);
-            throw new Error(response.statusText);
-        }
-
-        return response.json();
     }
 }
