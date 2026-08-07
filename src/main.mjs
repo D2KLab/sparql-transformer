@@ -326,7 +326,7 @@ function manageProtoKey(proto, vars = [], filters = [], wheres = [],
 
         const aggrWhat = is$ ? id : originalId;
         if (aggregate && !givenVar) {
-            id = is$ ? originalId : `?${aggregate}_${originalId.replace('?', '')}`;
+            id = `?${aggregate}_${aggrWhat.replace('?', '')}`;
         }
 
         // assign a clean id to the prototype

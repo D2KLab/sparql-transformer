@@ -1,7 +1,7 @@
 {
   "head": {
     "link": [],
-    "vars": ["total", "sum_v", "min_v", "max_v", "average"]
+    "vars": ["total", "sum_v", "min_v", "max_v", "average", "sum_value"]
   },
   "results": {
     "distinct": false,
@@ -31,6 +31,11 @@
         "type": "typed-literal",
         "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
         "value": "15.5"
+      },
+      "sum_value": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+        "value": "42"
       }
     }]
   }
