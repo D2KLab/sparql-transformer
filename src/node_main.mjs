@@ -1,10 +1,11 @@
-import isValidPath from 'is-valid-path';
-import jsonfile from 'jsonfile';
+import fs from 'fs';
 
 import sparqlTransformer from './main.mjs';
 
-export default function(input, options = {}) {
-    if (isValidPath(input)) input = jsonfile.readFileSync(input);
+export default function (input, options = {}) {
+    if (typeof input === 'string' && fs.existsSync(input) && fs.lstatSync(input).isFile()) {
+        input = JSON.parse(fs.readFileSync(input, 'utf8'));
+    }
 
     options.env = process && process.env;
     return sparqlTransformer(input, options);
