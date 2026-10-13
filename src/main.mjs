@@ -220,7 +220,7 @@ function mergeObj(base, addition) {
 
         if (Array.isArray(b)) {
             if (a[anchor]) {
-                const a0 = b.find(x => a[anchor] == x[anchor]); // same ids
+                const a0 = b.find(x => String(a[anchor]) === String(x[anchor])); // same ids
                 if (a0) {
                     mergeObj(a0, a);
                     return;
@@ -231,7 +231,7 @@ function mergeObj(base, addition) {
         }
         if (equal(a, b)) return;
 
-        if (a[anchor] && a[anchor] == b[anchor]) { // same ids
+        if (a[anchor] && String(a[anchor]) === String(b[anchor])) { // same ids
             mergeObj(b, a);
         } else base[k] = [b, a];
     });
