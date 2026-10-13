@@ -9,11 +9,6 @@ export default [
     js.configs.recommended,
     flatConfigs.recommended,
     {
-        linterOptions: {
-            reportUnusedDisableDirectives: 'off',
-        },
-    },
-    {
         languageOptions: {
             ecmaVersion: 'latest',
             sourceType: 'module',

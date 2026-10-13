@@ -30,7 +30,6 @@ async function getSparqlQuery(q) {
             },
         });
     } catch (e) {
-        // eslint-disable-next-line no-empty
     }
     return sparqlQuery;
 }

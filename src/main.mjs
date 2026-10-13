@@ -90,11 +90,9 @@ function parseValues(values) {
  * Prepare the output managing languages and datatypes
  */
 function toJsonldValue(input, options) {
-    // eslint-disable-next-line prefer-const
     let { value, datatype } = input;
     switch (datatype) {
         case xsd('boolean'):
-            // eslint-disable-next-line eqeqeq
             value = value !== 'false' && value != 0;
             break;
         case xsd('integer'):
@@ -124,7 +122,6 @@ function toJsonldValue(input, options) {
     }
 
     // I can't accept 0 if I want a string
-    // eslint-disable-next-line valid-typeof
     if (options.accept && typeof value !== options.accept) return null;
 
     // nothing more to do for other types
@@ -152,7 +149,6 @@ function toJsonldValue(input, options) {
  */
 function fitIn(instance, line, options) {
     return function fittingFunction(k) {
-        /* eslint-disable no-param-reassign */
         let variable = instance[k];
 
         // if value is an obj
@@ -224,7 +220,6 @@ function mergeObj(base, addition) {
 
         if (Array.isArray(b)) {
             if (a[anchor]) {
-                /* eslint-disable eqeqeq */
                 const a0 = b.find(x => a[anchor] == x[anchor]); // same ids
                 if (a0) {
                     mergeObj(a0, a);
@@ -236,7 +231,6 @@ function mergeObj(base, addition) {
         }
         if (equal(a, b)) return;
 
-        // eslint-disable-next-line eqeqeq
         if (a[anchor] && a[anchor] == b[anchor]) { // same ids
             mergeObj(b, a);
         } else base[k] = [b, a];
@@ -258,7 +252,6 @@ function computeRootId(proto, prefix) {
     }
 
     const str = proto[k];
-    // eslint-disable-next-line prefer-const
     let [_rootId, ...modifiers] = str.split('$');
 
     let required = modifiers.includes('required');
