@@ -1,6 +1,6 @@
 {
     "name": "sparql-transformer",
-    "version": "3.1.1",
+    "version": "3.1.2",
     "description": "Transform the SPARQL Endpoint output in JSON or JSON-LD",
     "main": "src/node_main.mjs",
     "type": "module",
@@ -13,7 +13,10 @@
         "**/*.mjs",
         "*.js"
     ],
-    "repository": "https://github.com/D2KLab/sparql-transformer",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/D2KLab/sparql-transformer.git"
+    },
     "scripts": {
         "test": "DEBUG_LEVEL=debug node --test test.js",
         "prepublishOnly": "rollup -c",

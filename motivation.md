@@ -1,7 +1,6 @@
 Motivation
 ==========
 
-
 [Slides at the WebConf 2018.](https://goo.gl/s5FoDv)
 
 The output of SPARQL endpoints (i.e. [Virtuoso](https://virtuoso.openlinksw.com/)) is not so practical. It simply presents the results as an array of all possible sets of variables that satisfy the query.
