@@ -44,7 +44,7 @@ function loadFiles(file) {
     return [orig, q, sparql, expected];
 }
 
-test('DBpedia list of cities (proto)', async (t) => {
+test('DBpedia list of cities (proto)', async () => {
     const file = 'city.list.json';
     const [orig, q, sparql, expected] = loadFiles(file);
     mockFetch(orig);
