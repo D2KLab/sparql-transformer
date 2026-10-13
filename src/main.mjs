@@ -465,85 +465,85 @@ ${filters.map(f => `${INDENT}FILTER(${f})`).join('\n')}
   ${offset}
   `;
 
-  query = query.replace(/\n+/g, '\n')
-    .replace(/\n\s+\n/g, '\n')
-    .replace(/\.+/g, '.');
+    query = query.replace(/\n+/g, '\n')
+        .replace(/\n\s+\n/g, '\n')
+        .replace(/\.+/g, '.');
 
-  debug.debug(query);
-  return {
-    query,
-    proto,
-  };
+    debug.debug(query);
+    return {
+        query,
+        proto,
+    };
 }
 
 export default function(baseInput, options = {}) {
-  const input = objectAssignDeep({}, baseInput);
-  const opt = Object.assign({},
-    DEFAULT_OPTIONS, {
-    context: input['@context'],
-  }, options);
+    const input = objectAssignDeep({}, baseInput);
+    const opt = Object.assign({},
+        DEFAULT_OPTIONS, {
+            context: input['@context'],
+        }, options);
 
-  if (opt.env && opt.env.DEBUG_LEVEL) debug.level = opt.env.DEBUG_LEVEL;
-  // Override debug level if `debug` option is set
-  if (opt.debug === true) debug.level = 'debug';
-  if (opt.debug === false) debug.level = 'log';
+    if (opt.env && opt.env.DEBUG_LEVEL) debug.level = opt.env.DEBUG_LEVEL;
+    // Override debug level if `debug` option is set
+    if (opt.debug === true) debug.level = 'debug';
+    if (opt.debug === false) debug.level = 'log';
 
-  debug.verbose('options:', JSON.stringify(opt, null, 2));
+    debug.verbose('options:', JSON.stringify(opt, null, 2));
 
-  if (typeof input !== 'object') throw new Error('Input format not valid');
+    if (typeof input !== 'object') throw new Error('Input format not valid');
 
-  // I save the info about hideLang before it is destroyed
-  opt.langTag = input.$langTag || opt.langTag;
+    // I save the info about hideLang before it is destroyed
+    opt.langTag = input.$langTag || opt.langTag;
 
-  const {
-    proto,
-    query,
-  } = jsonld2query(input);
+    const {
+        proto,
+        query,
+    } = jsonld2query(input);
 
-  const isJsonLD = input['@graph'];
-  const voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
-  opt.voc = voc;
+    const isJsonLD = input['@graph'];
+    const voc = KEY_VOCABULARIES[isJsonLD ? 'JSONLD' : 'PROTO'];
+    opt.voc = voc;
 
-  const sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
+    const sparqlFun = opt.sparqlFunction || defaultSparql(opt.endpoint);
 
-  return sparqlFun(query, opt.params).then((sparqlRes) => {
-    const { bindings } = sparqlRes.results;
-    let content = [];
+    return sparqlFun(query, opt.params).then((sparqlRes) => {
+        const { bindings } = sparqlRes.results;
+        let content = [];
 
-    if (bindings.length) {
-      // apply the proto
-      const instances = bindings.map(b => sparql2proto(b, proto, opt));
-      // merge lines with the same id
+        if (bindings.length) {
+            // apply the proto
+            const instances = bindings.map(b => sparql2proto(b, proto, opt));
+            // merge lines with the same id
 
-      const anchor = instances[0] && instances[0].$anchor;
-      instances.forEach((inst) => {
-        const id = inst[anchor];
-        // search if we have already the same id
-        const match = content.find(x => x[anchor] === id);
-        if (!match) {
-          // it is a new one
-          content.push(inst);
-          return;
+            const anchor = instances[0] && instances[0].$anchor;
+            instances.forEach((inst) => {
+                const id = inst[anchor];
+                // search if we have already the same id
+                const match = content.find(x => x[anchor] === id);
+                if (!match) {
+                    // it is a new one
+                    content.push(inst);
+                    return;
+                }
+                // otherwise modify previous one
+                mergeObj(match, inst);
+            });
+
+            // remove anchor tag
+            content.forEach(cleanRecursively);
         }
-        // otherwise modify previous one
-        mergeObj(match, inst);
-      });
 
-      // remove anchor tag
-      content.forEach(cleanRecursively);
-    }
+        if (baseInput.$limit && baseInput.$limitMode == 'library') {
+            const offset = baseInput.$offset || 0;
+            content = content.slice(offset, offset + baseInput.$limit);
+        }
 
-    if (baseInput.$limit && baseInput.$limitMode == 'library') {
-      const offset = baseInput.$offset || 0;
-      content = content.slice(offset, offset + baseInput.$limit);
-    }
-
-    if (isJsonLD) {
-      return {
-        '@context': opt.context,
-        '@graph': content,
-      };
-    }
-    return content;
-  });
+        if (isJsonLD) {
+            return {
+                '@context': opt.context,
+                '@graph': content,
+            };
+        }
+        return content;
+    });
 }
