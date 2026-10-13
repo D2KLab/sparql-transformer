@@ -33,7 +33,7 @@
         "eslint": "^8.57.1",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-plugin-import": "^2.32.0",
-        "rollup": "^4.62.4",
+        "rollup": "^4.64.6",
         "rollup-plugin-cleanup": "^3.2.1"
     },
     "dependencies": {
