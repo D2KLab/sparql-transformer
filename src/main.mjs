@@ -416,7 +416,6 @@ function jsonld2query(input) {
         .filter(k => k.startsWith('$'))
         .forEach((k) => {
             modifiers[k] = input[k];
-            delete input[k];
         });
 
     const vars = [];
@@ -485,7 +484,6 @@ export default function(baseInput, options = {}) {
 
     if (typeof input !== 'object') throw new Error('Input format not valid');
 
-    // I save the info about hideLang before it is destroyed
     opt.langTag = input.$langTag || opt.langTag;
 
     const {
