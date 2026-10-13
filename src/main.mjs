@@ -121,7 +121,8 @@ function toJsonldValue(input, options) {
             break;
     }
 
-    // I can't accept 0 if I want a string
+    // $accept filters on the post-conversion type, so a numeric 0
+    // is discarded when 'string' was requested, never stringified
     if (options.accept && typeof value !== options.accept) return null;
 
     // nothing more to do for other types
